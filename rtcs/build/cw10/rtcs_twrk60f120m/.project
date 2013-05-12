@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>rtcs_twrk60f120m</name>
+	<comment>MQX project</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>?name?</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.append_environment</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildArguments</key>
+					<value>-j6</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildCommand</key>
+					<value>${system:ECLIPSE_HOME}/../gnu/bin/mingw32-make</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>${ProjDirPath}/Release</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>true</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>RTCS Include</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>twrk60f120m Config in lib</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Debug/rtcs_twrk60f120m_d.a</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60f120m.cw10/rtcs/rtcs_twrk60f120m_d.a</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/arp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/arp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/arp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/arp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/arpif.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/arpif.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/asn1.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/asn1.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/auth.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/auth.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/bootp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/bootp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ccp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ccp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/chap.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/chap.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/checksum.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/checksum.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/clnt.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/clnt.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/dhcp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/dhcp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/dhcp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/dhcp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/dhcpsrv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/dhcpsrv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/dhcpuprv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/dhcpuprv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/dns.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/dns.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/fcs16.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/fcs16.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ftp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ftp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ftpc.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ftpc.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ftpd.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ftpd.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ftpd_msg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ftpd_msg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/icmp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/icmp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/icmp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/icmp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/igmp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/igmp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ip-e.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ip-e.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ip.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ip.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ip_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ip_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipc_udp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipc_udp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipc_udp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipc_udp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipcfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipcfg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipcfg_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipcfg_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipcp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipcp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ipradix.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ipradix.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/iptunnel.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/iptunnel.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/iwcfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/iwcfg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/lcp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/lcp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/md5.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/md5.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/nat.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/nat.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/nat_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/nat_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/nat_session.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/nat_session.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/natvers.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/natvers.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/pap.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/pap.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/pmap.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/pmap.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/pmapif.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/pmapif.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ppp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ppp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ppp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ppp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/pppfsm.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/pppfsm.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ppphdlc.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ppphdlc.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rip.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rip.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rip_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rip_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/route.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/route.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rpcmsg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rpcmsg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rpctypes.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rpctypes.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcs.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcs.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcs25x.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcs25x.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcs_in.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcs_in.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcs_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcs_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcscfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcscfg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcshdlc.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcshdlc.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcslog.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcslog.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcspcb.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcspcb.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcsrpc.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcsrpc.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcsrtos.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcsrtos.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcstime.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcstime.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/rtcsvers.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/rtcsvers.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/select.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/select.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/snmp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/snmp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/snmpcfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/snmpcfg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/socket.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/socket.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/svc.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/svc.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/svcauth.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/svcauth.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/tcp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/tcp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/tcp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/tcp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/tcpip.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/tcpip.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/telnet.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/telnet.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/tftp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/tftp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/ticker.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/ticker.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/udp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/udp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/udp_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/udp_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Include/xdr.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/include/xdr.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ipc_udp</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Release/rtcs_twrk60f120m.a</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60f120m.cw10/rtcs/rtcs_twrk60f120m.a</locationURI>
+		</link>
+		<link>
+			<name>twrk60f120m Config in lib/twrk60f120m_lib.txt</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60f120m.cw10/twrk60f120m_lib.txt</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/binfile.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/binfile.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/coff.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/coff.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/dhcpsrv.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/dhcpsrv.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/echosrv.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/echosrv.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/eds.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/eds.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpc.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpc_cmd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpc_cmd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpclnt.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpclnt.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpd_cmd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpd_cmd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/ftpd_msg.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/ftpd_msg.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/loadtb.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/loadtb.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/loadtc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/loadtc.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/loadts.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/loadts.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/resolver.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/resolver.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/rtcsload.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/rtcsload.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/rtcssh.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/rtcssh.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/sntp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/sntp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/sockio.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/sockio.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/srec32.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/srec32.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/srecord.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/srecord.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/telnet.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/telnet.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/telnetio.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/telnetio.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/telnsrv.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/telnsrv.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/tftp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/tftp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/tftpacc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/tftpacc.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/tftpsrv.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/tftpsrv.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/apps/tftputil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/apps/tftputil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_cnfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_cnfg.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_mqx.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_mqx.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_poll.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_poll.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_prv.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_supp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_supp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_supp.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_supp.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_task.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_task.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_types.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_types.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/httpd/httpd_wrapper.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/httpd/httpd_wrapper.h</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/arpcmd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/arpcmd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/dnshosts.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/dnshosts.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/dnsinit.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/dnsinit.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/dnsutil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/dnsutil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ghbname.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ghbname.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifadd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifadd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifbootp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifbootp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifdhcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifdhcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifdns.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifdns.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifppp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifppp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifrem.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifrem.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ifstat.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ifstat.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/iftraps.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/iftraps.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/iftunnel.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/iftunnel.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/inet.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/inet.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ipcfg.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ipcfg.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/iwcfg.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/iwcfg.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/ping.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/ping.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcs.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcs.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcscmd.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcscmd.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcsdela.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcsdela.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcsglob.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcsglob.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcshost.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcshost.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcsinit.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcsinit.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcslog0.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcslog0.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcslog1.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcslog1.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/rtcsrand.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/rtcsrand.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sdgram.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sdgram.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/select.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/select.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sockutil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sockutil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/soigmp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/soigmp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/soip.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/soip.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/solink.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/solink.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sosel0.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sosel0.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sosel1.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sosel1.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/soselall.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/soselall.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/soselset.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/soselset.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sosock.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sosock.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sotcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sotcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/soudp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/soudp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/if/sstream.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/if/sstream.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ipc_udp/ipc_udp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ipc_udp/ipc_udp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/arp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/arp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/arpinit.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/arpinit.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/ip-e.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/ip-e.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/ipcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/ipcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/ipcpfsm.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/ipcpfsm.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/media/proxyarp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/media/proxyarp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcsdate.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcsdate.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcsmsec.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcsmsec.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcsmsg.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcsmsg.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcspart.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcspart.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcssec.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcssec.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/os/rtcstask.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/os/mqx25x/rtcstask.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/ccp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/ccp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/chap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/chap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/gen16.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/gen16.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/genmd5.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/genmd5.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/hdlcio.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/hdlcio.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/hdlcio2.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/hdlcio2.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/lcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/lcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/lcpif.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/lcpif.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/md5.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/md5.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/md5step.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/md5step.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/pap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/pap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/pktrx.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/pktrx.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/pkttx.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/pkttx.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/ppp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/ppp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/pppfsm.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/pppfsm.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/pppglob.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/pppglob.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/ppp/ppphdlc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/ppp/ppphdlc.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/authnone.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/authnone.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/clnterr.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/clnterr.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/clntpmap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/clntpmap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/clnttcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/clnttcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/clntudp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/clntudp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/portmap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/portmap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svcauth.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svcauth.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svcpmap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svcpmap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svcreply.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svcreply.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svcrun.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svcrun.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svctcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svctcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/rpc/svcudp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/rpc/svcudp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/1213.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/1213.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/mib.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/mib.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/mqxmib.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/mqxmib.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/snmp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/snmp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/trap_receivers.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/trap_receivers.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/snmp/traps.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/snmp/traps.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/bootcomm.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/bootcomm.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/bootinit.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/bootinit.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/bootp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/bootp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/checksum.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/checksum.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/dhcpclnt.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/dhcpclnt.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/dhcputil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/dhcputil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/icmp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/icmp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/igmp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/igmp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/igmputil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/igmputil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ip.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ip.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ip_reasm.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ip_reasm.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ipif_add.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ipif_add.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ipif_rem.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ipif_rem.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/iplocal.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/iplocal.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ipradix.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ipradix.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/iproute.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/iproute.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/iptunnel.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/iptunnel.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/iputil.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/iputil.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/rip.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/rip.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/route.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/route.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/rtcspcb.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/rtcspcb.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcp_buf.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcp_buf.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcp_clos.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcp_clos.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcp_rcv.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcp_rcv.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcp_send.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcp_send.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/tcpip.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/tcpip.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/ticker.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/ticker.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/timer.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/timer.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/tcpip/udp.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/tcpip/udp.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr/xdr.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/xdr/xdr.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr/xdrmem.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/xdr/xdrmem.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr/xdrpmap.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/xdr/xdrpmap.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr/xdrrec.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/xdr/xdrrec.c</locationURI>
+		</link>
+		<link>
+			<name>RTCS Source/xdr/xdrrpc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/rtcs/source/xdr/xdrrpc.c</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>MQX_ROOT_DIR</name>
+			<value>${PROJECT_LOC}/../../../..</value>
+		</variable>
+		<variable>
+			<name>PROJDIRPATH</name>
+			<value>${PROJECT_LOC}/../..</value>
+		</variable>
+	</variableList>
+</projectDescription>

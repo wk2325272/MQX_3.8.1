@@ -1,0 +1,40 @@
+  
+!!! DO NOT CHANGE FILES IN THIS DIRECTORY !!!
+!!! ALL FILES ARE GENERATED DURING BUILD  !!!
+  
+  
+The MQX Libraries Directory
+===========================
+  
+The [MQX]/lib/[board] directory contains output files (.a and .h files) 
+created when building key MQX libraries: MQX PSP and BSP, MFS, RTCS, USB, 
+etc. This is the sole directory which needs to be added to "Access Paths" 
+for end-user application targeting this [board] platform. 
+
+You can drag and drop this text file into your project opened in the  
+CodeWarrior IDE to add correct MQX "Access Path" automatically to the
+project search paths. Even if you remove the file from project later, 
+the search path remains registered.
+
+
+Configuring the MQX Libraries
+=============================
+
+Please use the /config/[board]/user_config.h file to specify required 
+configuration options for the MQX, RTCS, MFS and other key libraries.
+
+This user's configuration file gets copied into /lib/[board] directory 
+during the MQX PSP or BSP build process. It is accessed from THIS location 
+by other libraries (RTCS, MFS, ...) so their configuration is consistent 
+with the MQX configuration. 
+
+!!! DO NOT CHANGE FILES IN THIS /lib/[board] DIRECTORY.
+
+It is recommended to rebuild all libraries after any change in the 
+/config/[board]/user_config.h file. 
+
++------------------------------------------------------------------------+
+!  Recommended compilation order is BSP, PSP, MFS, RTCS, USB, Shell, ... !
+!  Use /config/[board]/build_libs.mcp project for convenient mass build. !
++------------------------------------------------------------------------+
+

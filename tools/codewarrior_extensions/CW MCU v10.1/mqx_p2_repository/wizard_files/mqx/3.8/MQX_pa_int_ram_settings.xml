@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+		
+			<settingsGroup id="MQX_pa_int_ram_settings">
+			<!-- Execute tasks option -->
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="false" type="boolean"/>  			
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

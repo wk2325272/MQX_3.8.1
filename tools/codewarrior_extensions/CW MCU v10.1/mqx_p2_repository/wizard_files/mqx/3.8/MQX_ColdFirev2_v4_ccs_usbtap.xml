@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings><settingsGroup 
+conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4"
+id="MQX_ColdFirev2_v4_ccs_usbtap">
+
+<settingsGroupRef id="MQX_ColdFirev2_v4_common"/>
+
+<!--
+<settingsGroupRef id="MQX_ColdFirev2_v4_linux_kd_common"/>
+-->
+
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.loggingOn" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.previousSerialNo" value="" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.serialNo" value="" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.useDefaultSerialNo" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.chainSpeedTCK" value="5120" type="integer"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.disableSyncClock" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.USB TAP Remote Connection.CCSTimeOut" value="60" type="string"/>
+
+
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="CF - CCS" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.freescale.cdt.debug.cw.core.settings.CCSConnection.USB TAP" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type CW Panel" value="USB TAP Remote Connection" type="string"/>
+
+</settingsGroup></launchSettings></newProjectExtension></wizardExtension>

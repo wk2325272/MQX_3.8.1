@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\build\iar\bsp_twrk60n512.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\codesize_twrk60n512.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\build\iar\psp_twrk60n512.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>Build all</name>
+      <member>
+        <project>bsp_twrk60n512</project>
+        <configuration>Release</configuration>
+      </member>
+      <member>
+        <project>psp_twrk60n512</project>
+        <configuration>Release</configuration>
+      </member>
+      <member>
+        <project>codesize_twrk60n512</project>
+        <configuration>Max Release</configuration>
+      </member>
+      <member>
+        <project>codesize_twrk60n512</project>
+        <configuration>Small Release</configuration>
+      </member>
+      <member>
+        <project>codesize_twrk60n512</project>
+        <configuration>Tiniest Release</configuration>
+      </member>
+      <member>
+        <project>codesize_twrk60n512</project>
+        <configuration>Typical Release</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

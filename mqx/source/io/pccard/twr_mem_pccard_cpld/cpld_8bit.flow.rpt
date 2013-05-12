@@ -1,0 +1,103 @@
+Flow report for cpld_8bit
+Mon Dec 14 10:49:37 2009
+Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Flow Summary                                                            ;
++--------------------------+----------------------------------------------+
+; Flow Status              ; Successful - Mon Dec 14 10:49:37 2009        ;
+; Quartus II Version       ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
+; Revision Name            ; cpld_8bit                                    ;
+; Top-level Entity Name    ; cpld_8bit                                    ;
+; Family                   ; MAX II                                       ;
+; Device                   ; EPM240GT100C3                                ;
+; Timing Models            ; Final                                        ;
+; Met timing requirements  ; Yes                                          ;
+; Total logic elements     ; 2 / 240 ( < 1 % )                            ;
+; Total pins               ; 59 / 80 ( 74 % )                             ;
+; Total virtual pins       ; 0                                            ;
+; Total memory bits        ; 0                                            ;
+; DSP block 9-bit elements ; 0                                            ;
+; Total PLLs               ; 0                                            ;
+; Total DLLs               ; 0                                            ;
+; UFM blocks               ; 0 / 1 ( 0 % )                                ;
++--------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/14/2009 10:49:33 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; cpld_8bit           ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                 ;
++------------------------+------------------------------+---------------+-------------+------------+
+; Assignment Name        ; Value                        ; Default Value ; Entity Name ; Section Id ;
++------------------------+------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID  ; 343673692725.126078417300344 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP ; 85                           ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP ; 0                            ; --            ; --          ; --         ;
++------------------------+------------------------------+---------------+-------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 146 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 154 MB              ; 00:00:00                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 132 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 107 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off cpld_8bit -c cpld_8bit
+quartus_fit --read_settings_files=off --write_settings_files=off cpld_8bit -c cpld_8bit
+quartus_asm --read_settings_files=off --write_settings_files=off cpld_8bit -c cpld_8bit
+quartus_tan --read_settings_files=off --write_settings_files=off cpld_8bit -c cpld_8bit
+
+
+

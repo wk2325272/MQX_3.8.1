@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<wizardExtension>
+  <uiExtension>
+    <pages>
+      <page id="mcu.mqxprojectwizard1.page.devices">
+        <uiElement id="mcu.mqxprojectwizard1.chip.list">
+          <elementChoice id="mcu.mqxprojectwizard1.board.list.cf" name="ColdFire Evaluation Boards" contentHelp="&#10;&#10;Creates projects for ColdFire evaluation boards">
+          </elementChoice>        
+        </uiElement>
+      </page>
+    </pages>
+  </uiExtension>
+</wizardExtension>

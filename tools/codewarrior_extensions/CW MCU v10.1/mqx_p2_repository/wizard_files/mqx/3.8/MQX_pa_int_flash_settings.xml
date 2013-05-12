@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+		
+			<settingsGroup id="MQX_pa_int_flash_settings">
+			<!-- Execute tasks option -->
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="true" type="boolean"/>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskNames" type="list" mode="append"><listValue value="${MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${ChipId}_${pa_VLE_BOOKE_var}.tcl"/></applySetting>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskTypes" type="list" mode="append"><listValue value="___CLDE_SCRIPT___"/></applySetting>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskInitialLaunches" type="list" mode="append"><listValue value="true"/></applySetting>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskSuccessiveRuns" type="list" mode="append"><listValue value="true"/></applySetting>
+   			
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

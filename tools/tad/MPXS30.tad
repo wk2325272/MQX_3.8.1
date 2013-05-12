@@ -1,0 +1,110 @@
+INT_VECTOR, 1, Exception: Reset
+INT_VECTOR, 2, Exception: Machine check
+INT_VECTOR, 3, Exception: Data storage
+INT_VECTOR, 4, Exception: Instruction storage 
+INT_VECTOR, 5, Exception: External
+INT_VECTOR, 6, Exception: Alignment
+INT_VECTOR, 7, Exception: Program
+INT_VECTOR, 8, Exception: Fp unavailable
+INT_VECTOR, 9, Exception: Decrementer
+INT_VECTOR, 10, Exception: Critical
+INT_VECTOR, 12, Exception: System call
+INT_VECTOR, 13, Exception: Trace
+INT_VECTOR, 15, Exception: Performance Monitor 
+INT_VECTOR, 16, Exception: Instr tlb miss
+INT_VECTOR, 17, Exception: Data load tlb miss
+INT_VECTOR, 18, Exception: Data store tlb miss
+INT_VECTOR, 19, Exception: Instruction breakpoint 
+INT_VECTOR, 20, Exception: System management
+INT_VECTOR, 35 , Int. Ctl.: SSCIR0            
+INT_VECTOR, 36 , Int. Ctl.: SSCIR1            
+INT_VECTOR, 37 , Int. Ctl.: SSCIR2            
+INT_VECTOR, 38 , Int. Ctl.: SSCIR3            
+INT_VECTOR, 39 , Int. Ctl.: SSCIR4            
+INT_VECTOR, 40 , Int. Ctl.: SSCIR5            
+INT_VECTOR, 41 , Int. Ctl.: SSCIR6            
+INT_VECTOR, 42 , Int. Ctl.: SSCIR7            
+INT_VECTOR, 76 , Int. Ctl.: SIU_IRQ_0         
+INT_VECTOR, 77 , Int. Ctl.: SIU_IRQ_1         
+INT_VECTOR, 78 , Int. Ctl.: SIU_IRQ_2         
+INT_VECTOR, 79 , Int. Ctl.: SIU_IRQ_3         
+INT_VECTOR, 94 , Int. Ctl.: PIT_0             
+INT_VECTOR, 95 , Int. Ctl.: PIT_1             
+INT_VECTOR, 96 , Int. Ctl.: PIT_2             
+INT_VECTOR, 97 , Int. Ctl.: ADC0_EOC          
+INT_VECTOR, 98 , Int. Ctl.: ADC0_ER           
+INT_VECTOR, 99 , Int. Ctl.: ADC0_WD           
+INT_VECTOR, 100, Int. Ctl.: FLEXCAN0_ESR      
+INT_VECTOR, 101, Int. Ctl.: FLEXCAN0_BOFF     
+INT_VECTOR, 103, Int. Ctl.: FLEXCAN0_BUF_00_03
+INT_VECTOR, 104, Int. Ctl.: FLEXCAN0_BUF_04_07
+INT_VECTOR, 105, Int. Ctl.: FLEXCAN0_BUF_08_11
+INT_VECTOR, 106, Int. Ctl.: FLEXCAN0_BUF_12_15
+INT_VECTOR, 107, Int. Ctl.: FLEXCAN0_BUF_16_31
+INT_VECTOR, 109, Int. Ctl.: DSPI0_TFUF_RFOF   
+INT_VECTOR, 110, Int. Ctl.: DSPI0_EOQF        
+INT_VECTOR, 111, Int. Ctl.: DSPI0_TFFF        
+INT_VECTOR, 112, Int. Ctl.: DSPI0_TCF         
+INT_VECTOR, 113, Int. Ctl.: DSPI0_RFDF        
+INT_VECTOR, 114, Int. Ctl.: LINFLEX0_RXI      
+INT_VECTOR, 115, Int. Ctl.: LINFLEX0_TXI      
+INT_VECTOR, 116, Int. Ctl.: LINFLEX0_ERR      
+INT_VECTOR, 117, Int. Ctl.: ADC1_EOC          
+INT_VECTOR, 118, Int. Ctl.: ADC1_ER           
+INT_VECTOR, 119, Int. Ctl.: ADC1_WD           
+INT_VECTOR, 120, Int. Ctl.: FLEXCAN1_ESR      
+INT_VECTOR, 121, Int. Ctl.: FLEXCAN1_BOFF     
+INT_VECTOR, 123, Int. Ctl.: FLEXCAN1_BUF_00_03
+INT_VECTOR, 124, Int. Ctl.: FLEXCAN1_BUF_04_07
+INT_VECTOR, 125, Int. Ctl.: FLEXCAN1_BUF_08_11
+INT_VECTOR, 126, Int. Ctl.: FLEXCAN1_BUF_12_15
+INT_VECTOR, 127, Int. Ctl.: FLEXCAN1_BUF_16_31
+INT_VECTOR, 129, Int. Ctl.: DSPI1_TFUF_RFOF   
+INT_VECTOR, 130, Int. Ctl.: DSPI1_EOQF        
+INT_VECTOR, 131, Int. Ctl.: DSPI1_TFFF        
+INT_VECTOR, 132, Int. Ctl.: DSPI1_TCF         
+INT_VECTOR, 133, Int. Ctl.: DSPI1_RFDF        
+INT_VECTOR, 134, Int. Ctl.: LINFLEX1_RXI      
+INT_VECTOR, 135, Int. Ctl.: LINFLEX1_TXI      
+INT_VECTOR, 136, Int. Ctl.: LINFLEX1_ERR      
+INT_VECTOR, 137, Int. Ctl.: ADC2_EOC          
+INT_VECTOR, 138, Int. Ctl.: ADC2_ER           
+INT_VECTOR, 139, Int. Ctl.: ADC2_WD           
+INT_VECTOR, 140, Int. Ctl.: FLEXCAN2_ESR      
+INT_VECTOR, 141, Int. Ctl.: FLEXCAN2_BOFF     
+INT_VECTOR, 143, Int. Ctl.: FLEXCAN2_BUF_00_03
+INT_VECTOR, 144, Int. Ctl.: FLEXCAN2_BUF_04_07
+INT_VECTOR, 145, Int. Ctl.: FLEXCAN2_BUF_08_11
+INT_VECTOR, 146, Int. Ctl.: FLEXCAN2_BUF_12_15
+INT_VECTOR, 147, Int. Ctl.: FLEXCAN2_BUF_16_31
+INT_VECTOR, 149, Int. Ctl.: DSPI2_TFUF_RFOF   
+INT_VECTOR, 150, Int. Ctl.: DSPI2_EOQF        
+INT_VECTOR, 151, Int. Ctl.: DSPI2_TFFF        
+INT_VECTOR, 152, Int. Ctl.: DSPI2_TCF         
+INT_VECTOR, 153, Int. Ctl.: DSPI2_RFDF        
+INT_VECTOR, 154, Int. Ctl.: LINFLEX2_RXI      
+INT_VECTOR, 155, Int. Ctl.: LINFLEX2_TXI      
+INT_VECTOR, 156, Int. Ctl.: LINFLEX2_ERR      
+INT_VECTOR, 157, Int. Ctl.: LINFLEX3_RXI      
+INT_VECTOR, 158, Int. Ctl.: LINFLEX3_TXI      
+INT_VECTOR, 159, Int. Ctl.: LINFLEX3_ERR      
+INT_VECTOR, 160, Int. Ctl.: I2C0              
+INT_VECTOR, 161, Int. Ctl.: I2C1              
+INT_VECTOR, 162, Int. Ctl.: PIT_3             
+INT_VECTOR, 282, Int. Ctl.: SEMA40            
+INT_VECTOR, 283, Int. Ctl.: SEMA41            
+INT_VECTOR, 317, Int. Ctl.: FLEXCAN3_ESR      
+INT_VECTOR, 318, Int. Ctl.: FLEXCAN3_BOFF     
+INT_VECTOR, 320, Int. Ctl.: FLEXCAN3_BUF_00_03
+INT_VECTOR, 321, Int. Ctl.: FLEXCAN3_BUF_04_07
+INT_VECTOR, 322, Int. Ctl.: FLEXCAN3_BUF_08_11
+INT_VECTOR, 323, Int. Ctl.: FLEXCAN3_BUF_12_15
+INT_VECTOR, 324, Int. Ctl.: FLEXCAN3_BUF_16_31
+INT_VECTOR, 327, Int. Ctl.: I2C2              
+INT_VECTOR, 337, Int. Ctl.: ADC3_EOC          
+INT_VECTOR, 338, Int. Ctl.: ADC3_ER           
+INT_VECTOR, 339, Int. Ctl.: ADC3_WD           
+INT_VECTOR, 369, Int. Ctl.: FEC_TX            
+INT_VECTOR, 370, Int. Ctl.: FEC_RX            
+INT_VECTOR, 371, Int. Ctl.: FEC_ERR           
+

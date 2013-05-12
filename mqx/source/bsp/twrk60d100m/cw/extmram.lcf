@@ -1,0 +1,154 @@
+MEMORY
+{
+   vectorrom   (RX): ORIGIN = 0x70000000, LENGTH = 0x00000410
+   cfmprotrom  (RX): ORIGIN = 0x70000410, LENGTH = 0x00000010
+   rom         (RX): ORIGIN = 0x70000420, LENGTH = 0x0007FBE0  # Code + Const data
+   ram         (RW): ORIGIN = 0x1FFF0000, LENGTH = 0x00020000  # SRAM - RW data
+
+   # kernel space starts after RAM variables (Location of MQX Kernel data + MQX heap)
+   end_of_kd   (RW): ORIGIN = 0x2000FFF0, LENGTH = 0x00000000
+   
+   # Boot stack reused by MQX Kernel data
+   bstack      (RW): ORIGIN = 0x2000FA00, LENGTH = 0x00000200  # Boot stack
+   end_bstack  (RW): ORIGIN = 0x2000FBFF, LENGTH = 0x00000000
+}
+
+KEEP_SECTION { .vectors_rom, .vectors_ram, .cfmconfig }
+
+SECTIONS
+{
+   __INTERNAL_SRAM_BASE  = 0x1FFF0000;
+   __INTERNAL_SRAM_SIZE  = 0x00020000;
+
+   __INTERNAL_FLASH_BASE = 0x00000000;
+   __INTERNAL_FLASH_SIZE = 0x00080000;
+
+   __INTERNAL_FLEXNVM_BASE = 0;
+   __INTERNAL_FLEXNVM_SIZE = 0;
+   
+   __EXTERNAL_MRAM_BASE  = 0x70000000;
+   __EXTERNAL_MRAM_SIZE  = 0x00080000;
+   __EXTERNAL_MRAM_ROM_BASE = 0x70000000;
+   __EXTERNAL_MRAM_ROM_SIZE = 0x00060000;
+   __EXTERNAL_MRAM_RAM_BASE = 0x70060000;
+   __EXTERNAL_MRAM_RAM_SIZE = 0x00020000;
+
+   __EXTERNAL_LCD_BASE = 0x60000000;
+   __EXTERNAL_LCD_SIZE = 0x1FFFF;
+   __EXTERNAL_LCD_DC_BASE = 0x60010000;
+
+   # MQX link time configurations
+   __DEFAULT_PROCESSOR_NUMBER = 1;
+   __DEFAULT_INTERRUPT_STACK_SIZE = 1024;
+   __KERNEL_DATA_VERIFY_ENABLE = 0;    # Test SDRAM read/write
+   
+   # Flashx configurations
+   __FLASHX_SECT_SIZE = 0x800;
+
+    .vectors :
+    {
+        __VECTOR_TABLE_ROM_START = .;        # Runtime vector table in sram
+
+        *(.vectors_rom)
+        . = ALIGN (0x4); 
+    } > vectorrom
+
+    .cfmprotect :
+    {
+        *(.cfmconfig)
+	. = ALIGN(0x4);
+    } > cfmprotrom
+
+    .main_application :
+    {
+        *(KERNEL)
+        *(S_BOOT)
+        *(IPSUM)
+        *(.text)
+        *(.init)
+        *(.fini)
+        *(.eini)
+        *(.ctors)
+        *(.dtors)
+        .= ALIGN(0x4);
+        *(.rodata)
+        .= ALIGN(0x4);
+        *(.rdata)
+    } > rom
+
+    .main_application_data :
+    {
+        . = ALIGN (128);
+        __VECTOR_TABLE_RAM_START = .;        # Runtime vector table in sram
+        *(.vectors_ram)
+        
+        . = ALIGN(512);
+        __BDT_BASE = .;
+        *(.usb_bdt)
+        __BDT_END = .; 
+    
+        . = ALIGN(0x4);
+        *(.exception)
+        . = ALIGN(0x4);
+        __exception_table_start__ = .;
+        EXCEPTION
+        __exception_table_end__ = .;
+
+        __sinit__ = .;
+        STATICINIT
+
+        __START_DATA = .;
+        *(.data)
+        __END_DATA = .;
+
+        __START_SDATA = .;
+        *(.sdata)
+        __END_SDATA = .;
+
+        __SDA_BASE  = .;
+        __SDA_BASE_ = __SDA_BASE;
+
+        __START_SBSS = .;
+        *(.sbss)
+        *(SCOMMON)
+        __END_SBSS = .;
+
+        __START_BSS = .;
+        *(.bss)
+        *(COMMON)
+        __END_BSS = .;
+        . = ALIGN(16);
+   } > ram
+
+   .kernel_data :
+   {
+      __KERNEL_DATA_START = ALIGN(0x10);
+   }
+   .end_of_kernel_data :
+   {
+      __KERNEL_DATA_END = .;
+   } > end_of_kd
+
+   .boot_stack :
+   {
+      _stack_end = .;
+   } > bstack
+   .end_of_boot_stack :
+   {
+      _stack_addr  = .;
+      __SP_INIT    = .;
+      __BOOT_STACK_ADDRESS = .;
+   } > end_bstack
+
+   __S_romp = 0x0;              # no ROM in this example
+   
+
+    _flashx_start = __INTERNAL_FLASH_BASE + __FLASHX_SECT_SIZE;
+
+    # flashx working area spans across the whole rest of Flash memory
+    __FLASHX_START_ADDR = ((_flashx_start + __FLASHX_SECT_SIZE - 1) / __FLASHX_SECT_SIZE) * __FLASHX_SECT_SIZE;
+    __FLASHX_END_ADDR = __INTERNAL_FLASH_BASE + __INTERNAL_FLASH_SIZE;
+
+}
+
+# EOF

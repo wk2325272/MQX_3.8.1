@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+    <variables>
+    
+            <!-- 
+            ****************************** 
+            main.h variables
+            ************************************
+            -->
+            
+            <!-- $mainh_shell_includes$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainh_shell_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="[[[!codeblock]]]mainh_shell_includes.h">
+               </enumeratedValue>
+            </enumeratedVariable>
+  
+            <!-- 
+            ****************************** 
+            main.c variables
+            ************************************
+            -->       
+            
+            <!-- $mainc_shell_includes$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_shell_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="[[[!codeblock]]]mainc_shell_includes.c">
+               </enumeratedValue>
+            </enumeratedVariable>
+                       
+            
+            <!-- $mainc_shell_cmdstruct_begin$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_shell_cmdstruct_begin">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="[[[!codeblock]]]mainc_shell_cmdstruct_begin.c">                     
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <!-- $mainc_shell_cmdstruct_end$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_shell_cmdstruct_end">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="[[[!codeblock]]]mainc_shell_cmdstruct_end.c">                         
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            
+            
+             <!-- $mainc_shell_for$ -->
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_shell_for">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="[[[!codeblock]]]mainc_shell_for.c">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <!-- $mainc_not_shell$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_not_shell">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxshell_not"
+                     value="[[[!codeblock]]]mainc_not_shell.c">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            
+            
+    </variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

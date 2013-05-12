@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings><settingsGroup 
+conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4"
+id="MQX_cf_v2_v4_common_settings">
+
+	<settingsGroupRef id="MQX_common_settings_elf_importer"/>
+
+	<applySetting id="com.freescale.cdt.debug.cw.processor" value="${ChipDebugSelect}" type="string"/>
+	<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.${dbg_group} Debugger.processor" value="${ChipDebugSelect}" type="string"/>
+	<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Processor Attr Name" value="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.${dbg_group} Debugger.processor" type="string"/>
+
+</settingsGroup></launchSettings></newProjectExtension></wizardExtension>

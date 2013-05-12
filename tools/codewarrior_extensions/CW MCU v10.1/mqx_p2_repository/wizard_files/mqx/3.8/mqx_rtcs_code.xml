@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+    <variables>
+    
+            <!-- 
+            ****************************** 
+            main.h variables
+            ************************************
+            -->
+            
+      <!-- rtcs_init_function_prototype -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_init_function_prototype">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="[[[!codeblock]]]rtcs_init_function_prototype.h">                     
+               </enumeratedValue>
+      </enumeratedVariable>
+     
+     <!-- mainh_rtcs_includes -->      
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainh_rtcs_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="[[[!codeblock]]]mainh_rtcs_includes.h">                     
+               </enumeratedValue>
+      </enumeratedVariable> 
+            
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_ip_address">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value=" ">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="#define ENET_IPADDR IPADDR(${editText:com.freescale.mcu.mqxprojectwizard1.rtcsoptions.iptext})">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_ip_mask">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value=" ">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="#define ENET_IPMASK IPADDR(${editText:com.freescale.mcu.mqxprojectwizard1.rtcsoptions.ipmasktext})">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_gateway">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value=" ">
+               </enumeratedValue>               
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="#define ENET_GATEWAY IPADDR(${editText:com.freescale.mcu.mqxprojectwizard1.rtcsoptions.ipgatewaytext})">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_enet_device">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value=" ">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="#define ENET_DEVICE 0">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_dhcp">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.dhcp_not"
+                     value="#define RTCS_DHCP 0">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.dhcp"
+                     value="#define RTCS_DHCP 1">
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.rtcs_ppp">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.ppp_not"
+                     value="#define RTCS_PPP 0">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.ppp"
+                     value="#define RTCS_PPP 1">
+               </enumeratedValue>
+      </enumeratedVariable> 
+            
+            
+            <!-- 
+            ****************************** 
+            main.c variables
+            ************************************
+            -->
+            
+      <!-- mainc_rtcs_includes -->      
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_rtcs_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="[[[!codeblock]]]mainc_rtcs_includes.c">                     
+               </enumeratedValue>
+      </enumeratedVariable> 
+                                    
+            
+            <!--$mainc_rtcs_shellcmds$-->  
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_rtcs_shellcmds">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.add_to_shell_struct_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.add_to_shell_struct"
+                     value="[[[!codeblock]]]mainc_rtcs_shellcmds.c">
+               </enumeratedValue>
+            </enumeratedVariable>   
+                                      
+             <!--$mainc_rtcs_tellnet_shellcmdstruct$-->  
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_rtcs_tellnet_shellcmdstruct">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.add_to_shell_struct_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs.add_to_shell_struct"
+                     value="[[[!codeblock]]]mainc_rtcs_tellnet_shellcmdstruct.c">
+               </enumeratedValue>
+            </enumeratedVariable>                                  
+          
+          <!--$mainc_rtcs_init_call$--> 
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_rtcs_init_call">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxrtcs"
+                     value="[[[!codeblock]]]mainc_rtcs_init_call.c">                      
+               </enumeratedValue>
+      </enumeratedVariable> 
+          
+    </variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

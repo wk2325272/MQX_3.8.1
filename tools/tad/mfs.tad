@@ -1,0 +1,50 @@
+[strings:TASK_ERROR_CODE]
+0x0 = MFS: No error
+0x3001 = MFS: Invalid function code
+0x3002 = MFS: File not found
+0x3003 = MFS: Path not found
+0x3005 = MFS: Access denied
+0x3006 = MFS: Invalid handle
+0x3008 = MFS: Insufficient memory
+0x3009 = MFS: Invalid memory block address
+0x3010 = MFS: Attempt to remove current dir
+0x3013 = MFS: Disk is write protected
+0x3014 = MFS: Bad disk unit
+0x3018 = MFS: Invalid length in disk operation
+0x301a = MFS: Not a dos disk
+0x301b = MFS: Sector not found
+0x301d = MFS: Write fault
+0x301e = MFS: Read fault
+0x3020 = MFS: Sharing violation
+0x3050 = MFS: File exists
+0x3055 = MFS: Already assigned
+0x3057 = MFS: Invalid parameter
+0x3065 = MFS: Disk full
+0x3066 = MFS: Root dir full
+0x3067 = MFS: End of file (EOF)
+0x3068 = MFS: Cannot create directory
+0x3097 = MFS: Not initialized
+0x3098 = MFS: Operation not allowed
+0x309d = MFS: Invalid drive handle
+0x309e = MFS: Invalid file handle
+0x309f = MFS: Unknown filesystem version
+0x30a0 = MFS: Lost chain
+0x30a1 = MFS: Invalid device
+0x30a2 = MFS: Invalid cluster number
+0x30a3 = MFS: Failed to delete long filename
+0x30a4 = MFS: Bad long filename entry
+0x30aa = PMGR: Invalid partition
+0x30ab = PMGR: Insufficient memory
+
+[strings:MEM_TYPE]
+12289 = MFS Drive Info;MFS/Main
+12290 = MFS Directory;MFS/Main
+12291 = MFS Data Sector;MFS/Main
+12292 = MFS Directory Sector;MFS/Main
+12293 = MFS FAT buffer;MFS/Main
+12294 = MFS Filesystem Info;MFS/Main
+12295 = MFS Cluster;MFS/Main
+12296 = MFS File/Path Name;MFS/Main
+12297 = Partition Manager Info;MFS/PartMgr
+12298 = Partition Manager Sector;MFS/PartMgr
+

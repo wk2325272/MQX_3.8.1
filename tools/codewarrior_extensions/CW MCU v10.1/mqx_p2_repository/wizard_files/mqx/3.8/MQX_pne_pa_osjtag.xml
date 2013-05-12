@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_pne_pa_osjtag">
+				
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="EPPC GDI" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.pemicro.mcu.debug.connections.pne.eppc" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.pemicro.mcu.debug.connections.pne.eppc." type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.SimulatorConnectionAttributeBase" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.logData" value="false" type="boolean"/>
+				
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.CommandLineArgs" value="" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.ConfigFile" value="" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.Library" value="eppc_pne_gdi" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.PEDEBUG_CURRENTDEVICE" value="${DeviceName}" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.PEDEBUG_DO_DEBUG_OUTPUT" value="0" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_IP" value="xxxx.xxxx.xxxx.xxxx" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_PCI_DELAY" value="5" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_PORT" value="21" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.STARTUP_interface_selection" value="1" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.eppc.names_of_user_added_attributes" value="" type="string"/>
+								
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

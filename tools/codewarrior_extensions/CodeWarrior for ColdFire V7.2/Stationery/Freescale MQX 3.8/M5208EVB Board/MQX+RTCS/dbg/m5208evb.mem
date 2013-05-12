@@ -1,0 +1,32 @@
+// Memory Configuration File
+//
+// Description:
+//  A memory configuration file contains commands that define the legally accessible
+//  areas of memory for your specific board. Useful for example when the debugger
+//  tries to display the content of a "char *" variable, that has not yet been initialized.
+//  In this case the debugger may try to read from a bogus address, which could cause a
+//  bus error.
+//
+// Board:
+//  Freescale M5208EVB
+//
+// Reference:
+//  M5208EVBUM-RevA.pdf
+
+
+// All reserved ranges read back 0xBABA...
+reservedchar 0xBA
+
+
+usederivative "MCF5208"
+
+//         Memory Map:
+//         ----------------------------------------------------------------------
+range      0x00000000 0x001FFFFF 4 Read         // 2 MByte Flash
+reserved   0x00200000 0x3FFFFFFF
+range      0x40000000 0x41FFFFFF 4 ReadWrite    // 32 MBytes DDR SDRAM
+reserved   0x42000000 0x7FFFFFFF
+range      0x80000000 0x80003FFF 4 ReadWrite    // 16 KBytes Internal SRAM
+reserved   0x80004000 0xFBFFFFFF
+//         0xFC000000 0xFC0FFFFF		// Memory Mapped Registers
+reserved   0xFC0A8118 0xFFFFFFFF

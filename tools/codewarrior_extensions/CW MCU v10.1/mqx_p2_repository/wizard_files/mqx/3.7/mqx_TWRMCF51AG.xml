@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+  <uiExtension>
+	<pages>
+	  <page id="mcu.mqxprojectwizard1.page.devices">
+		<uiElement id="mcu.mqxprojectwizard1.chip.list">		 
+		  <elementChoice id="mcu.mqxprojectwizard1.board.list.cf">  
+		    <elementChoice name="TWRMCF51AG Board" id="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG" 
+        systemTypeId="com.freescale.cw.system.coldfire.MCF51AG.MCF51AG128"
+        contentHelp="TWRMCF51AG Board&#10;&#10;..."> 		     
+		    </elementChoice>
+		  </elementChoice>
+		  	</uiElement>
+	  </page>
+	</pages>
+
+    		    
+<conditions>
+	<!--Conditions to include selected targets in the new project.
+        We add them with OR so that all conditions defined in other files
+        or in plugin.xml also apply.
+        Here Condition means if true, then perform the action, which is defined with 
+        this condition ID,
+        e.g. copy cfg file for EXTRAM to project.
+        
+        TODO: Define by conditions which modules this board supports (USBHost, MFS etc.)
+        TODO: Define  by conditions which targets will be included in the new project if 
+              this board is selected 
+  -->      
+    <condition id="mcu.mqxprojectwizard1.condition.hasmfs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG" />
+			</or>
+		</condition>		 
+		<condition id="mcu.mqxprojectwizard1.condition.hasshell">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG" />
+			</or>
+		</condition>			
+    <condition id="mcu.mqxprojectwizard1.condition.hasrtcs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG" />
+			</or>
+		</condition>       	
+      		
+    <!-- Conditions to define the configurations (targets) for this board -->
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_INT_FLASH_DEBUG">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_INT_FLASH_RELEASE">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		<!-- Conditions to define ColdFire version -->		
+		<condition id="mcu.mqxprojectwizard1.condition.isColdFire.v1">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		
+			<!-- Conditions to define which connections this board supports (e.g. OSBDM, PEBDM) -->	
+		<condition id="mcu.mqxprojectwizard1.condition.connection.haspebdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasosbdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>	
+		<!-- To enable P&E Cyclone Pro connections (ColdFire v1 only)-->
+		<condition id="mcu.mqxprojectwizard1.condition.support.pneserial">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.support.pneusb">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.support.pnetcpip">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+			</or>
+		</condition>
+		
+
+	</conditions>
+	</uiExtension>
+ 
+ <newProjectExtension>
+  	<variables>
+	  <variable name="BoardName" value="twrmcf51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG" />
+	  	  <variable name="BoardID" value="ID_BOARD_TWRMCF51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="ChipName" value="MCF51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>	
+	  <variable name="ChipHeaders" value="MCF51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="ChipFamily" value="V1" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="ChipCompSelect" value="51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="ChipAssemblySelect" value="51AG" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="ChipDebugSelect" value="MCF51AG128" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <!--
+    <variable name="TtfFileNames" value="mcf51ag128_Int_Flash.ttf" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>
+	  <variable name="TaskNamePrefix" value="mcf51ag128" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRMCF51AG"/>	    
+    -->
+    </variables>
+  </newProjectExtension>
+
+</wizardExtension>

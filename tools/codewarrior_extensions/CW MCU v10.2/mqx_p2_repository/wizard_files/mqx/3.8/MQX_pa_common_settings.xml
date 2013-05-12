@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+		
+			<settingsGroup id="MQX_pa_common_settings">
+			
+				<settingsGroupRef id="MQX_common_settings_elf_importer"/>
+			
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Debugger PIC Settings Panel.altLoadAddr" value="0" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Debugger PIC Settings Panel.enableAltLoadAddr" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVconstant" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVexecutable" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVinitialized" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVuninitialized" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVconstant" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVexecutable" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVinitialized" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVuninitialized" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.coreIndex" value="0" type="integer"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.homogeneousMulticore" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.simulator" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.doMountRoot" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.doRedirectStdout" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.doRedirectTrace" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.rootFolder" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.stdoutFile" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.traceFile" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.traceLevel" value="1" type="integer"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.useSharedConsole" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.System Call Service.useSyscalls" value="false" type="boolean"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.eppc.EPPCDebugger" type="string"/>
+
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtExit" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtProgramEntryPoint" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtStartUp" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtUserSpecified" value="false" type="boolean"/>
+				<!-- controlled by MQX_pa_int_flash_settings.xml  
+        <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.StandardDownload" value="true" type="boolean"/>
+        -->
+				<applySetting id="com.freescale.cdt.debug.cw.PN_StopAtProgramEntryPoint" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.Symbolics.CacheSymbolicsBetweenRuns" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.Symbolics.UseExecutableCopy" value="false" type="boolean"/>
+
+
+				<applySetting id="com.freescale.panel.list" type="list" mode="append">
+					<listValue value="Debugger Common Settings"/>
+					<listValue value="EPPC Exceptions"/>
+					<listValue value="Embedded Download"/>
+					<listValue value="Debugger PIC Settings Panel"/>
+					<listValue value="System Call Service"/>
+					<listValue value="Other Executables"/>
+					<listValue value="Symbolics"/>
+					<listValue value="osawareness"/>
+				</applySetting>
+
+        <!-- Added or moved from other file for MQX -->
+        <applySetting id="com.freescale.cdt.debug.cw.osawareness.osContributorID" mode="replace" type="string" value="com.freescale.os.mqx.cortexm"/>
+	       <applySetting
+                        id="com.freescale.cdt.debug.cw.osawareness.rtospluginname"
+                        mode="replace"
+                        type="string"
+                        value="MQX RTOS PPC">
+                  </applySetting>
+                  <applySetting
+                        id="com.freescale.cdt.debug.cw.osawareness.targetos"
+                        mode="replace"
+                        type="string"
+                        value="MQX OS for PowerPC">
+                  </applySetting>	
+                  
+        <applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useInitFile" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.initPath" value="${MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${ChipId}_${pa_VLE_BOOKE_var}.tcl" type="string"/>
+	         
+	         <!-- from e200_multi_core_settings.xml -->
+	      <applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.smp" value="true" type="boolean"/>				
+				<applySetting id="com.freescale.cdt.debug.cw.SMPCores" type="list" mode="append">
+					<listValue value="0"/>
+					<!-- <listValue value="1"/> -->
+				</applySetting>				
+				<applySetting id="com.freescale.cdt.debug.cw.CoreNameList" type="list" mode="append">
+					<listValue value="${CoreIdDbg}#0"/>
+					<!-- <listValue value="${CoreIdDbg}#1"/> -->
+				</applySetting>				
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value="${MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${ChipId}_LS.mem" type="string"/>        
+        <!-- End added for MQX -->		
+				
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.EPPC Debugger.processor" value="${ProcessorIdDbg}" type="string"/>
+				<applySetting
+					id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Processor Attr Name"
+					value="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.EPPC Debugger.processor" type="string">
+				</applySetting>
+				
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

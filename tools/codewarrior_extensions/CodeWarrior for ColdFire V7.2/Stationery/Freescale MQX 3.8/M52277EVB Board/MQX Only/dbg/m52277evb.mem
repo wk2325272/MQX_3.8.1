@@ -1,0 +1,33 @@
+// Memory Configuration File
+//
+// Description:
+//  A memory configuration file contains commands that define the legally accessible
+//  areas of memory for your specific board. Useful for example when the debugger
+//  tries to display the content of a "char *" variable, that has not yet been initialized.
+//  In this case the debugger may try to read from a bogus address, which could cause a
+//  bus error.
+//
+// Board:
+//  Freescale MUSHU/M52277EVB
+//
+// Reference:
+//  M52277EVBUM.pdf
+
+
+// All reserved ranges read back 0xBABA...
+reservedchar 0xBA
+
+usederivative "MCF52277"
+
+//         Memory Map:
+//         ----------------------------------------------------------------------
+
+range      0x00000000 0x00FFFFFF 4 Read         // 16 MByte External Flash
+reserved   0x01000000 0x3FFFFFFF
+range      0x40000000 0x43FFFFFF 4 ReadWrite    // 64 MBytes SDRAM
+reserved   0x44000000 0x7FFFFFFF
+range      0x80000000 0x8001FFFF 4 ReadWrite    // 128 KBytes Internal SRAM
+reserved   0x80020000 0xFBFFFFFF
+//         0xFC000000 0xFC0C4007                // Memory Mapped Registers
+reserved   0xFC0C0008 0xFFFFFFFF
+

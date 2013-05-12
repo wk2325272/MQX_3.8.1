@@ -1,0 +1,46 @@
+// Memory Configuration File
+//
+// Description:
+//  A memory configuration file contains commands that define the legally accessible
+//  areas of memory for your specific board. Useful for example when the debugger
+//  tries to display the content of a "char *" variable, that has not yet been initialized.
+//  In this case the debugger may try to read from a bogus address, which could cause a
+//  bus error.
+//
+// Board:
+//  M54455EVB Alpha
+//
+// Reference:
+//  ?
+
+
+// All reserved ranges read back 0xBABA...
+reservedchar 0xBA
+
+address 	MMUBAR_BASE 	0x11000000
+
+usederivative "MCF54455"
+
+//         Memory Map:
+//         ----------------------------------------------------------------------
+range      0x00000000 0x01FEFFFF 4 ReadWrite	// 32Mb FLASH
+reserved   0x01FF0000 0x03FFFFFF
+range      0x04000000 0x0406FFFF 4 ReadWrite    // 512K FLASH
+reserved   0x04070000 0x07FFFFFF
+
+range      0x08000000 0x08FEFFFF 4 ReadWrite    // CPLD
+reserved   0x08FF0000 0x08FFFFFF
+range      0x09000000 0x09FEFFFF 4 ReadWrite    // FPGA 
+reserved   0x09FF0000 0x10FFFFFF
+
+//    	   $MMUBAR_BASE $MMUBAR_BASE + 0xFFFF	// Disabled: Memory Mapped MMU Registers 
+reserved   $MMUBAR_BASE + 0x0000001C 0x3FFFFFFF
+
+//         insert MMU range here
+range      0x40000000 0x4FFFFFFF 4 ReadWrite    // 256 MBytes DDR2 SDRAM
+reserved   0x50000000 0x7FFFFFFF
+
+range      0x80000000 0x80007FFF 4 ReadWrite    // 32K SRAM (RAMBAR)
+reserved   0x80008000 0xFBFFFFFF
+//         0xFC000000 0xFC0FFFFF		// Memory Mapped Registers
+reserved   0xFC0C4008 0xFFFFFFFF

@@ -1,0 +1,16 @@
+
+   /* MFS commands */ 
+   { "cd",        Shell_cd },      
+   { "copy",      Shell_copy },
+   { "create",    Shell_create },
+   { "del",       Shell_del },       
+   { "disect",    Shell_disect},      
+   { "dir",       Shell_dir },      
+   { "format",    Shell_format },
+   { "mkdir",     Shell_mkdir },     
+   { "pwd",       Shell_pwd },       
+   { "read",      Shell_read },      
+   { "ren",       Shell_rename },    
+   { "rmdir",     Shell_rmdir },
+   { "type",      Shell_type },
+   { "write",     Shell_write },

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+    <variables>
+    
+            <!-- 
+            ****************************** 
+            main.h variables
+            ************************************
+            -->
+
+             <!-- $mainh_usbdevice_includes$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainh_usbdevice_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice"
+                     value="[[[!codeblock]]]mainh_usbdevice_includes.h"> 
+               </enumeratedValue>
+            </enumeratedVariable>
+  
+            <!-- 
+            ****************************** 
+            main.c variables
+            ************************************
+            -->       
+
+            <!-- $usbd_init_function_prototype$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbd_init_function_prototype">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice"
+                     value="[[[!codeblock]]]usbd_init_function_prototype.h">                     
+               </enumeratedValue>
+             </enumeratedVariable>    
+ 
+            <!-- $mainc_usbdevice_includes$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_usbdevice_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice"
+                     value="[[[!codeblock]]]mainc_usbdevice_includes.c"> 
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            <!-- $mainc_usbd_init_call$ -->
+             <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_usbd_init_call">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbdevice"
+                     value="[[[!codeblock]]]mainc_usbd_init_call.c"> 
+               </enumeratedValue>
+            </enumeratedVariable>
+            
+            
+   
+            
+    </variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

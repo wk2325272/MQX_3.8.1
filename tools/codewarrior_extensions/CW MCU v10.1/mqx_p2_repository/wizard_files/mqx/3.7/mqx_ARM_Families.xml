@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<uiExtension>
+		<pages>
+			<page id="mcu.mqxprojectwizard1.page.devices">
+				<uiElement id="mcu.mqxprojectwizard1.chip.list">
+					<elementChoice id="mcu.mqxprojectwizard1.board.list.kinetis" name="Kinetis Evaluation Boards" contentHelp="Kinetis MCUs represent the most scalable portfolio of 32-bit ARM&#174; Cortex&#x2122;-M4 MCUs in the industry. This portfolio includes MCU families with pin-, peripheral- and software compatible devices with outstanding performance (50-180MHz), memory (32KB to 1MB) and feature scalability. Enabled with unique FlexMemory (configurable embedded EEPROM), Kinetis features the latest low-power innovations and high performance, high precision mixed-signal capability." hideIfEmpty="false">
+					</elementChoice>
+				</uiElement>
+			</page>
+		</pages>
+	</uiExtension>
+</wizardExtension>

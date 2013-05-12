@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings><settingsGroup 
+conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4"
+id="MQX_ColdFirev2_v4_common">
+<settingsGroupRef id="MQX_cf_v2_v4_common_settings"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.accessError" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.addressError" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.divideByZero" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.formatError" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.illegalInstruction" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.irq7BreakButton" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.onPCBreakpointDebugInterrupt" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.pcBreakpointDebugInterrupt" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.privilegeViolation" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.spuriousInterrupt" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.trace" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.trap14ConsoleIO" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.unimplementedLineAOpcode" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.unimplementedLineFOpcode" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.uninitializedInterrupt" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.unsupportedInstruction" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Exceptions.userAppTrap14ConsoleIO" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Interrupt.interrupt_mask" value="0" type="integer"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Interrupt.interrupt_enabled" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Reset.initialPC" value="0" type="integer"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Reset.initialSP" value="0" type="integer"/>
+
+<!-- jd: changed from 0 to 3 according to template -->
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.CF Reset.source" value="3" type="integer"/>
+
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Debugger PIC Settings Panel.altLoadAddr" value="0" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Debugger PIC Settings Panel.enableAltLoadAddr" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDconstant" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDexecutable" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDinitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDuninitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVconstant" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVexecutable" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVinitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVuninitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDconstant" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDexecutable" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDinitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDuninitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVconstant" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVexecutable" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVinitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVuninitialized" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.homogeneousMulticore" value="false" type="boolean"/>
+
+<!-- Fix @MTWX43175 (Bareboard) -->
+<applySetting id="com.freescale.cdt.debug.cw.executeReset" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useDefaultConfigFile" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useInitFile" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.initPath" value="${unevaluated:MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${BoardName}.cfg" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="true" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value="${unevaluated:MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${BoardName}.mem" type="string"/>
+
+
+<applySetting id="com.freescale.cdt.debug.cw.CoreNameList" type="list" mode="append"><listValue value="ColdFire"/></applySetting>
+<applySetting id="com.freescale.cdt.debug.cw.Symbolics.CacheSymbolicsBetweenRuns" value="false" type="boolean"/>
+<applySetting id="com.freescale.cdt.debug.cw.Symbolics.UseExecutableCopy" value="false" type="boolean"/>
+
+<applySetting id="com.freescale.cdt.debug.cw.restoreAllBPsList" type="list" mode="append"><listValue value="true"/></applySetting>
+<applySetting id="com.freescale.cdt.debug.cw.runOutOfResetList" type="list" mode="append"><listValue value="false"/></applySetting>
+
+<applySetting id="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.coldfire.ColdFireDebugger" type="string"/>
+
+
+</settingsGroup>
+
+</launchSettings></newProjectExtension></wizardExtension>

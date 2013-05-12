@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Export-Package: com.keypoint,org.jfree,org.jfree.base,org.jfree.base.c
+ onfig,org.jfree.base.log,org.jfree.base.modules,org.jfree.chart,org.j
+ free.chart.annotations,org.jfree.chart.axis,org.jfree.chart.block,org
+ .jfree.chart.demo,org.jfree.chart.editor,org.jfree.chart.encoders,org
+ .jfree.chart.entity,org.jfree.chart.event,org.jfree.chart.imagemap,or
+ g.jfree.chart.labels,org.jfree.chart.needle,org.jfree.chart.panel,org
+ .jfree.chart.plot,org.jfree.chart.plot.dial,org.jfree.chart.renderer,
+ org.jfree.chart.renderer.category,org.jfree.chart.renderer.xy,org.jfr
+ ee.chart.resources,org.jfree.chart.servlet,org.jfree.chart.title,org.
+ jfree.chart.urls,org.jfree.chart.util,org.jfree.data,org.jfree.data.c
+ ategory,org.jfree.data.contour,org.jfree.data.function,org.jfree.data
+ .gantt,org.jfree.data.general,org.jfree.data.io,org.jfree.data.jdbc,o
+ rg.jfree.data.resources,org.jfree.data.statistics,org.jfree.data.time
+ ,org.jfree.data.time.ohlc,org.jfree.data.xml,org.jfree.data.xy,org.jf
+ ree.date,org.jfree.experimental.chart.demo,org.jfree.experimental.cha
+ rt.plot,org.jfree.experimental.chart.renderer.xy,org.jfree.experiment
+ al.chart.swt,org.jfree.experimental.chart.swt.demo,org.jfree.experime
+ ntal.chart.swt.editor,org.jfree.experimental.swt,org.jfree.io,org.jfr
+ ee.layout,org.jfree.resources,org.jfree.text,org.jfree.threads,org.jf
+ ree.ui,org.jfree.ui.about,org.jfree.ui.about.resources,org.jfree.ui.a
+ ction,org.jfree.ui.tabbedui,org.jfree.util
+Require-Bundle: org.eclipse.swt;bundle-version="3.4.1"
+Bundle-ClassPath: jcommon-1.0.16.jar,jfreechart-1.0.13.jar,jfreechart-
+ 1.0.13-experimental.jar,jfreechart-1.0.13-swt.jar,swtgraphics2d.jar
+Bundle-Version: 1.1.11.201206140913
+Bundle-Name: JFreeChart Libraries
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.freescale.mqx.jfreechart.libs
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<uiExtension>
+		<pages>
+			<page id="mcu.mqxprojectwizard1.page.devices">
+				<uiElement id="mcu.mqxprojectwizard1.chip.list">
+					<elementChoice id="mcu.mqxprojectwizard1.board.list.ppc" name="PowerPC Evaluation Boards" contentHelp="PPC" hideIfEmpty="false">
+					</elementChoice>
+				</uiElement>
+			</page>
+		</pages>
+	</uiExtension>
+</wizardExtension>

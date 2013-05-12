@@ -1,0 +1,34 @@
+%- (C) 2009 Freescale
+%- All rights reserved
+%- Author: Jaroslav Cernoch
+%- Revisions: Marek Vinkler
+%-
+%------------------------------------------------------------------------------
+%- Definitions of symbols for CPU component
+%------------------------------------------------------------------------------
+%-
+%define_prj! PE_G_CPUCFG_EntryPointFunctionName __pe_initialize_hardware
+%define_prj! PE_G_CPUCFG_ManageInterruptVectorTable no
+%define_prj! PE_G_CPUCFG_GenerateMainModule no
+%define_prj! PE_G_CPUCFG_GenerateLinkerFile no
+%define_prj! PE_G_CPUCFG_InitIntVectorTableSym no
+%define_prj! PE_G_CPUCFG_AutoIncludeStartupFile no
+%define_prj! PE_G_CPUCFG_AutoIncludeIO_Map no
+%-
+%-
+%include Sw\RTOSAdaptor\MQX_RTOSAdaptor.prg
+%-
+%------------------------------------------------------------------------------
+%- Publishing component properties
+%------------------------------------------------------------------------------
+%-
+%-
+%------------------------------------------------------------------------------
+%- Definitions of abstract RTOS functions
+%------------------------------------------------------------------------------
+%inclSUB RTOSAdap_defineRTOSFunction(Malloc,hasUserMallocFun,userMallocFunName,void *,(unsigned size),_mem_alloc_system)
+%inclSUB RTOSAdap_defineRTOSFunction(Dealloc,hasUserDeallocFun,userDeallocFunName,void,(void *ptr),_mem_free)
+%inclSUB RTOSAdap_defineRTOSFunction(EnterCritical,hasUserEnterCriticalFun,userEnterCriticalFunName,void,(void),_int_disable)
+%inclSUB RTOSAdap_defineRTOSFunction(ExitCritical,hasUserExitCriticalFun,userExitCriticalFunName,void,(void),_int_enable)
+%-
+%-

@@ -1,0 +1,4 @@
+
+instructions.install=\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:@artifact/../mqx_p2_repository/wizard_files/mqx/3.8,target:${installFolder}/../MCU/lib/wizard_data/mqx/3.8,overwrite:true);
+

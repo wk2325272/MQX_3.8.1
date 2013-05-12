@@ -1,0 +1,342 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+
+
+<html>
+<head>
+<title>Freescale MQX Webserver</title>
+<style type="text/css">
+
+.header{
+	background-color: #ffffff;
+	vertical-align: top; 
+	text-align: right; 
+	padding-right: 5px;	
+	
+}
+.headerText{
+	text-align: right;
+}
+
+
+.padMe5 {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+}
+
+.Hdr {
+	font-weight: bold;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFF;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	font-weight: normal;
+	color: #51626F;
+}
+
+a{
+	color: #017bba;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #017bba;
+	text-decoration: underline;
+}
+
+h1 {
+	line-height: 28px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	text-indent: 0px;
+}
+
+#mncnt {
+	padding: 0px 0px 0px 12px;
+}
+
+.cframe{
+	margin: 0px 0px 0px 164px;
+}
+
+.lcn { width: 598px; }
+
+/* Begin Left Nav CSS  */
+
+#lfnvcl {
+	float: left;
+	width: 157px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#lnv h1, #lnv h2, #lnv h3, #lnv h4, #lnv h5, #lnv h6 {
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+#lnv, #lnv ul { /* all left nav lists */
+	padding: 0px 0px 1px 1px;
+	margin: 0px;
+	list-style: none;
+	float : left;
+	/*width : 157px;*/
+	width:157px;
+	display: block;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	background-color: #FFF;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+	font-size: .9em;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	border: 1px solid #C4CFD1;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+}
+
+#lnv a {
+	color: #51626F;
+	text-decoration: none;
+}
+
+#lnv a:hover {
+	color: #51626F;
+	text-decoration: underline;
+}
+
+#lnv .pt {
+	background-color: #C4CFD1;
+}
+
+#lnv .ar {
+	background: url(arrow.gif) center right no-repeat;
+	background-color: #E0E6E6;
+}
+
+
+
+#lnv li { /* all list items */
+	position : relative;
+	float : left;
+	line-height : 16px;
+	margin: 0px;
+	padding: 0px;
+	width: 157px;
+	background-color: #FFF;
+	z-index: 50;
+}
+	
+#lnv li ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	margin-left : 161px;
+	margin-top : -24px;
+	font-size: 1em;
+}
+
+
+	
+#lnv li a {
+	width: 144px;
+	w\idth : 144px;
+	display : block;
+	font-weight : normal;
+	text-decoration : none;
+	background-color: #E0E6E6;
+	margin : 0px;
+	padding: 3px 12px 3px 5px;
+	border-top: 1px solid #FFF;
+}
+	
+#lnv li a:hover {
+	background-color : #C4CFD1;
+}
+	
+#lnv li:hover ul ul, #lnv li:hover ul ul ul, #lnv li.sfhover ul ul, #lnv li.sfhover ul ul ul {
+	left: -999em;
+	background-color: #FFF;
+}
+	
+#lnv li:hover ul, #lnv li li:hover ul, #lnv li li li:hover ul, #lnv li.sfhover ul, #lnv li li.sfhover ul, #lnv li li li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+	background-color: #FFF;
+}
+	
+#ftr{
+	position: relative;
+	float: left;
+	clear: both;
+	display: block;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	width: 988px;
+	height: 23px;
+	line-height: 23px;
+	border: 1px solid #C3CFD1;
+	font-size: .9em;
+	background-color: #FFF;
+	z-index: 1;
+}
+
+
+#ftr .copyright {
+	float: right;
+	padding-right: 5px;
+}
+
+
+
+
+div.hrw {
+  background: #aaaaaa repeat-x scroll center;
+	margin: 0;
+	padding: 0;
+	height: 1px;
+}
+div.hrw hr {
+  display: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*************Breadcrumbs************/
+/*Standard breadcrumbs*/
+.breadcrumbs {
+	margin: 0em;
+	padding: .5em .5em;
+	font-size: .9em;
+	line-height: 1.4em;
+}
+/*Standard breadcrumbs anchor*/
+.breadcrumbs a{
+	color: #51626F;
+	text-decoration: none;
+	padding-right: 1.4em;
+	background: url(bc_seperator.gif) center right no-repeat;
+}
+/*Standard breadcrumbs anchor on hover*/
+.breadcrumbs a:hover{
+	color: #51626F;
+	text-decoration:underline;
+}
+/*Standard breadcrumbs visited anchor*/
+.breadcrumbs a:visited{
+	color: #51626F;
+	text-decoration: none;
+
+}
+/*Standard breadcrumbs visited anchor on hover*/
+.breadcrumbs a:visited:hover{
+	color: #51626F;
+	text-decoration: underline;
+
+}
+
+</style>
+<script type="text/javascript">
+
+sfHover2 = function() {
+	var navthree = document.getElementById("lnv");
+	if (navthree){
+		var sfEls2 = document.getElementById("lnv").getElementsByTagName("LI");
+		for (var i=0; i<sfEls2.length; i++) {
+			sfEls2[i].onmouseover=function() {
+				this.className+=" sfhover";
+			}
+			sfEls2[i].onmouseout=function() {
+				this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+			}
+		}
+	}
+}
+
+if (window.attachEvent) {
+	window.attachEvent("onload", sfHover2);
+}
+</script>
+
+</head>
+<body>
+
+
+<a href="http://www.freescale.com" title="Freescale"><img src="header.gif" alt="Freescale Semiconductor" width="990" height="50" border="0"/></a><BR>
+<div id="lfnvcl">
+<ul id="lnv">
+<li><a href="../mqx.html" class="pt">Webserver Home</a></li>
+<li><a href="index.htm" class="pt">ColdFire® MCF5225x</a></li>
+<li><a href="core_int.htm">&nbsp;&nbsp;ColdFire Core</a></li>
+<li><a href="memory.htm" >&nbsp;&nbsp;Flash and SRAM</a></li>
+<li><a href="eth_int.htm">&nbsp;&nbsp;FEC</a></li>
+<li><a href="USB.htm">&nbsp;&nbsp;USB</a></li>
+<li><a href="CAU.htm">&nbsp;&nbsp;CAU</a></li>
+<li><a href="can_intr.htm">&nbsp;&nbsp;CAN</a></li>
+<li><a href="minibus.htm">&nbsp;&nbsp;Mini-FlexBus</a></li>
+<li><a href="EMAC.htm">&nbsp;&nbsp;EMAC</a></li>
+<li><a href="sys_int.htm">&nbsp;&nbsp;System Integration</a></li>
+<li><a href="debug.htm">&nbsp;&nbsp;Debug</a></li>
+<li><a href="RTC_int.htm">&nbsp;&nbsp;RTC</a></li>
+<li><a href="GPIO.htm">&nbsp;&nbsp;GPIO</a></li>
+<li><a href="PLL.htm">&nbsp;&nbsp;PLL</a></li>
+<li><a href="DTIMER.htm">&nbsp;&nbsp;DTimer</a></li>
+<li><a href="I2C.htm">&nbsp;&nbsp;I2C</a></li>
+<li><a href="UART_int.htm">&nbsp;&nbsp;UART</a></li>
+<li><a href="GPT_int.htm">&nbsp;&nbsp;GPT</a></li>
+<li><a href="QSPI.htm">&nbsp;&nbsp;QSPI</a></li>
+<li><a href="RTC_int.htm">&nbsp;&nbsp;RTC</a></li>
+<li><a href="ADC_int.htm">&nbsp;&nbsp;ADC</a></li>
+<li><a href="pit_int.htm">&nbsp;&nbsp;PIT</a></li>
+<li><a href="pwm_int.htm">&nbsp;&nbsp;PWM</a></li>
+<li><a href="DMA_int.htm">&nbsp;&nbsp;DMA</a></li>
+<li><a href="ezp_int.htm">&nbsp;&nbsp;EZPORT</a></li>
+</ul>
+</div>
+
+
+ <div id="mncnt" class="cframe">
+	<div class="breadcrumbs"><a href="index.htm">ColdFire&reg; MCF5225x </a>DMA Timers (DTIM0-DTIM3)</div>
+
+  
+<div class="lcn" >
+      <div class="padMe5"></div>
+       <div class="hrw"><hr /></div>
+   <h1>DMA Timers (DTIM0-DTIM3)</h1>
+
+ <div class="hrw"><hr /></div>
+  
+  <p align="left"><font face="Arial">These 32-bit timers provide input capture and 
+reference compare capabilities with optional signaling of events using 
+interrupts or DMA triggers. Each DMA timer module has a separate register set 
+for configuration and control. The timers can be
+configured to operate from the internal bus clock or from an external clocking 
+source using the DTINn signal. If the internal bus clock is selected, it can be divided by 16 or 1. The 
+selected clock source is routed
+to an 8-bit programmable prescaler that clocks the actual DMA timer counter 
+register (DTCNn). Using the
+DTMRn, DTXMRn, DTCRn, and DTRRn registers, the DMA timer may be configured to 
+assert an output
+signal, generate an interrupt, or request a DMA transfer on a particular event.</font></p>
+  <p align="left"><font face="Arial">Each DMA timer module has:</font></p>
+  <ul>
+    <li> Maximum timeout period of 109,951 seconds at 80 MHz (~30 hours)</li><li> 12.5-ns resolution at 80 MHz</li><li> Programmable sources for the clock input, including external clock</li><li> Programmable prescaler</li><li> Input-capture capability with programmable trigger edge on input pin</li><li> Programmable mode for the output pin on reference compare</li><li> Free run and restart modes</li><li> Programmable interrupt or DMA request on input capture or reference-compare</li><li> Ability to stop the timer from counting when the ColdFire core is halted</font></li>
+  </ul>
+  </div>
+ </div>
+<div id="ftr">
+<div id=copyright>
+<center>&copy; Freescale Semiconductor, Inc. 2004 - 2008. All Rights Reserved </center>
+</div>
+</div>
+
+</body>
+</html>	

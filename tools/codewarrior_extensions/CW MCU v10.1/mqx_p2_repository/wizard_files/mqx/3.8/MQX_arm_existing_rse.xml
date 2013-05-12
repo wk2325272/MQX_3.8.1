@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_arm_existing_rse">
+				
+				<settingsGroupRef id="MQX_arm_common_settings"/>
+				
+				<settingsGroup id="rse_arm_common" conditionId="mcu.mqxprojectwizard1.connections.list.arm.selectExistingSystemID">
+					<applySetting
+						id="com.freescale.cdt.debug.cw.core.settings.rseSystemId" 
+						type="string" 
+						value="${rseHostCombo:mcu.mqxprojectwizard1.connections.list.arm.rseHostComboComposite}">
+					</applySetting>
+				</settingsGroup>
+				
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

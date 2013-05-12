@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<wizardExtension>
+
+<!-- 
+  Version 2: 
+  This file is directly used by wizard so the elements must be in the
+  format required by wizard.   
+-->
+
+<uiExtension>
+	<pages>
+	  <page id="mcu.mqxprojectwizard1.page.selectexample">		                 
+      <uiElement id="mcu.mqxprojectwizard1.example.list">
+      
+         <!-- Defines one item (example application) in the list in wizard GUI -->
+         <!-- enablementCondition is used to display only examples available for
+              selected board. 
+              NOTE that current implementation depends on the name of the condition,
+              which must be derived from example name. The element enablementCondition=
+              is in fact ignored (?bug in listTree in MCU wizard?) and we handle the
+              hiding of unwanted examples by our code. 
+          -->     
+     
+<!-- 
+*********************************************   
+***************   ITEM 1 ******************** 
+* example properties   
+*********************************************   
+--> 
+
+    <elementChoice id="mcu.mqxprojectwizard1.example.list.basic">
+     
+       <!-- NOTE: the comment with "sub-category begin" is used by script. 
+            Do not modify or remove it! -->
+        <!-- Optional sub-category begin: -->
+        <!-- <elementChoice id="mcu.mqxprojectwizard1.example.list.{EXAMPLE_SUB_CATEGORY_ID}"> -->     		                
+          <elementChoice name="lwevent example" id="mcu.mqxprojectwizard1.example.lwevent"		        
+          contentHelp="Simple demonstration of MQX lightweight events." 
+          enablementCondition="mcu.mqxprojectwizard1.condition.examples.display.lwevent.example"> 		     		 
+		      </elementChoice>
+        <!-- Optional sub-category end: -->
+        <!-- </elementChoice> -->     			      		    
+    </elementChoice>
+        		      		       
+  </uiElement>		  		  		  
+ </page>
+</pages>	
+	 
+<conditions>	 
+ <!-- 
+*********************************************   
+***************   ITEM 2   ******************
+* list of boards for which the example is (in)visible  
+*********************************************   
+-->
+    <!-- 
+    Define which boards are excluded for this example.
+    For example, if for Hello application the ID_BOARD_TWRK60N512 is listed here, 
+    then the Hello example will not be visible if user selects ID_BOARD_TWRK60N512.
+    -->
+     
+    <!-- 
+    TODO: Create the condition for your example and insert the list of boards 
+        for which this example is invisible).
+        If there are no such boards (example is always visible), 
+        define the condition as true like this:
+        <condition id="mcu.mqxprojectwizard1.condition.examples.lwevent.example">
+        <true/> </condition>      
+    -->
+ 
+  <!-- Display condition for lwevent -->
+  <condition id="mcu.mqxprojectwizard1.condition.examples.display.lwevent.example">
+    <not>
+      <or>        
+        <!-- Example of board definition 
+         <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M53015EVB"/> 
+        -->        
+      </or>
+    </not>
+  </condition>  <!-- End of display condition for lwevent -->
+         
+<!-- 
+*********************************************   
+***************   ITEM 3   ****************** 
+* libraries required by the examples 
+*********************************************   
+-->	
+	<!-- 
+  Define the libraries required by each example application.      
+  -->
+  
+    <!--
+    TODO: if the example requires library Lx, add the example into the list 
+        for the library Lx. All supported libraries are already defined here,
+         just add example into the list.  
+    -->
+  
+  <!-- Define examples which use MFS library -->
+	<condition id="mcu.mqxprojectwizard1.condition.examples.mqxmfs">
+			<or>
+				<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.example.lwevent"/> -->				        
+			</or>
+	</condition>
+		
+	<!-- Define examples which use RTCS library -->
+	<condition id="mcu.mqxprojectwizard1.condition.examples.mqxrtcs">
+		<or>			
+		</or>
+	</condition>
+	
+	<!-- Define examples which use USB HOST library -->
+  <condition id="mcu.mqxprojectwizard1.condition.examples.mqxusbhost">
+			<or>							
+			</or>
+	</condition>
+	
+	<!-- Define examples which use USB Device library -->
+  <condition id="mcu.mqxprojectwizard1.condition.examples.mqxusbdevice">
+			<or>							
+      </or>
+	</condition>
+	
+  <!-- Define examples which use Shell library -->
+  <condition id="mcu.mqxprojectwizard1.condition.examples.mqxshell">
+			<or>								
+			</or>
+	</condition>
+	
+ </conditions>	
+</uiExtension>
+
+<newProjectExtension>
+  <variables>
+
+<!--
+*********************************************   
+***************   ITEM 4 ******************** 
+* source folders   
+*********************************************
+-->
+     	
+  	<!-- 
+    Define the source folders and files for this example application. 
+    There is one variable for folders and one for files.
+    Multiple folders/files can be specified in the "value", separated by ";"
+    For folders all content is copied to project and added to project.
+    For files only the specified file is copied to project and added to project.
+    NOTE that exclusions apply as defined in mqx_examples_exclusions.xml.
+    -->
+    
+    
+    <!--
+    TODO: Insert the path(s) of source directories
+        which should be copied to the project.
+        Multiple paths may be defined in the "value", separated by ";"
+    -->
+    <variable name="MQX_ExampleSourceFolders" value="${MQX_ROOT_DIR}/mqx/examples/lwevent" 
+      conditionId="mcu.mqxprojectwizard1.example.lwevent"/>
+  	           
+  
+<!--
+*********************************************   
+***************   ITEM 5 ******************** 
+* source files   
+*********************************************
+-->
+  
+  <!-- 
+  Define the file(s) to add to project. 
+  Multiple files can be specified in the "value", separated by ";" 
+  -->
+  <!--
+  <variable name="MQX_ExampleSourceFiles" value="{EXAMPLE_SOURCE_FILE}" 
+      conditionId="mcu.mqxprojectwizard1.example.lwevent"/>    
+  </variables>
+  -->
+  </variables>
+</newProjectExtension>
+		
+</wizardExtension>
+

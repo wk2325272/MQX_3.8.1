@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<plugin>
+  <name>MQX</name>
+  <dllFile>$EW_DIR$\arm\plugins\rtos\MQX\MQXRtosPluginARM.dll</dllFile>
+  <description>MQX Kernel Awareness (ARM)</description>
+  <defaultLoad>no</defaultLoad>
+  <originator>Freescale Semiconductor, Embedded Access Inc.</originator>
+  <version>0.1</version>
+</plugin>

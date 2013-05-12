@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_pne_arm_multilink_usb">
+				
+				<settingsGroupRef id="MQX_arm_common_settings"/>				
+
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="ARM GDI" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.pemicro.mcu.debug.connections.pne.arm" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.pemicro.mcu.debug.connections.pne.arm." type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.arm.Library" value="arm_pne_gdi" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.arm.PEDEBUG_CURRENTDEVICE" value="${ChipName}" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.arm.CommandLineArgs" value="arm_icd" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_PORT" value="21" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_interface_selection" value="1" type="string"/>
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

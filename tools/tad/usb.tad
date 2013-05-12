@@ -1,0 +1,11 @@
+[strings:MEM_TYPE]
+16385 = USB Host device;USB Host/Main                   
+16386 = USB Host state struct;USB Host/Main	 	  
+16387 = USB Iso packet_desc struct;USB Host/Main
+16388 = USB Host pipe descriptor;USB Host/Main
+16389 = USB Host pipe tr struct;USB Host/Main
+16390 = USB Filesystem struct;USB Host/MSD       
+16391 = USB Callback struct;USB Host/Main	 	  
+16392 = USB Mfs struct;USB Host/MSD	         	          
+16393 = USB Host service struct;USB Host/Main   
+

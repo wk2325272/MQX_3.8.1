@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<wizardExtension>
+<!-- 
+    This file defines the excluded names of files and folders for generating
+    example applications by MQX Wizard.
+    If any of these names is found in a source path, the file/directory will not
+    be added to the project.
+-->
+
+<newProjectExtension>
+  <variables>
+  
+    <!-- Excluded names
+    If this name is found in any part of the path, the file/folder is not
+    copied and added to project.
+    Names are valid for all examples.
+    Separate values by ";"
+    DEFINE EVERYTHING IN LOWER CASE!
+    -->    
+  	<variable name="MQX_ExampleExcludedNames" 
+    value="cw10;cwcf72;cwmcu63;cwmpc88;cwmpc92;iar;uv4"/>
+  
+  </variables>
+</newProjectExtension>
+
+		
+</wizardExtension>
+

@@ -1,0 +1,328 @@
+<!DOCTYPE HTML SYSTEM>
+
+<html>
+<head>
+<title>Freescale MQX Webserver: MCF5225X Family</title>
+<style type="text/css">
+.header {
+	background-color: #ffffff;
+	vertical-align: top;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.headerText {
+	text-align: right;
+}
+
+.padMe5 {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+}
+
+.Hdr {
+	font-weight: bold;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFF;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	font-weight: normal;
+	color: #51626F;
+}
+
+a {
+	color: #017bba;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #017bba;
+	text-decoration: underline;
+}
+
+h1 {
+	line-height: 28px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	text-indent: 0px;
+}
+
+#mncnt {
+	padding: 0px 0px 0px 12px;
+}
+
+.cframe {
+	margin: 0px 0px 0px 160px;
+}
+
+/* Begin Left Nav CSS  */
+#lfnvcl {
+	float: left;
+	width: 161px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#lnv h1,#lnv h2,#lnv h3,#lnv h4,#lnv h5,#lnv h6 {
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+#lnv,#lnv ul { /* all left nav lists */
+	padding: 0px 0px 1px 1px;
+	margin: 0px;
+	list-style: none;
+	float: left;
+	width: 157px;
+	display: block;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	background-color: #FFF;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+	font-size: .9em;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	border: 1px solid #C4CFD1;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+}
+
+#lnv a {
+	color: #51626F;
+	text-decoration: none;
+}
+
+#lnv a:hover {
+	color: #51626F;
+	text-decoration: underline;
+}
+
+#lnv .pt {
+	background-color: #C4CFD1;
+}
+
+#lnv .ar { /*	background: url(arrow.gif) center right no-repeat;*/
+	background-color: #E0E6E6;
+}
+
+#lnv .sp {
+	background-color: #D3DBDC;
+}
+
+#lnv .usbnav {
+	margin: -1px 0px 0px 0px;
+}
+
+#lnv li { /* all list items */
+	position: relative;
+	float: left;
+	line-height: 16px;
+	margin: 0px;
+	padding: 0px;
+	width: 157px;
+	background-color: #FFF;
+	z-index: 50;
+}
+
+#lnv li ul { /* second-level lists */
+	position: absolute;
+	left: -999em;
+	margin-left: 157px;
+	margin-top: -24px;
+	font-size: 1em;
+}
+
+#lnv li a {
+	width: 139px;
+	w\idth: 139px;
+	display: block;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: #E0E6E6;
+	margin: 0px;
+	padding: 3px 12px 3px 5px;
+	border-top: 1px solid #FFF;
+}
+
+#lnv li a:hover {
+	background-color: #C4CFD1;
+}
+
+#lnv li:hover ul ul,#lnv li:hover ul ul ul,#lnv li.sfhover ul ul,#lnv li.sfhover ul ul ul
+	{
+	left: -999em;
+	background-color: #FFF;
+}
+
+#lnv li:hover ul,#lnv li li:hover ul,#lnv li li li:hover ul,#lnv li.sfhover ul,#lnv li li.sfhover ul,#lnv li li li.sfhover ul
+	{ /* lists nested under hovered list items */
+	left: auto;
+	background-color: #FFF;
+}
+
+#lnv .usbnav {
+	margin: -1px 0px 0px 0px;
+}
+
+div.hrw {
+	background: #aaaaaa repeat-x scroll center;
+	margin: 0;
+	padding: 0;
+	height: 1px;
+}
+
+div.hrw hr {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+</style>
+
+<script type="text/javascript">
+	var rtc_value = new Array(3);
+	var data_received = 0;
+
+	// header.js
+
+	sfHover2 = function() {
+		var navthree = document.getElementById("lnv");
+		if (navthree) {
+			var sfEls2 = document.getElementById("lnv").getElementsByTagName(
+					"LI");
+			for ( var i = 0; i < sfEls2.length; i++) {
+				sfEls2[i].onmouseover = function() {
+					this.className += " sfhover";
+					hideselects('hidden');
+				}
+				sfEls2[i].onmouseout = function() {
+					this.className = this.className.replace(new RegExp(
+							" sfhover\\b"), "");
+					hideselects('visible');
+				}
+			}
+		}
+	}
+
+	if (window.attachEvent) {
+		window.attachEvent("onload", sfHover2);
+	}
+
+	function hideselects(state) {
+		for (i = 0; i < document.forms.length; i++) { // if there are forms on the page
+			frm = document.forms[i];
+			var inputs = frm.getElementsByTagName("SELECT");
+			for (j = 0; j < inputs.length; j++) {
+				inputs[j].style.visibility = state;
+			}
+		}
+	}
+</script>
+
+</head>
+<body>
+
+	<a href="http://www.freescale.com" title="Freescale"><img
+		src="header.gif" alt="Freescale Semiconductor" width="990" height="50"
+		border="0" /> </a>
+
+
+
+	<div id="lfnvcl">
+		<ul id="lnv">
+			<li><h3>
+					<a href="mqx.html" class="pt">Webserver Home</a>
+				</h3></li>
+			<li><h3>
+					<a href="hvac.html">HVAC Demo...</a>
+				</h3>
+				<ul>
+					<li><a href="hvac.html">HVAC Status</A></li>
+					<li><a href="hvac_input.html">Change Settings</A></li>
+				</ul>
+			</li>
+			<li><h3>
+					<a href="ipstat.html">Network Status...</a>
+				</h3>
+				<ul>
+					<li><a href="ipstat.html">IP Stats</a></li>
+					<li><a href="tcpstat.html">TCP Stats</a></li>
+				</ul>
+			</li>
+			<li><a href="rtc.html">System Run Time (RTC)</a></li>
+			<li><a href="mcf5225x.html">MCF5225x Family</a></li>
+			<li id="usbstick" style="visibility: <% usb_status_fn %>;"><a href="usb/index.htm">Browse
+					USB Mass Storage Device</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<div id="mncnt" class="cframe">
+
+		<div class="padMe5"></div>
+		<div class="lcn" style="width: 594px; height: 269px">
+
+			<div class="hrw">
+				<hr>
+			</div>
+			<h1>
+				<strong>MCF5225X Family</strong>
+			</h1>
+
+			<div class="hrw">
+				<hr>
+			</div>
+
+
+			<div class="padMe5"></div>
+			This 32-bit device is based on the Version 2 (V2) ColdFire reduced
+			instruction set computing (RISC) core with an enhanced
+			multiply-accumulate unit (EMAC) and hardware divider providing 76
+			Dhrystone 2.1 MIPS at a frequency up to 80 MHz. On-chip modules
+			include the following:
+			<ul>
+				<li>V2 ColdFire core with enhanced multiply-accumulate unit
+					(EMAC)
+				<li>Up to 64 Kbytes of internal SRAM
+				<li>Up to 512 Kbytes of on-chip flash memory
+				<li>Three universal asynchronous receiver/transmitters (UARTs)
+
+				
+				<li>Two inter-integrated circuit (I2C) bus controller
+				<li>12-bit analog-to-digital converter (ADC)
+				<li>Queued serial peripheral interface (QSPI) module
+				<li>Four-channel, 32-bit direct memory access (DMA) controller
+
+				
+				<li>Four 32-bit general purpose timers with optional DMA
+					support
+				<li>Two 16-bit periodic interrupt timers (PITs)
+				<li>Programmable software watchdog timer
+				<li>Two interrupt controllers capable of handling up to 128
+					interrupt sources
+				<li>Clock module with 8 MHz on-chip relaxation oscillator and
+					integrated phase-locked loop (PLL)
+				<li>External Mini-FlexBus interface
+				<li>Fast Ethernet Controller
+				<li>Cryptographic Acceleration Unit
+			</ul>
+			Attach the included USB Flash drive to your board to browse the web
+			pages on there and get more information on the MCF5225X Family.
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

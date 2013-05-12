@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<wizardExtension>
+<!--   This file defines the root categories (types of examples) and optional
+      sub-categories within these categories.
+      
+      NOTE: The MQX NPW code does not support sub-sub-categories (sub-categories in sub-category) 
+      Only two levels of categories are supported, e.g. USB HOST > HID > Some_example
+      but not USB HOST > HID > SUB-HID1 > Some_example 
+-->
+  <uiExtension>
+    <pages>
+      <page id="mcu.mqxprojectwizard1.page.selectexample">
+        <uiElement id="mcu.mqxprojectwizard1.example.list">
+        
+        <!--  !!!!!!!!!!!!!!!   IMPORTANT NOTE  !!!!!!!!!!!!!!!!!!!!!!!!!! 
+         If you add sub-category here, add also condition for it below! 
+             IMPORTANT NOTE!
+         -->
+                    
+          <!-- General MQX examples -->
+          <elementChoice id="mcu.mqxprojectwizard1.example.list.basic" name="Basic examples" contentHelp="&#10;&#10;The basic MQX examples.">
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.basic.can" name="CAN examples" contentHelp="&#10;&#10;CAN examples">            
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.basic.ipc" name="IPC examples" contentHelp="&#10;&#10;IPC Examples">            
+            </elementChoice> 
+          </elementChoice> 
+          <!-- RTCS -->                 
+          <elementChoice id="mcu.mqxprojectwizard1.example.list.rtcs" name="RTCS examples" contentHelp="&#10;&#10;The RTCS examples.">
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.rtcs.ipc_udp" name="IPC UDP examples" contentHelp="&#10;&#10;IPC UDP Examples">            
+            </elementChoice> 
+          </elementChoice>
+          
+          <!-- MFS -->
+          <elementChoice id="mcu.mqxprojectwizard1.example.list.mfs" name="MFS examples" contentHelp="&#10;&#10;The MFS examples.">
+          </elementChoice>                       
+          
+          <!-- USB Device -->
+          <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice" name="USB Device examples" contentHelp="&#10;&#10;The USB Device examples.">
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice.audio" name="Audio Device examples" contentHelp="&#10;&#10;The USB Device Audio Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice.cdc" name="CDC Device examples" contentHelp="&#10;&#10;The USB Device CDC Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice.hid" name="HID Device examples" contentHelp="&#10;&#10;The USB Device HID Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice.msd" name="MSD Device examples" contentHelp="&#10;&#10;The USB Device MSD Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbdevice.phdc" name="PHDC Device examples" contentHelp="&#10;&#10;The USB Device PHDC Examples.">
+            </elementChoice>
+          </elementChoice>                       
+          
+          <!-- USB Host -->
+          <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost" name="USB Host examples" contentHelp="&#10;&#10;The USB Host examples.">
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost.audio" name="Audio Host examples" contentHelp="&#10;&#10;The USB Host Audio Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost.cdc" name="CDC Host examples" contentHelp="&#10;&#10;The USB Host CDC Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost.hid" name="HID Host examples" contentHelp="&#10;&#10;The USB Host HID Examples.">
+            </elementChoice>
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost.msd" name="MSD Host examples" contentHelp="&#10;&#10;The USB Host MSD Examples.">
+            </elementChoice>
+            <!-->
+            <elementChoice id="mcu.mqxprojectwizard1.example.list.usbhost.phdc" name="PHDC Host examples" contentHelp="&#10;&#10;The USB Host PHDC Examples.">
+            </elementChoice>
+            -->
+          </elementChoice>                       
+           <elementChoice id="mcu.mqxprojectwizard1.example.list.demo" name="Demos" contentHelp="&#10;&#10;Lab Tutorial Demos">
+           </elementChoice>         
+        </uiElement>
+      </page>
+    </pages>
+    
+    <!-- IMPORTANT NOTE: define true condition for each sub-category defined above. 
+      The name of the condition must match the name of the sub-category
+      with spaces replaced by "." and all lower-case letters!!!-->
+    <conditions>
+    
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.can.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.cdc.host.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.hid.host.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.msd.host.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.phdc.host.examples">
+        <true/>
+      </condition>
+      
+       <condition id="mcu.mqxprojectwizard1.condition.examples.display.cdc.device.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.hid.device.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.msd.device.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.phdc.device.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc.udp.examples">
+        <true/>
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.audio.host.examples">
+        <true/>        
+      </condition>
+      <condition id="mcu.mqxprojectwizard1.condition.examples.display.audio.device.examples">
+        <true/>        
+      </condition>
+      <!--
+      <condition id="TODO: add condition for sub-category">
+        <true/>
+      </condition>
+      -->
+    </conditions>
+    
+  </uiExtension>
+</wizardExtension>

@@ -1,0 +1,78 @@
+#! armcc -E
+
+; The balance of unused flash is used as user flash. Make sure this value 
+; matches the one in bsp/twrk60n512/twrk60n512.h. Change them as 
+; needed to match the flash image size. MAKE SURE THIS VALUE IS ALIGNED TO
+; (is a multiple of) THE SECTOR SIZE - 0x800
+#define USERFLASH_BASE_ADDR    0x00060000
+#define INTFLASH_BASE_ADDR     0x00000000
+#define INTFLASH_SIZE          (USERFLASH_BASE_ADDR - INTFLASH_BASE_ADDR)
+
+#define MY_ALIGN(address, alignment) ((address + (alignment-1)) AND ~(alignment-1))
+
+LOAD_REGION_INTFLASH INTFLASH_BASE_ADDR INTFLASH_SIZE
+{
+    VECTORS INTFLASH_BASE_ADDR
+    {
+        vectors.o (.vectors_rom,+FIRST)
+        vectors.o (.cfmconfig)
+    }
+
+    CODE +0
+    {
+        * (InRoot$$Sections)      ; All library sections for example, __main.o,
+                                  ; __scatter*.o, __dc*.o, and * Region$$Table
+        * (KERNEL)
+        * (TEXT)
+        * (+RO)
+    }
+ 
+    NOUSER 0x1FFF0000
+    {
+		* (.nouser)
+    }
+
+    ROUSER MY_ALIGN(ImageLimit(NOUSER), 32)
+    {
+		* (.rouser)
+    }
+
+    RWUSER MY_ALIGN(ImageLimit(ROUSER), 32)
+    {
+		* (.rwuser)
+    }
+
+    DATA MY_ALIGN(ImageLimit(RWUSER), 32)
+    {
+        * (+RW)
+        * (+ZI)
+    }
+
+    USB_BDT MY_ALIGN(ImageLimit(DATA), 512)
+    {
+        * (.usb_bdt)
+    }
+
+    KERNEL_DATA_START MY_ALIGN(ImageLimit(USB_BDT), 0x10)
+    {
+        * (KERNEL_DATA_START)     ; start of kernel data
+    }
+    
+    KERNEL_DATA_END 0x2000FFF0      ; RAM_END
+    {
+        * (KERNEL_DATA_END)     ; end of kernel data
+    }
+
+    ; mem_init writes a storeblock_struct at the end of kernel data, 
+    ; max size 32 bytes, so use 0x100 offset
+    BOOT_STACK_ADDR 0x2000FEF0 
+    {
+        * (BOOT_STACK)
+    }
+
+    ; We don't use their stack or heap, but the tools expect this
+    ; to be here, so we have a dummy placeholder.
+    ARM_LIB_STACKHEAP 0x2000F9F0 EMPTY UNINIT 0x04
+    {
+    }
+}

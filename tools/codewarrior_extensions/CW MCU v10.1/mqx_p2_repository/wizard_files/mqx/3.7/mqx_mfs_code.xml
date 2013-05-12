@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+  	<variables>
+  	
+<!-- 
+******************************************************************* 
+ main.h variables
+*******************************************************************
+-->
+            
+            
+      <!-- mfs_ram_disk_start_function_prototype -->
+  		<enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mfs_ram_disk_start_function_prototype">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mfs_ram_disk_start_function_prototype.h">
+               </enumeratedValue>
+            </enumeratedVariable>
+      
+      <!-- mfs_ramdisk_defines -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mfs_ramdisk_defines">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mfs_ramdisk_defines.h">
+               </enumeratedValue>
+      </enumeratedVariable>      
+      
+      <!-- mainh_mfs_includes -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainh_mfs_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mainh_mfs_includes.h">                     
+               </enumeratedValue>
+      </enumeratedVariable>      
+            
+            
+<!-- 
+*************************************************************** 
+ main.c variables
+***************************************************************
+-->
+            
+      <!-- mainc_mfs_includes -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mfs_ram_disk_size">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="#define RAM_DISK_SIZE ${editText:com.freescale.mcu.mqxprojectwizard1.mfsoptions.ramdisksize}">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value=" ">
+               </enumeratedValue>
+            </enumeratedVariable>   
+            
+            
+<!-- 
+*************************************************************** 
+ main.c variables
+***************************************************************
+-->
+            
+      <!-- mainc_mfs_includes -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_mfs_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mainc_mfs_includes.c">                     
+               </enumeratedValue>
+      </enumeratedVariable>
+            
+      <!-- $mainc_mfs_ifdef_usesmfs$ -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_mfs_ifdef_usesmfs">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mainc_mfs_ifdef_usesmfs.c">                     
+               </enumeratedValue>
+      </enumeratedVariable>
+            
+      <!-- $mainc_mfs_ifdef_ramdisksize$ -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_mfs_ifdef_ramdisksize">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mainc_mfs_ifdef_ramdisksize.c">                     
+               </enumeratedValue>
+      </enumeratedVariable>
+                                    
+            
+      <!-- $mainc_mfs_ramdiskstart_call$ -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_mfs_ramdiskstart_call">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs"
+                     value="[[[!codeblock]]]mainc_mfs_ramdiskstart_call.c">                     
+               </enumeratedValue>
+      </enumeratedVariable>
+            
+            
+      <!-- $mainc_mfs_shellcmds$ -->
+            <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainc_mfs_shellcmds">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs.add_to_shell_struct_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxmfs.add_to_shell_struct"
+                     value="[[[!codeblock]]]mainc_mfs_shellcmds.c">
+               </enumeratedValue>
+      </enumeratedVariable>
+            
+  	</variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

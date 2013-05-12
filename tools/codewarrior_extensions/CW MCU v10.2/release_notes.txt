@@ -1,0 +1,33 @@
+Release Notes for MQX plug-ins for CodeWarrior 10.2
+
+---------------------------------------------------
+Release 1.1.8 (Build ID: 201207171328)
+---------------------------------------------------
+BUG FIXES:
+* Fixed problem with creating new USB example application
+  - fixed include path
+  - for USB Host the usb_classes.c file was added to the project
+
+---------------------------------------------------
+Release 1.1.7 (Build ID: 201206271138)
+---------------------------------------------------
+BUG FIXES:
+* Improved support of read-only files in the User Config graphical editor
+* Added "Yes to All" and "No to All" in the Project of Projects importer,
+  when user asked if a read-only project should be made writable
+* Fixed bug related to exporting working set with a closed project in the
+  Project of Projects plug-in
+* Bug fixes in TAD and New Project Wizard
+
+---------------------------------------------------
+Release 1.1.4 (Build ID: 201203010932)
+---------------------------------------------------
+NEW FEATURES:
+* Added Build Toolbar plug-in
+* New Project Wizard supports standalone MQX patches
+* Support for the TWR-K60F120M board (requires installation of an appropriate patch)
+
+BUG FIXES:
+* Minor bug fixes in Project of Projects and New Project Wizard plug-ins
+* Fixed installer/uninstaller scripts - solved problems related to un-/reinstallation
+  after CodeWarrior had been updated via update site

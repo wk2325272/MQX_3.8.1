@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<fpconfig>
+
+  <targetconfwindow>
+    <usecustomsettings>false</usecustomsettings>
+    <targetprocessor>52277</targetprocessor>
+    <connection>PEMICRO_USB</connection>
+    <usetargetinit>true</usetargetinit>
+    <targetinitfile>{CodeWarrior}\ColdFire_Support\Initialization_Files\M52277EVB.cfg</targetinitfile>
+    <targetmembuffaddr>0x80000000</targetmembuffaddr>
+    <targetmembuffsize>0x00020000</targetmembuffsize>
+    <enablelogging>true</enablelogging>
+    <verifywrites>false</verifywrites>
+  </targetconfwindow>
+
+  <flashconfwindow>
+    <membaseaddr>0x00000000</membaseaddr>
+    <device>S29WS128N</device>
+    <organization>8Mx16x1</organization>
+    <flashstart>0x00000000</flashstart>
+    <flashend>0x007FFFFF</flashend>
+  </flashconfwindow>
+
+  <programverifywindow>
+    <useselectedfile>false</useselectedfile>
+    <projbuildtargetfile>nofile</projbuildtargetfile>
+    <fileiotype>Auto Detect</fileiotype>
+    <restrictaddrrange>false</restrictaddrrange>
+    <restrictaddrrangestart>0xFF800000</restrictaddrrangestart>
+    <restrictaddrrangeend>0xFFFFFFFF</restrictaddrrangeend>
+    <applyaddroffset>false</applyaddroffset>
+    <addroffset>0x00000000</addroffset>
+  </programverifywindow>
+
+  <eraseblankcheckwindow>
+    <eraseallsectors>true</eraseallsectors>
+    <sector/>
+    <processsectorsindividually>false</processsectorsindividually>
+  </eraseblankcheckwindow>
+
+  <checksumwindow>
+    <computechecksumover>EntireFlash</computechecksumover>
+    <addrstart>0xFF800000</addrstart>
+    <addrsize>0x007FFFFF</addrsize>
+  </checksumwindow>
+
+</fpconfig>

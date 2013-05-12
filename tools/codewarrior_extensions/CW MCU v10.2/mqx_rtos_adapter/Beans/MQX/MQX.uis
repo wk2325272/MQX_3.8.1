@@ -1,0 +1,10 @@
+
+[USED_FACES]
+BeanVersion=01.029
+
+InterfacesCount=1
+
+Symbol=DefaultSerialChannel
+Link=Yes
+Interface=MQX\IO_Serial
+Version=01.001

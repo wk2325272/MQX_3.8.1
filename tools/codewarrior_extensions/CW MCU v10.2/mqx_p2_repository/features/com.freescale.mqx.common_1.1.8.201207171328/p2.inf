@@ -1,0 +1,9 @@
+
+instructions.install=\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:@artifact/../mqx_p2_repository/tad_files,target:${installFolder}/../MCU/bin/plugins/Debugger/rtos,overwrite:true);
+
+instructions.uninstall=\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../MCU/bin/plugins/Debugger/rtos/mqx);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../MCU/bin/plugins/Debugger/rtos/CFrtos_MQX.dll);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../MCU/bin/plugins/Debugger/rtos/PPCrtos_MQX.dll);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../MCU/bin/plugins/Debugger/rtos/CORTEXMrtos_MQX.dll);

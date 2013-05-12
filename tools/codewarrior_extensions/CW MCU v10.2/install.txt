@@ -1,0 +1,9 @@
+To install MQX plug-ins into CW10.2:
+------------------------------------------------------
+
+1) Exit CodeWarrior 10.2 if it is running
+
+2) Execute the install_cw10.2_plugin.bat <CW_INSTAL_DIR> command to install MQX plug-ins into CW10.2. 
+All required data files are  copied into CW10.2 automatically during this installation.
+
+

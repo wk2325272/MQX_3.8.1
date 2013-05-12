@@ -1,0 +1,64 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%- Disabling of platform specific parts in CPU component
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%-
+%if defined(CPUfamily)
+  %set @_CPU_@CPU ReqValue $=CLEAR-ALL-NOT-APPLICABLE=$
+  %-
+  %-
+  %----------------------------------------------------------------------------
+  %- External bus
+  %----------------------------------------------------------------------------
+  %if %get(@_CPU_@ExternalBusGrp,Exists?) = 'yes' & %get(@_CPU_@ExternalBusGrp,IsEnabled) = 'yes'
+    %set @_CPU_@ExternalBusGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+  %endif
+  %----------------------------------------------------------------------------
+  %- Linker file generation
+  %----------------------------------------------------------------------------
+  %if %get(@_CPU_@C_GenerateLINKFILE,Exists?) = 'yes' & %get(@_CPU_@C_GenerateLINKFILE,IsEnabled) = 'yes'
+    %set @_CPU_@C_GenerateLINKFILE ReqValue #Bool:no=Don't generate linker file. It exists in MQX project.
+  %endif
+  %----------------------------------------------------------------------------
+  %if CPUfamily = 'Kinetis'
+  %----------------------------------------------------------------------------
+    %--------------------------------------------------------------------------
+    %- Internal Peripherals
+    %--------------------------------------------------------------------------
+    %- MPU peripheral
+    %if %get(@_CPU_@MPUGrp,Exists?) = 'yes' & %get(@_CPU_@MPUGrp,IsEnabled) = 'yes'
+      %set @_CPU_@MPUGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %--------------------------------------------------------------------------
+    %- Interrupts
+    %--------------------------------------------------------------------------
+    %- NMI Interrupt
+    %if %get(@_CPU_@IntNMIGrp,Exists?) = 'yes' & %get(@_CPU_@IntNMIGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntNMIGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %- Hard Fault Interrupt
+    %if %get(@_CPU_@IntHardFaultGrp,Exists?) = 'yes' & %get(@_CPU_@IntHardFaultGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntHardFaultGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %- Bus Fault Interrupt
+    %if %get(@_CPU_@IntBusFaultGrp,Exists?) = 'yes' & %get(@_CPU_@IntBusFaultGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntBusFaultGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %- Usage Fault Interrupt
+    %if %get(@_CPU_@IntUsageFaultGrp,Exists?) = 'yes' & %get(@_CPU_@IntUsageFaultGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntUsageFaultGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %- Supervisor Call Interrupt
+    %if %get(@_CPU_@IntSVCallGrp,Exists?) = 'yes' & %get(@_CPU_@IntSVCallGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntSVCallGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+    %- Pendable Service Interrupt
+    %if %get(@_CPU_@IntPendSVGrp,Exists?) = 'yes' & %get(@_CPU_@IntPendSVGrp,IsEnabled) = 'yes'
+      %set @_CPU_@IntPendSVGrp ReqValue #Bool:no=Don't initialize this peripheral. It is initialized by MQX.
+    %endif
+  %----------------------------------------------------------------------------
+  %endif
+  %----------------------------------------------------------------------------
+%-
+%endif

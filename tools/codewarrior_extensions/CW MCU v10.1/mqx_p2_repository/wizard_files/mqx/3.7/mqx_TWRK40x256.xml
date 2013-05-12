@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+  <uiExtension>
+	<pages>
+	  <page id="mcu.mqxprojectwizard1.page.devices">
+		<uiElement id="mcu.mqxprojectwizard1.chip.list">		 		  
+		    <elementChoice id="mcu.mqxprojectwizard1.board.list.kinetis">					
+		      <elementChoice name="TWRK40x256 Board" id="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" 
+          systemTypeId="com.freescale.cw.system.kinetis.K40.MK40X256VMD100"
+          contentHelp="TWRK40x256 Board&#10;&#10;..."> 		     
+		      </elementChoice>
+		    </elementChoice>
+		</uiElement>
+	 </page>
+	</pages>
+
+    		    
+<conditions>
+	<!--Conditions to include selected targets in the new project.
+        We add them with OR so that all conditions defined in other files
+        or in plugin.xml also apply.
+        Here Condition means: if true, then perform the action, which is defined with 
+        this condition ID,
+        e.g. copy cfg file for EXTRAM to project.
+        
+        TODO: Define by conditions which modules this board supports (USBHost, MFS etc.)
+        TODO: Define  by conditions which targets will be included in the new project if 
+              this board is selected 
+  -->      
+    <condition id="mcu.mqxprojectwizard1.condition.hasmfs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+			</or>
+		</condition>
+		 <condition id="mcu.mqxprojectwizard1.condition.hasusbhost">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+			</or>
+		</condition>			
+    <condition id="mcu.mqxprojectwizard1.condition.hasrtcs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+			</or>
+		</condition>	
+    <condition id="mcu.mqxprojectwizard1.condition.hasusbdevice">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+			</or>
+		</condition>	
+		
+    <condition id="mcu.mqxprojectwizard1.condition.hasshell">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+			</or>
+		</condition>	
+      
+       <!-- Conditions to define the configurations (targets) for this board -->      
+		<condition id="mcu.mqxprojectwizard1.condition.arm.ID_TARGET_INTERNAL_RAM">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.arm.ID_TARGET_INTERNAL_FLASH_RELEASE">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.arm.ID_TARGET_INTERNAL_FLASH_DEBUG">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>
+			<!-- Conditions to define this is ARM processor -->
+		<condition id="mcu.mqxprojectwizard1.condition.isArmFamily">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>
+		<!-- Condition to define standard download or execute task for flash targets
+      if defined here, the board uses tasks; (task file must exist and names must be defined below!) 
+      if not defined, uses standard download.
+      NOTE: for Kinetis this only applies to Segger J-Link connection, the other connections
+      have standard download hard-coded in plugin.xml
+      -->
+		<condition id="mcu.mqxprojectwizard1.condition.launch.hastargettask">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>	
+		
+		<!-- Conditions to define which connections this board supports (e.g. OSBDM, PEBDM) -->				
+		<condition id="mcu.mqxprojectwizard1.condition.connection.haspeusbmulti">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>		
+		<condition id="mcu.mqxprojectwizard1.condition.connection.haspeosjtag">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>			
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasseggerjlink">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+			</or>
+		</condition>				
+
+	</conditions>
+	</uiExtension>
+ 
+ <newProjectExtension>
+  	<variables>
+	  <variable name="BoardName" value="twrk40x256" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256" />
+	  	  <variable name="BoardID" value="ID_BOARD_TWRK40x256" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+	  <variable name="ChipName" value="MK40X256VMD100" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>		    
+	  <variable name="ChipFamily" value="MK40" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40x256"/>
+
+    <!-- variables new for Kinetis-->	  
+	  <variable name="ChipId" value="MK40X256VMD100" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+		<variable name="ChipPEx" value="MK40X256VMD100" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+		<variable name="FlashFileAF" value="MK40X256VMD100.xml" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+		<variable name="ChipIntFamily" value="Marconi" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+		<variable name="ChipIntName" value="Marconi (MK40X256)" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+
+    
+    <variable name="TtfFileNames" value="k40x256_Int_Flash.ttf" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+    <variable name="TaskNamePrefix" value="k40x256" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40X256"/>
+    
+    
+    <!-- variables which were for ColdFire but are not in Kinetis
+    <variable name="ChipHeaders" value="MCF52259" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40x256"/>
+    <variable name="ChipCompSelect" value="52259" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40x256"/>
+	  <variable name="ChipAssemblySelect" value="52259" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40x256"/>
+	  <variable name="ChipDebugSelect" value="MCF52259" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK40x256"/>	  	    
+  	-->
+    </variables>
+  </newProjectExtension>
+
+</wizardExtension>

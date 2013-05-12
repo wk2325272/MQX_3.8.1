@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings><settingsGroup id="MQX_common_settings_elf_importer">
+
+	<applyEnumeratedSetting
+		settingId="org.eclipse.cdt.launch.PROGRAM_NAME">
+                     
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copytoproject.cfv1"
+				projectSettingValue="./${ChipSTID} Imported Executable/${imported_file_name}">
+			</enumerationMap>
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.dontcopytoproject"
+				projectSettingValue="${editText:mcu.elfimporter.select.elffile}">
+			</enumerationMap>
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.abs"
+				projectSettingValue="./${ChipSTID} Imported Executable/${imported_file_name}">
+			</enumerationMap>
+			<!-- Implementation @MTWX43003 (include 'e200' as well in the original fix @MTWX42613) -->
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copyelf.pa"
+				projectSettingValue="./${ChipId}_${pa_multicore_mode}_Imported_Executable/${imported_file_name}">
+			</enumerationMap>
+			<!-- Fix @MTWX43741 (include 'Kinetis' as well in the original fix @MTWX42613) -->
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.elf.arm"
+				projectSettingValue="./${ChipId} Imported Executable/${imported_file_name}">
+			</enumerationMap>
+                     
+			<!-- conditionId="mcu.elfimporter.isCfBbOrKd" -->
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.bb.elf"
+				projectSettingValue="./${BoardName} Imported Executable/${imported_file_name}">
+			</enumerationMap>
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.kd.elf"
+				projectSettingValue="./Imported Kernel Image/${imported_file_name}">
+			</enumerationMap>
+                     
+			<!-- conditionId="mcu.elfimporter.isappdebug" -->
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.app.elf"
+				projectSettingValue="./Imported Linux Executable/${imported_file_name}">
+			</enumerationMap>
+			<enumerationMap
+				conditionId="mcu.elfimporter.condition.copy.flt"
+				projectSettingValue="./Imported uClinux Executable/${imported_file_name}">
+			</enumerationMap>
+                     
+	</applyEnumeratedSetting>
+                  
+</settingsGroup></launchSettings></newProjectExtension></wizardExtension>

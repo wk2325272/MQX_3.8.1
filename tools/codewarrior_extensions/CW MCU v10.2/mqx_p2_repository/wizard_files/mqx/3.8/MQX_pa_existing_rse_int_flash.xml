@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_pa_existing_rse_int_flash">
+				
+				<settingsGroupRef id="MQX_pa_common_settings"/>
+				
+				<!--
+				<settingsGroupRef id="e200_single_core_settings_int_flash"/>
+				
+				<settingsGroupRef id="e200_multi_core_settings_int_flash"/>
+				-->
+				<!-- added for MQX instead of e200-->
+				<settingsGroupRef id="MQX_pa_int_flash_settings"/>
+				
+				<settingsGroup id="rse_pa_common" conditionId="mcu.mqxprojectwizard1.connections.list.pa.selectExistingSystemID">
+					<applySetting
+						id="com.freescale.cdt.debug.cw.core.settings.rseSystemId"
+						type="string" 
+						value="${rseHostCombo:mcu.mqxprojectwizard1.connections.list.pa.rseHostComboComposite}">
+					</applySetting>
+				</settingsGroup>				
+
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

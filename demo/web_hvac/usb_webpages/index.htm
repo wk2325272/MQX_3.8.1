@@ -1,0 +1,409 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+
+
+<html>
+<head>
+<title>Freescale MQX Webserver</title>
+<style type="text/css">
+
+.header{
+	background-color: #ffffff;
+	vertical-align: top; 
+	text-align: right; 
+	padding-right: 5px;	
+	
+}
+.headerText{
+	text-align: right;
+}
+
+
+.padMe5 {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+}
+
+.Hdr {
+	font-weight: bold;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFF;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	font-weight: normal;
+	color: #51626F;
+}
+
+a{
+	color: #017bba;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #017bba;
+	text-decoration: underline;
+}
+
+h1 {
+	line-height: 28px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	text-indent: 0px;
+}
+
+#mncnt {
+	padding: 0px 0px 0px 12px;
+}
+
+.cframe{
+	margin: 0px 0px 0px 164px;
+}
+
+.lcn { width: 598px; }
+
+/* Begin Left Nav CSS  */
+
+#lfnvcl {
+	float: left;
+	width: 157px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#lnv h1, #lnv h2, #lnv h3, #lnv h4, #lnv h5, #lnv h6 {
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+#lnv, #lnv ul { /* all left nav lists */
+	padding: 0px 0px 1px 1px;
+	margin: 0px;
+	list-style: none;
+	float : left;
+	/*width : 157px;*/
+	width:157px;
+	display: block;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	background-color: #FFF;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+	font-size: .9em;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	border: 1px solid #C4CFD1;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+}
+
+#lnv a {
+	color: #51626F;
+	text-decoration: none;
+}
+
+#lnv a:hover {
+	color: #51626F;
+	text-decoration: underline;
+}
+
+#lnv .pt {
+	background-color: #C4CFD1;
+}
+
+#lnv .ar {
+	background: url(arrow.gif) center right no-repeat;
+	background-color: #E0E6E6;
+}
+
+
+
+#lnv li { /* all list items */
+	position : relative;
+	float : left;
+	line-height : 16px;
+	margin: 0px;
+	padding: 0px;
+	width: 157px;
+	background-color: #FFF;
+	z-index: 50;
+}
+	
+#lnv li ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	margin-left : 161px;
+	margin-top : -24px;
+	font-size: 1em;
+}
+
+
+	
+#lnv li a {
+	width: 144px;
+	w\idth : 144px;
+	display : block;
+	font-weight : normal;
+	text-decoration : none;
+	background-color: #E0E6E6;
+	margin : 0px;
+	padding: 3px 12px 3px 5px;
+	border-top: 1px solid #FFF;
+}
+	
+#lnv li a:hover {
+	background-color : #C4CFD1;
+}
+	
+#lnv li:hover ul ul, #lnv li:hover ul ul ul, #lnv li.sfhover ul ul, #lnv li.sfhover ul ul ul {
+	left: -999em;
+	background-color: #FFF;
+}
+	
+#lnv li:hover ul, #lnv li li:hover ul, #lnv li li li:hover ul, #lnv li.sfhover ul, #lnv li li.sfhover ul, #lnv li li li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+	background-color: #FFF;
+}
+	
+#ftr{
+	position: relative;
+	float: left;
+	clear: both;
+	display: block;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	width: 988px;
+	height: 23px;
+	line-height: 23px;
+	border: 1px solid #C3CFD1;
+	font-size: .9em;
+	background-color: #FFF;
+	z-index: 1;
+}
+
+
+#ftr .copyright {
+	float: right;
+	padding-right: 5px;
+}
+
+
+
+
+div.hrw {
+  background: #aaaaaa repeat-x scroll center;
+	margin: 0;
+	padding: 0;
+	height: 1px;
+}
+div.hrw hr {
+  display: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*************Breadcrumbs************/
+/*Standard breadcrumbs*/
+.breadcrumbs {
+	margin: 0em;
+	padding: .5em .5em;
+	font-size: .9em;
+	line-height: 1.4em;
+}
+/*Standard breadcrumbs anchor*/
+.breadcrumbs a{
+	color: #51626F;
+	text-decoration: none;
+	padding-right: 1.4em;
+	background: url(bc_seperator.gif) center right no-repeat;
+}
+/*Standard breadcrumbs anchor on hover*/
+.breadcrumbs a:hover{
+	color: #51626F;
+	text-decoration:underline;
+}
+/*Standard breadcrumbs visited anchor*/
+.breadcrumbs a:visited{
+	color: #51626F;
+	text-decoration: none;
+
+}
+/*Standard breadcrumbs visited anchor on hover*/
+.breadcrumbs a:visited:hover{
+	color: #51626F;
+	text-decoration: underline;
+
+}
+
+</style>
+<script type="text/javascript">
+
+sfHover2 = function() {
+	var navthree = document.getElementById("lnv");
+	if (navthree){
+		var sfEls2 = document.getElementById("lnv").getElementsByTagName("LI");
+		for (var i=0; i<sfEls2.length; i++) {
+			sfEls2[i].onmouseover=function() {
+				this.className+=" sfhover";
+			}
+			sfEls2[i].onmouseout=function() {
+				this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+			}
+		}
+	}
+}
+
+if (window.attachEvent) {
+	window.attachEvent("onload", sfHover2);
+}
+</script>
+
+</head>
+<body>
+
+
+<a href="http://www.freescale.com" title="Freescale"><img src="header.gif" alt="Freescale Semiconductor" width="990" height="50" border="0"/></a><BR>
+<div id="lfnvcl">
+<ul id="lnv">
+<li><a href="../mqx.html" class="pt">Webserver Home</a></li>
+<li><a href="index.htm" class="pt">ColdFire® MCF5225x</a></li>
+<li><a href="core_int.htm">&nbsp;&nbsp;ColdFire Core</a></li>
+<li><a href="memory.htm" >&nbsp;&nbsp;Flash and SRAM</a></li>
+<li><a href="eth_int.htm">&nbsp;&nbsp;FEC</a></li>
+<li><a href="USB.htm">&nbsp;&nbsp;USB</a></li>
+<li><a href="CAU.htm">&nbsp;&nbsp;CAU</a></li>
+<li><a href="can_intr.htm">&nbsp;&nbsp;CAN</a></li>
+<li><a href="minibus.htm">&nbsp;&nbsp;Mini-FlexBus</a></li>
+<li><a href="EMAC.htm">&nbsp;&nbsp;EMAC</a></li>
+<li><a href="sys_int.htm">&nbsp;&nbsp;System Integration</a></li>
+<li><a href="debug.htm">&nbsp;&nbsp;Debug</a></li>
+<li><a href="RTC_int.htm">&nbsp;&nbsp;RTC</a></li>
+<li><a href="GPIO.htm">&nbsp;&nbsp;GPIO</a></li>
+<li><a href="PLL.htm">&nbsp;&nbsp;PLL</a></li>
+<li><a href="DTIMER.htm">&nbsp;&nbsp;DTimer</a></li>
+<li><a href="I2C.htm">&nbsp;&nbsp;I2C</a></li>
+<li><a href="UART_int.htm">&nbsp;&nbsp;UART</a></li>
+<li><a href="GPT_int.htm">&nbsp;&nbsp;GPT</a></li>
+<li><a href="QSPI.htm">&nbsp;&nbsp;QSPI</a></li>
+<li><a href="RTC_int.htm">&nbsp;&nbsp;RTC</a></li>
+<li><a href="ADC_int.htm">&nbsp;&nbsp;ADC</a></li>
+<li><a href="pit_int.htm">&nbsp;&nbsp;PIT</a></li>
+<li><a href="pwm_int.htm">&nbsp;&nbsp;PWM</a></li>
+<li><a href="DMA_int.htm">&nbsp;&nbsp;DMA</a></li>
+<li><a href="ezp_int.htm">&nbsp;&nbsp;EZPORT</a></li>
+</ul>
+</div>
+
+
+
+<div id="mncnt" class="cframe">
+
+  
+<div class="lcn" >
+      <div class="padMe5"></div>
+       <div class="hrw"><hr /></div>
+   <h1>
+    <strong>ColdFire&reg; MCF5225x</strong>    </h1>
+
+ <div class="hrw"><hr /></div>
+  
+ <h3>This web page is running off the USB Mass Storage Device </h3>
+ <p><a href="http://www.freescale.com/webapp/sps/site/overview.jsp?code=MCF5225X" title="Freescale" target="_blank"><img src="MCF5225X.jpg" alt="Freescale Semiconductor" width="596" height="131" border="0"/></a></p>
+ <p><strong><em>MQX Software Solutions </em></strong><br />
+   With the powerful integration of MCF5225x family, Freescale provides full production source code of Freescale MQX software&nbsp;including:</p>
+ <ul type="disc">
+   <li>RTOS &ndash; Full priority-based, pre-emptive scheduler </li>
+   <li>Real-time TCP/IP Communication Suite (RTCS):TCP/IP, FTP, Telnet,      DHCP, DNS server and client, SNMP client and more </li>
+   <li>USB Host/Device </li>
+   <li>MS-DOS File System (MFS) </li>
+   <li>PC Host Tools (Application Generator Tool) </li>
+ </ul>
+ <p>Freescale MQX, a component based architecture provides scalability by allowing you to choose components required for your applications while reducing overhead.&nbsp; And to make development easier, Freescale MQX RTOS task aware debugging is integrated with CodeWarrior&reg; and IAR Embedded Workbench. </p>
+ <p><strong><em>MCF5225X Family</em></strong><BR>
+
+The MCF5225x family consists of highly
+integrated devices with on-chip USB,
+Ethernet, CAN and encryption functions.
+The MCF5225x family is based on a
+32-bit ColdFire® core with up to 80 MHz
+core frequency, 512 KB flash and 64 KB
+SRAM. The external bus interface provides
+flexibility to add additional memory or simple
+peripherals. These and other features make
+the MCF5225x devices ideal for industry and
+health care applications that require a broad
+range of connectivity</p>
+ <p><strong><em>MCF5225X Block Diagram</em></strong><br /><BR>
+
+
+  <MAP NAME="map1">
+    
+    <AREA HREF="can_intr.htm" ALT="Controller Area Network" TITLE="Controller Area Network" SHAPE=RECT COORDS="160, 208, 229, 244">
+    
+    <AREA HREF="core_int.htm" ALT="CPU core" TITLE="CPU core" SHAPE=RECT COORDS="199, 277, 287, 349">
+    
+    <AREA HREF="eth_int.htm" ALT="10/100 Fast Ethernet Controller" TITLE="10/100 Fast Ethernet Controller" SHAPE=RECT COORDS="160, 163, 230, 202">
+    
+    <AREA HREF="sys_int.htm" ALT="System Integration Module" TITLE="System Integration Module" SHAPE=RECT COORDS="295, 278, 368, 350">
+    
+    <AREA HREF="ezp_int.htm" ALT="EzPort " TITLE="EzPort" SHAPE=RECT COORDS="375, 276, 402, 348">
+    
+    <AREA HREF="minibus.htm" ALT="Mini Bus " TITLE="Minu Bus" SHAPE=RECT COORDS="414, 275, 454, 347">
+    
+    <AREA HREF="pit_int.htm" ALT="Pit " TITLE="Pit" SHAPE=RECT COORDS="235, 208, 303, 244">
+    
+    <AREA HREF="pwm_int.htm" ALT="pwm " TITLE="pwm" SHAPE=RECT COORDS="309, 208, 380, 245">
+    
+    <AREA HREF="DMA_int.htm" ALT="DMA " TITLE="DMA" SHAPE=RECT COORDS="385, 209, 457, 244">
+    
+    <AREA HREF="RTC_int.htm" ALT="RTC " TITLE="RTC" SHAPE=RECT COORDS="234, 165, 305, 202">
+    
+    <AREA HREF="ADC_int.htm" ALT="ADC " TITLE="ADC" SHAPE=RECT COORDS="309, 165, 380, 202">
+    
+    <AREA HREF="UART_int.htm" ALT="UART" TITLE="UART" SHAPE=RECT COORDS="386, 79, 457, 203">
+    
+    <AREA HREF="GPT_int.htm" ALT="GPT" TITLE="GPT" SHAPE=RECT COORDS="233, 121, 305, 159">
+    
+    <AREA HREF="QSPI.htm" ALT="QSPI" TITLE="QSPI" SHAPE=RECT COORDS="310, 121, 382, 158">
+    
+    <AREA HREF="USB.htm" ALT="USB" TITLE="USB" SHAPE=RECT COORDS="160, 120, 228, 157">
+    
+    <AREA HREF="DTIMER.htm" ALT="DMA Timer" TITLE="DMA Timer" SHAPE=RECT COORDS="232, 77, 303, 118">
+    
+    <AREA HREF="I2C.htm" ALT="I2C" TITLE="I2C" SHAPE=RECT COORDS="310, 78, 381, 118">
+    
+    <AREA HREF="memory.htm" ALT="Flash & SRAM" TITLE="Flash & SRAM" SHAPE=RECT COORDS="10, 5, 88, 190">
+    
+    <AREA HREF="CAU.htm" ALT="CAU" TITLE="CAU" SHAPE=RECT COORDS="4, 235, 97, 278">
+    
+    <AREA HREF="GPIO.htm" ALT="GPIO" TITLE="GPIO" SHAPE=RECT COORDS="352, 34, 398, 76">
+    
+    <AREA HREF="PLL.htm" ALT="PLL" TITLE="PLL" SHAPE=RECT COORDS="411,33,455,73">
+    
+    <AREA HREF="debug.htm" ALT="debug" TITLE="debug" SHAPE=RECT COORDS="159,35,266,74">
+    
+    <AREA HREF="RTC_int.htm" ALT="RTC" TITLE="RTC" SHAPE=RECT COORDS="285, 34, 331, 72">
+    
+    <AREA HREF="EMAC.htm" ALT="EMAC" TITLE="EMAC" SHAPE=RECT COORDS="156, 276, 200, 350">
+  </MAP>
+   
+  <IMG SRC="5225x_2.JPG" ALT="Move mouse over section of board to see details" BORDER=0 WIDTH=467 HEIGHT=366 USEMAP="#map1"></p>
+ <p align="left"><font face="Arial">Click on each section to open another page with more information</font></p>
+ </div>
+</div>
+<div id="ftr">
+<div id=copyright>
+<center>&copy; Freescale Semiconductor, Inc. 2004 - 2008. All Rights Reserved </center>
+</div>
+</div>
+
+</body>
+</html>		

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_pne_pa_univmlink_int_flash">
+				
+				<settingsGroupRef id="MQX_pa_common_settings"/>
+					<!-- 
+				<settingsGroupRef id="e200_single_core_settings_int_flash"/>				
+				<settingsGroupRef id="e200_multi_core_settings_int_flash"/>
+				-->
+				
+				<settingsGroupRef id="MQX_pne_pa_univmlink"/>
+				<settingsGroupRef id="MQX_pa_int_flash_settings"/>
+				
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

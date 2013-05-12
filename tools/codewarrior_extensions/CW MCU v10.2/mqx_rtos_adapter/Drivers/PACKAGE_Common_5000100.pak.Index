@@ -1,0 +1,18 @@
+[PACKAGE INDEX]
+PackageVersion=5000100
+PackageShortDescription=Support of MQX RTOS adapter component
+FileCount=3
+FileName=COMMON\PE_LDD.prg
+FileOffset=1560
+FileSize=4240
+FileDate=1045985699
+FileName=Kinetis\Kinetis_Constants.prg
+FileOffset=5800
+FileSize=1512
+FileDate=1046042940
+FileName=sw\MQX.dmo
+FileOffset=0
+FileSize=1560
+FileDate=1046043139
+
+[_end_]

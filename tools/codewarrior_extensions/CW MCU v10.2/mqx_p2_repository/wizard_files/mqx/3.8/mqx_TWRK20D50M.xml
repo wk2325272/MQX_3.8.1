@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+	<uiExtension>
+		<pages>
+			<page id="mcu.mqxprojectwizard1.page.devices">
+				<uiElement id="mcu.mqxprojectwizard1.chip.list">		 		  
+					<elementChoice id="mcu.mqxprojectwizard1.board.list.kinetis">					
+						<elementChoice name="TWRK20D50M Board" id="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" 
+          systemTypeId="com.freescale.cw.system.kinetis.K20D.K20DX128"
+          contentHelp="TWRK20d50m Board&#10;&#10;..."> 		     
+						</elementChoice>
+					</elementChoice>
+				</uiElement>
+			</page>
+		</pages>
+
+
+		<conditions>
+			<!--Conditions to include selected targets in the new project.
+        We add them with OR so that all conditions defined in other files
+        or in plugin.xml also apply.
+        Here Condition means: if true, then perform the action, which is defined with 
+        this condition ID,
+        e.g. copy cfg file for EXTRAM to project.
+        
+        TODO: Define by conditions which modules this board supports (USBHost, MFS etc.)
+        TODO: Define  by conditions which targets will be included in the new project if 
+              this board is selected 
+  -->      
+			<condition id="mcu.mqxprojectwizard1.condition.hasmfs">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+				</or>
+			</condition>
+			<condition id="mcu.mqxprojectwizard1.condition.hasusbhost">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+				</or>
+			</condition>	
+			<condition id="mcu.mqxprojectwizard1.condition.hasrtcs">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+				</or>
+			</condition>	
+
+			<condition id="mcu.mqxprojectwizard1.condition.hasusbdevice">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+				</or>
+			</condition>	
+
+			<condition id="mcu.mqxprojectwizard1.condition.hasshell">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+				</or>
+			</condition>	
+
+			<!-- Conditions to define the configurations (targets) for this board -->      
+			<condition id="mcu.mqxprojectwizard1.condition.arm.ID_TARGET_INTERNAL_FLASH_DEBUG">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+			<condition id="mcu.mqxprojectwizard1.condition.arm.ID_TARGET_INTERNAL_FLASH_RELEASE">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+			<!-- Conditions to define this is ARM processor -->
+			<condition id="mcu.mqxprojectwizard1.condition.isArmFamily">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+			<!-- Condition to define standard download or execute task for flash targets
+      if defined here, the board uses tasks; (task file must exist and names must be defined below!) 
+      if not defined, uses standard download.
+      NOTE: for Kinetis this only applies to Segger J-Link connection, the other connections
+      have standard download hard-coded in plugin.xml
+      -->
+			<!-- Kinetis boards use standard download now
+		<condition id="mcu.mqxprojectwizard1.condition.launch.hastargettask">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+			</or>
+		</condition>	
+		-->
+
+			<!-- Conditions to define which connections this board supports (e.g. OSBDM, PEBDM) -->				
+
+			<condition id="mcu.mqxprojectwizard1.condition.connection.haspeusbmulti">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>		
+			<condition id="mcu.mqxprojectwizard1.condition.connection.haspeosjtag">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>			
+
+			<condition id="mcu.mqxprojectwizard1.condition.connection.hasseggerjlink">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+			<condition id="mcu.mqxprojectwizard1.condition.connection.arm.haspecyclonemax.usb">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+			<condition id="mcu.mqxprojectwizard1.condition.connection.arm.haspecyclonemax.tcpip">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>					
+			<condition id="mcu.mqxprojectwizard1.condition.connection.arm.haspecyclonemax.serial">
+				<or>
+					<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+				</or>
+			</condition>
+
+			<!-- Display condition for benchmrk_codesize -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.benchmrk_codesize">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for benchmrk_codesize -->
+
+			<!-- Display condition for benchmrk_timing -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.benchmrk_timing">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for benchmrk_timing -->
+
+			<!-- Display condition for bootloader -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.bootloader">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for bootloader -->
+
+			<!-- Display condition for bootloader -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.bootloader">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for bootloader -->
+
+			<!-- Display condition for flexcan -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.flexcan.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for flexcan -->
+
+			<!-- Display condition for crc -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.crc">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for crc -->
+
+			<!-- Display condition for dac example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.dac.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for dac.example -->
+
+			<!-- Display condition for demo -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.demo.example">
+				<not>
+					<or>        
+						<!-- Example of board definition <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for demo -->
+
+			<!-- Display condition for io -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.io.example">
+				<not>
+					<or>
+						<!-- Example of board definition <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for io -->
+
+			<!-- Display condition for cpu1 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.cpu1.example">
+				<not>
+					<or>
+						<!-- Example of board definition <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for cpu1 -->
+
+			<!-- Display condition for cpu2 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.cpu2.example">
+				<not>
+					<or>
+						<!-- Example of board definition <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for cpu2 -->
+
+			<!-- Display condition for klog.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.klog.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for klog.example -->
+
+			<!-- Display condition for lcd.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.lcd.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for lcd.example -->
+
+			<!-- Display condition for nandflash.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.nandflash.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for nandflash.example -->
+
+			<!-- Display condition for tchres.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.tchres">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for tchres.example -->
+
+			<!-- Display condition for usb_dcd.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.usb_dcd.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usb_dcd.example -->
+
+			<!-- Display condition for 3phmeter.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.3phmeter.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for 3phmeter.example -->
+
+			<!-- Display condition for dual_flash_update.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.dual_flash_update.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for dual_flash_update.example -->
+
+			<!-- Display condition for dual_webserver.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.dual_webserver.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for dual_webserver.example -->
+
+			<!-- Display condition for hvac.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.hvac.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for hvac.example -->
+
+			<!-- Display condition for hvac_error.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.hvac_error.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for hvac_error.example -->
+
+			<!-- Display condition for irtc.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.irtc.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for irtc.example -->
+
+			<!-- Display condition for security_telnet.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.security_telnet.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for security_telnet.example -->
+
+
+			<!-- Display condition for security_email.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.security_email.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for security_email.example -->
+
+			<!-- Display condition for security_webserver.example -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.security_webserver.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for security_webserver.example -->
+
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.telnet_to_serial.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.web_hvac.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+
+			<!-- Display condition for mfs.cfcard -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.cfcard.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for mfs.cfcard -->
+
+			<!-- Display condition for mfs.mfs_ftp -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.mfs_ftp.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for mfs.mfs_ftp -->
+
+			<!-- Display condition for mfs.ramdisk -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.ramdisk.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for mfs.ramdisk -->
+
+			<!-- Display condition for mfs.sdcard -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.sdcard.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for mfs.sdcard -->
+
+			<!-- Display condition for mfs.mfs_usb -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.mfs_usb.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for mfs.mfs_usb -->
+
+			<!-- Display condition for httpsrv -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.httpsrv.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for httpsrv -->
+
+			<!-- Display condition for ipc_udp cpu1 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc_udp.cpu1.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for ipc_udp cpu1 -->
+
+			<!-- Display condition for ipc_udp cpu2 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc_udp.cpu2.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for ipc_udp cpu2 -->
+
+			<!-- Display condition for rtcs shell -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.shell.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for rtcs shell -->
+
+			<!-- Display condition for snmp -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.snmp.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for snmp -->
+
+			<!-- Display condition for ipc_udp.cpu1 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc_udp.cpu1.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for ipc_udp.cpu1 -->
+
+			<!-- Display condition for ipc_udp.cpu2 -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.ipc_udp.cpu2.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for ipc_udp.cpu2 -->
+
+			<!-- Display condition for usbdevice.mouse -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.usb.device.audio_generator.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.mouse -->
+
+			<!-- Display condition for usb.device.audio_speaker -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.usb.device.audio_speaker.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usb.device.audio_speaker -->
+
+			<!-- Display condition for usbdevice.virtual_com -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.virtual_com.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.virtual_com -->
+
+			<!-- Display condition for usbdevice.virtual_nic -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.virtual_nic.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.virtual_nic -->
+
+
+			<!-- Display condition for usbdevice.disk -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.disk.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.disk -->
+
+			<!-- Display condition for usbdevice.bridge -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.bridge.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.bridge -->
+
+
+			<!-- Display condition for usbdevice.weighscale -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.weighscale.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbdevice.weighscale -->
+
+
+			<!-- Display condition for usbhost.audio_speaker -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.audio_speaker.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbhost.audio_speaker -->
+
+			<!-- Display condition for usbhost.audio_stream -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.audio_stream.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbhost.audio_stream -->
+
+
+			<!-- Display condition for usbhost.cdc_serial -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.cdc_serial.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbhost.cdc_serial -->
+
+			<!-- Display condition for usbhost.keyboard+mouse -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.keyboard+mouse.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbhost.keyboard+mouse -->
+
+			<!-- Display condition for usbhost.msd_commands -->
+			<condition id="mcu.mqxprojectwizard1.condition.examples.display.msd_commands.example">
+				<not>
+					<or>
+						<!-- <isSelected uiChoiceId="mcu.mqxprojectwizard1.board.{BOARD_ID}"/> -->
+						<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+					</or>
+				</not>
+			</condition>
+			<!-- End of display condition for usbhost.msd_commands -->
+
+    <!-- Conditions to define which paths to add to the compiler and assembler search path-->
+    <!-- Path: lib/board.cw10/bsp/Generated_Code -->	
+    <condition id="mcu.mqxprojectwizard1.condition.paths.addgenerated_code">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+			</or>
+		</condition>	
+		
+		</conditions>
+	</uiExtension>
+
+	<newProjectExtension>
+		<variables>
+			<variable name="BoardName" value="twrk20d50m" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+			<variable name="ChipName" value="K20DX128" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>		    
+			<variable name="ChipFamily" value="K20" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>    
+			<variable name="ChipPEx" value="MK20DX128xxx5" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>		
+			<variable name="ChipIntFamily" value="Gauss" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+			<variable name="ChipIntName" value="Gauss [p0] (MK20DX128 - 50 Mhz)" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+
+			<!-- removed, unused
+    <variable name="BoardID" value="ID_BOARD_TWRK20D50M" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+    <variable name="ChipId" value="K20DX128" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+    <variable name="FlashFileAF" value="ID_BOARD_TWRK20D50M.xml" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+    <variable name="TtfFileNames" value="k20d50m_Int_Flash.ttf" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+    <variable name="TaskNamePrefix" value="k20d50m" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M"/>
+    -->
+			<!-- MQX path to which this board refers to  - Added to suport MQX patches.
+      The value is the path to Win Registry key with information about MQX installation. 
+      Wizard will read PATH registry variable in this key and set the MQX_ROOT_DIR 
+      for the created project to the MQX path it founds there. -->
+			<variable name="MqxInstallRegPath" value="\FreeScale\FreeScale MQX\3.8" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_TWRK20D50M" />
+
+		</variables>
+	</newProjectExtension>
+
+</wizardExtension>

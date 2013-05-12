@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_arm_common_settings">
+			<settingsGroupRef id="MQX_common_settings_elf_importer"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Debugger.processor" value="${ChipName}" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.busFaultErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.checkUsageFaultErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.hardFaultErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.intErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.memManageErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.noCoprocessorErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Exceptions.stateUsageFaultErr" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Interrupt.interrupt_enabled" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Interrupt.interrupt_mask" value="0" type="integer"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVconstant" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVexecutable" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVinitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVuninitialized" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.coreIndex" value="0" type="integer"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.homogeneousMulticore" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.simulator" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.smp" value="false" type="boolean"/>
+				
+				<applySetting id="forceShellDownload" value="false"  type="boolean"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.arm.ArmDebugger" type="string"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value="" type="string"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run" type="string"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true" type="boolean"/>
+				<applySetting id="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main" type="string"/>
+				<applySetting id="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false" type="boolean"/>
+				<applySetting id="org.eclipse.cdt.launch.ENABLE_RESTORE_WATCHPOINTS" value="true" type="boolean"/>
+				<applySetting id="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false" type="boolean"/>				
+
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtProgramEntryPoint" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtStartUp" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.DebuggerTab.StopAtUserSpecified" value="true" type="boolean"/>
+				<!-- Moved to specific groups in plugin.xml - flash has different settings than RAM -->
+				<!--
+        <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="false" type="boolean"/>        
+				<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.StandardDownload" value="true" type="boolean"/>
+				-->
+        <applySetting id="com.freescale.cdt.debug.cw.PN_StopAtProgramEntryPoint" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.RefreshPolicy.RefreshPeriod" value="2.0" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.Symbolics.CacheSymbolicsBetweenRuns" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.Symbolics.UseExecutableCopy" value="false" type="boolean"/>
+				
+				<applySetting id="com.freescale.cdt.debug.cw.executePerCoresReset" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.processor" value="Generic" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.runOutOfResetList" type="list" mode="append">
+					<listValue value="false"/>
+				</applySetting>
+				
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Processor Attr Name" value="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.ARM Debugger.processor" type="string"/>
+				
+				<applySetting id="com.freescale.cdt.debug.cw.CoreNameList" type="list" mode="append">
+					<listValue value="${ChipName}#0"/>
+				</applySetting>
+				
+				<!-- Fix @MTWX43122 -->
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value="${unevaluated:MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/${BoardName}.mem" type="string"/>
+				
+				<!-- Fix @MTWX43574 -->
+				<applySetting id="com.freescale.cdt.debug.cw.executeReset" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useDefaultConfigFile" value="false" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useInitFile" value="true" type="boolean"/>
+				<applySetting id="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.initPath" value="${unevaluated:MQX_ROOT_DIR}/lib/${BoardName}.cw10/bsp/dbg/init_kinetis.tcl" type="string"/>
+				
+				 <applySetting id="com.freescale.cdt.debug.cw.osawareness.osContributorID" mode="replace" type="string" value="com.freescale.os.mqx.cortexm"/>
+	       <applySetting
+                        id="com.freescale.cdt.debug.cw.osawareness.rtospluginname"
+                        mode="replace"
+                        type="string"
+                        value="MQX RTOS CORTEXM">
+                  </applySetting>
+                  <applySetting
+                        id="com.freescale.cdt.debug.cw.osawareness.targetos"
+                        mode="replace"
+                        type="string"
+                        value="MQX OS for Cortex">
+                  </applySetting>
+
+          <applySetting
+                        id="com.freescale.panel.list"
+                        mode="replace"
+                        type="list">                     
+                     <listValue value="Debugger Common Settings"> </listValue>
+                    <listValue value="ARM Exceptions"></listValue>
+                    <listValue value="ARM Interrupt"></listValue>
+                    <listValue value="Embedded Download"></listValue>
+                    <listValue value="Debugger PIC Settings Panel"></listValue>
+                    <listValue value="Other Executables"></listValue>
+                    <listValue value="Symbolics"></listValue>
+                    <listValue value="osawareness"></listValue>
+          </applySetting>           
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

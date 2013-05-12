@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+    <variables>          
+          <!-- not needed anymore; path is read from Registry
+          <variable name="mqx_path" value="D:/ccwork/B21489_view_dev/MSGSW/MQX/src" />
+          -->   
+    </variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

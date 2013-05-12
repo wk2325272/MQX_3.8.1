@@ -1,0 +1,704 @@
+-- HEADER --------------------------------------------------------------
+-- ---------------------------------------------------------------------
+--
+--  Comments:  This file contains an implementation of the MQX MIB.
+--
+-- ---------------------------------------------------------------------
+-- END -----------------------------------------------------------------
+
+-- Definitions for MQX-MIB
+freescale                            enterprises.34535
+mqx                                     freescale.1
+
+%% DisplayString OCTET
+
+mqxKernel                               mqx.1
+mqxVersion                              mqxKernel.1                             INTEGER         read-only       mandatory
+mqxRevision                             mqxKernel.2                             SEQUENCE        not-accessible  mandatory
+    mqxRevKernel                        mqxRevision.1                           INTEGER         read-only       mandatory
+    mqxRevPSP                           mqxRevision.2                           INTEGER         read-only       mandatory
+    mqxRevIO                            mqxRevision.3                           INTEGER         read-only       mandatory
+    mqxRevBSP                           mqxRevision.4                           INTEGER         read-only       mandatory
+mqxCopyright                            mqxKernel.3                             DisplayString   read-only       mandatory
+mqxDate                                 mqxKernel.4                             DisplayString   read-only       mandatory
+mqxCPU                                  mqxKernel.5                             SEQUENCE        not-accessible  mandatory
+    mqxCPUType                          mqxCPU.1                                INTEGER         read-only       mandatory
+    mqxCPUEndian                        mqxCPU.2                                INTEGER         read-only       mandatory
+    mqxCPUAddressing                    mqxCPU.3                                INTEGER         read-only       mandatory
+mqxProcessorNum                         mqxKernel.6                             INTEGER         read-only       mandatory
+mqxConfig                               mqxKernel.7                             SEQUENCE        not-accessible  mandatory
+    mqxConfigFloatingPointIO            mqxConfig.1                             INTEGER         read-only       mandatory
+    mqxConfigInlineMacros               mqxConfig.2                             INTEGER         read-only       mandatory
+    mqxConfigKernelLogging              mqxConfig.3                             INTEGER         read-only       mandatory
+    mqxConfigMonitorStack               mqxConfig.4                             INTEGER         read-only       mandatory
+    mqxConfigTaskCreationBlocks         mqxConfig.5                             INTEGER         read-only       mandatory
+    mqxConfigTaskDestruction            mqxConfig.6                             INTEGER         read-only       mandatory
+    mqxConfigComponentDestruction       mqxConfig.7                             INTEGER         read-only       mandatory
+    mqxConfigCheckErrors                mqxConfig.8                             INTEGER         read-only       mandatory
+    mqxConfigCheckValidity              mqxConfig.9                             INTEGER         read-only       mandatory
+    mqxConfigCheckAlloc                 mqxConfig.10                            INTEGER         read-only       mandatory
+    mqxConfig64BitInts                  mqxConfig.11                            INTEGER         read-only       mandatory
+    mqxConfigPspKernelLogging           mqxConfig.12                            INTEGER         read-only       mandatory
+    mqxConfigPspFPRegisters             mqxConfig.13                            INTEGER         read-only       mandatory
+    mqxConfig32BitQIDs                  mqxConfig.14                            INTEGER         read-only       mandatory
+-- mqxTime                                 mqxKernel.7                             SEQUENCE        not-accessible  mandatory
+
+mqxTask                                 mqx.2
+mqxTaskTable                            mqxTask.1                               SEQUENCE        not-accessible  mandatory
+mqxTaskEntry                            mqxTaskTable.1                          SEQUENCE        not-accessible  mandatory   mqxTaskID
+mqxTaskID                               mqxTaskEntry.1                          INTEGER         read-only       mandatory
+mqxTaskCreator                          mqxTaskEntry.2                          INTEGER         read-only       mandatory
+mqxTaskName                             mqxTaskEntry.3                          DisplayString   read-only       mandatory
+mqxTaskState                            mqxTaskEntry.4                          INTEGER         read-only       mandatory
+mqxTaskErrorCode                        mqxTaskEntry.5                          INTEGER         read-only       mandatory
+mqxTaskSched                            mqxTaskEntry.6                          SEQUENCE        not-accessible  mandatory
+    mqxTaskSchedPriority                mqxTaskSched.1                          INTEGER         read-only       mandatory
+    mqxTaskSchedHomePriority            mqxTaskSched.2                          INTEGER         read-only       mandatory
+    mqxTaskSchedPolicy                  mqxTaskSched.3                          INTEGER         read-only       mandatory
+    mqxTaskSchedTimeSlice               mqxTaskSched.4                          INTEGER         read-only       mandatory
+mqxTaskStackSize                        mqxTaskEntry.7                          INTEGER         read-only       mandatory
+mqxTaskStackUsed                        mqxTaskEntry.8                          INTEGER         read-only       mandatory
+mqxTaskIO                               mqxTaskEntry.9                          SEQUENCE        not-accessible  mandatory
+    mqxTaskIOstdin                      mqxTaskIO.1                             DisplayString   read-only       mandatory
+    mqxTaskIOstdout                     mqxTaskIO.2                             DisplayString   read-only       mandatory
+    mqxTaskIOstderr                     mqxTaskIO.3                             DisplayString   read-only       mandatory
+mqxTaskFlag                             mqxTaskEntry.10                         SEQUENCE        not-accessible  mandatory
+    mqxTaskFlagFloatingPoint            mqxTaskFlag.1                           INTEGER         read-only       mandatory
+    mqxTaskFlagLoggingEnabled           mqxTaskFlag.2                           INTEGER         read-only       mandatory
+    mqxTaskFlagWatchdogEnabled          mqxTaskFlag.3                           INTEGER         read-only       mandatory
+    mqxTaskFlagPreemptionDisabled       mqxTaskFlag.4                           INTEGER         read-only       mandatory
+
+mqxComponent                            mqx.3
+
+mqxComponentName                        mqxComponent.1
+mqxComponentSem                         mqxComponent.2
+mqxComponentEvent                       mqxComponent.3
+mqxComponentMutex                       mqxComponent.4
+mqxComponentTimer                       mqxComponent.5
+mqxComponentLog                         mqxComponent.6
+mqxComponentWatchdog                    mqxComponent.7
+mqxComponentMessage                     mqxComponent.8
+mqxComponentPart                        mqxComponent.9
+mqxComponentIPC                         mqxComponent.10
+mqxComponentQlog                        mqxComponent.11
+mqxComponentEDS                         mqxComponent.12
+
+mqxIOC                                  mqx.4
+
+mqxIOCIO                                mqxIOC.1
+mqxIOCRTCS                              mqxIOC.2
+mqxIOCLAPB                              mqxIOC.3
+mqxIOCLAPD                              mqxIOC.4
+mqxIOCSDLC                              mqxIOC.5
+mqxIOCHDLC                              mqxIOC.6
+mqxIOCMFS                               mqxIOC.7
+mqxIOCCAN                               mqxIOC.8
+mqxIOCPPP                               mqxIOC.9
+mqxIOCSNMP                              mqxIOC.10
+mqxIOCENET                              mqxIOC.11
+
+%%
+
+/****************************************************************************/
+
+#if RTCSCFG_ENABLE_SNMP
+
+#include <rtcs_prv.h>
+#include "tcpip.h"
+
+#include <mqx.h>
+#include <fio.h>
+#include <psp.h>
+#include <mem_prv.h>
+#include <mqx_prv.h>
+#include <gen_rev.h>
+#include <psp_rev.h>
+#include <bsp_rev.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+extern uint_32 MIB_get_mqxConfig64BitInts(pointer dummy);
+extern uint_32 MIB_get_mqxRevKernel(pointer dummy);
+extern uint_32 MIB_get_mqxRevPSP(pointer dummy);
+extern uint_32 MIB_get_mqxRevIO(pointer dummy);
+extern uint_32 MIB_get_mqxRevBSP(pointer dummy);
+extern uchar_ptr MIB_get_mqxCopyright(pointer td);
+extern uchar_ptr MIB_get_mqxDate(pointer td);
+extern uint_32 MIB_get_mqxCPUEndian(pointer dummy);
+extern uint_32 MIB_get_mqxCPUAddressing(pointer dummy);
+extern uint_32 MIB_get_mqxProcessorNum(pointer dummy);
+static uint_32 MIB_get_mqxTaskID(pointer td);
+static uint_32 MIB_get_mqxTaskCreator(pointer td);
+static uchar_ptr MIB_get_mqxTaskName(pointer td);
+static uint_32 MIB_get_mqxTaskState(pointer td);
+static uint_32 MIB_get_mqxTaskErrorCode(pointer td);
+static uint_32 MIB_get_mqxTaskSchedPriority(pointer td);
+static uint_32 MIB_get_mqxTaskSchedHomePriority(pointer td);
+static uint_32 MIB_get_mqxTaskSchedPolicy(pointer td);
+static uint_32 MIB_get_mqxTaskSchedTimeSlice(pointer td);
+static uint_32 MIB_get_mqxTaskStackSize(pointer dummy);
+static uint_32 MIB_get_mqxTaskStackUsed(pointer dummy);
+static uchar_ptr MIB_get_mqxTaskIOstdin(pointer td);
+static uchar_ptr MIB_get_mqxTaskIOstdout(pointer td);
+static uchar_ptr MIB_get_mqxTaskIOstderr(pointer td);
+extern uint_32 MIB_get_mqxTaskFlagFloatingPoint(pointer td);
+static uint_32 MIB_get_mqxTaskFlagLoggingEnabled(pointer td);
+static uint_32 MIB_get_mqxTaskFlagWatchdogEnabled(pointer td);
+static uint_32 MIB_get_mqxTaskFlagPreemptionDisabled(pointer td);
+
+/****************************************************************************/
+
+uint_32 MIB_get_mqxConfig64BitInts(pointer dummy)
+{
+	return(0);	
+}
+
+boolean MIB_find_mqxTaskEntry
+   (
+      uint_32        op,
+      pointer        index,
+      pointer _PTR_  instance
+   )
+{ /* Body */
+   KERNEL_DATA_STRUCT_PTR  kd_ptr = _mqx_get_kernel_data();
+   _task_id                tid = (_task_id)*(uint_32_ptr)index;
+   TD_STRUCT_PTR           td_ptr = NULL;
+   QUEUE_ELEMENT_STRUCT_PTR search_ptr;
+   uint_32                  td_num;
+
+   if (op == RTCSMIB_OP_GET) {
+      *instance = _task_get_td(tid);
+      return (*instance != NULL);
+   } /* Endif */
+
+   search_ptr = kd_ptr->TD_LIST.NEXT;
+   td_num = 0;
+   for (;;) {
+     td_ptr = (TD_STRUCT_PTR)((char_ptr)search_ptr - offsetof(TD_STRUCT, TD_LIST_INFO));
+     if (td_ptr->TASK_ID >= tid) {
+        break;
+    } /* Endif */
+    td_num++;
+    if (td_num >= kd_ptr->TD_LIST.SIZE) {
+        td_ptr = NULL;
+        break;
+    } /* Endif */
+    search_ptr = search_ptr->NEXT;
+   } /* Endfor */
+
+   if (!td_ptr) {
+      return FALSE;
+   } /* Endif */
+
+   *(uint_32_ptr)index = td_ptr->TASK_ID;
+   *instance = td_ptr;
+   return (td_ptr != NULL);
+
+} /* Endbody */
+
+static uint_32   MIB_get_mqxTaskID                     (pointer td) {return ((TD_STRUCT_PTR)td)->TASK_ID;}
+static uint_32   MIB_get_mqxTaskCreator                (pointer td) {return ((TD_STRUCT_PTR)td)->PARENT;}
+static uint_32   MIB_get_mqxTaskSchedTimeSlice         (pointer td) {uint_32 ms; _sched_get_rr_interval(((TD_STRUCT_PTR)td)->TASK_ID,&ms); return ms;}
+static uchar_ptr MIB_get_mqxTaskName                   (pointer td) {return (uchar_ptr)((TD_STRUCT_PTR)td)->TASK_TEMPLATE_PTR->TASK_NAME;}
+static uint_32   MIB_get_mqxTaskState                  (pointer td) {return ((TD_STRUCT_PTR)td)->STATE;}
+static uint_32   MIB_get_mqxTaskErrorCode              (pointer td) {return ((TD_STRUCT_PTR)td)->TASK_ERROR_CODE;}
+static uint_32   MIB_get_mqxTaskSchedPriority          (pointer td) {return ((TD_STRUCT_PTR)td)->MY_QUEUE->PRIORITY;}
+static uint_32   MIB_get_mqxTaskSchedHomePriority      (pointer td) {return ((TD_STRUCT_PTR)td)->HOME_QUEUE->PRIORITY;}
+static uint_32   MIB_get_mqxTaskSchedPolicy            (pointer td) {
+#if MQX_TIME_SLICE_TASK
+return (((TD_STRUCT_PTR)td)->FLAGS & MQX_TIME_SLICE_TASK) ? MQX_SCHED_RR : MQX_SCHED_FIFO;
+#else
+return 0;
+#endif
+}
+#if MQX_KERNEL_LOGGING
+static uint_32   MIB_get_mqxTaskStackSize              (pointer td) {uint_32 ss,su; _klog_get_task_stack_usage(((TD_STRUCT_PTR)td)->TASK_ID,&ss,&su); return ss;}
+static uint_32   MIB_get_mqxTaskStackUsed              (pointer td) {uint_32 ss,su; _klog_get_task_stack_usage(((TD_STRUCT_PTR)td)->TASK_ID,&ss,&su); return su;}
+#endif
+static uchar_ptr MIB_get_mqxTaskIOstdin                (pointer td) {return (((TD_STRUCT_PTR)td)->STDIN_STREAM)  ? (uchar_ptr)((MQX_FILE_PTR)((TD_STRUCT_PTR)td)->STDIN_STREAM)->DEV_PTR->IDENTIFIER  : NULL;}
+static uchar_ptr MIB_get_mqxTaskIOstdout               (pointer td) {return (((TD_STRUCT_PTR)td)->STDOUT_STREAM) ? (uchar_ptr)((MQX_FILE_PTR)((TD_STRUCT_PTR)td)->STDOUT_STREAM)->DEV_PTR->IDENTIFIER : NULL;}
+static uchar_ptr MIB_get_mqxTaskIOstderr               (pointer td) {return (((TD_STRUCT_PTR)td)->STDERR_STREAM) ? (uchar_ptr)((MQX_FILE_PTR)((TD_STRUCT_PTR)td)->STDERR_STREAM)->DEV_PTR->IDENTIFIER : NULL;}
+#if PSP_HAS_FPU
+static uint_32   MIB_get_mqxTaskFlagFloatingPoint      (pointer td) {return (((TD_STRUCT_PTR)td)->FLAGS & MQX_FLOATING_POINT_TASK)  ? 1 : 0;}
+#endif
+static uint_32   MIB_get_mqxTaskFlagLoggingEnabled     (pointer td) {return (((TD_STRUCT_PTR)td)->FLAGS & TASK_LOGGING_ENABLED)     ? 1 : 0;}
+static uint_32   MIB_get_mqxTaskFlagWatchdogEnabled    (pointer td) {return (((TD_STRUCT_PTR)td)->FLAGS & TASK_WATCHDOG_STARTED)    ? 1 : 0;}
+static uint_32   MIB_get_mqxTaskFlagPreemptionDisabled (pointer td) {return (((TD_STRUCT_PTR)td)->FLAGS & TASK_PREEMPTION_DISABLED) ? 1 : 0;}
+
+
+uint_32 MIB_get_mqxRevKernel(pointer dummy)
+{
+	return(GEN_REVISION);
+}
+
+uint_32 MIB_get_mqxRevPSP(pointer dummy)
+{
+	return(PSP_REVISION);
+}
+
+uint_32 MIB_get_mqxRevIO(pointer dummy)
+{
+	return(IO_REVISION);
+}
+
+uint_32 MIB_get_mqxRevBSP(pointer dummy)
+{
+	return(BSP_REVISION);
+}
+
+uchar_ptr MIB_get_mqxCopyright(pointer td)
+{
+	return((uchar_ptr)_mqx_copyright);
+}
+
+uchar_ptr MIB_get_mqxDate(pointer td)
+{
+	return((uchar_ptr)_mqx_date );	
+}
+
+uint_32 MIB_get_mqxCPUEndian(pointer dummy)
+{
+	return(PSP_ENDIAN);	
+}
+
+uint_32 MIB_get_mqxCPUAddressing(pointer dummy)
+{
+	return(PSP_MEMORY_ADDRESSING_CAPABILITY);
+}
+
+uint_32 MIB_get_mqxProcessorNum(pointer dummy)
+{
+	KERNEL_DATA_STRUCT_PTR kd_ptr = _mqx_get_kernel_data();
+	return 0;//((uint_32)kd_ptr->PROCESSOR_NUMBER);	
+}
+
+/****************************************************************************/
+
+const RTCSMIB_VALUE MIBVALUE_mqxVersion = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_VERSION
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxRevKernel = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxRevKernel
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxRevPSP = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxRevPSP
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxRevIO = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxRevIO
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxRevBSP = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxRevBSP
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxCopyright = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxCopyright 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxDate = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxDate 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxCPUEndian = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxCPUEndian
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxCPUAddressing = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxCPUAddressing
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxProcessorNum = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxProcessorNum
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigFloatingPointIO = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_INCLUDE_FLOATING_POINT_IO
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigInlineMacros = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_USE_INLINE_MACROS
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigKernelLogging = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_KERNEL_LOGGING
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigMonitorStack = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_MONITOR_STACK
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigTaskCreationBlocks = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_TASK_CREATION_BLOCKS
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigTaskDestruction = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_TASK_DESTRUCTION
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigComponentDestruction = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_COMPONENT_DESTRUCTION
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigCheckErrors = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_CHECK_ERRORS
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigCheckValidity = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_CHECK_VALIDITY
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigCheckAlloc = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_CHECK_MEMORY_ALLOCATION_ERRORS
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfig64BitInts = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxConfig64BitInts
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfig32BitQIDs = {
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)MQX_USE_32BIT_MESSAGE_QIDS
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskID = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskID
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskCreator = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskCreator
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskName = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxTaskName 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskState = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskState
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskErrorCode = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskErrorCode
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskSchedPriority = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskSchedPriority
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskSchedHomePriority = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskSchedHomePriority
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskSchedPolicy = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskSchedPolicy
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskSchedTimeSlice = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskSchedTimeSlice
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskStackSize = {
+	#if MQX_KERNEL_LOGGING
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskStackSize
+	#else
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)NULL
+	#endif
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskStackUsed = {
+	#if MQX_KERNEL_LOGGING
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskStackUsed
+	#else
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)NULL
+	#endif	
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskIOstdin = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxTaskIOstdin 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskIOstdout = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxTaskIOstdout 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskIOstderr = {
+	RTCSMIB_NODETYPE_DISPSTR_FN,
+	(void _PTR_)MIB_get_mqxTaskIOstderr 
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskFlagFloatingPoint = {
+#if PSP_HAS_FPU
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskFlagFloatingPoint
+#else
+	RTCSMIB_NODETYPE_UINT_CONST,
+	(void _PTR_)NULL
+#endif	
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskFlagLoggingEnabled = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskFlagLoggingEnabled
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskFlagWatchdogEnabled = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskFlagWatchdogEnabled
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskFlagPreemptionDisabled = {
+	RTCSMIB_NODETYPE_UINT_FN,
+	(void _PTR_)MIB_get_mqxTaskFlagPreemptionDisabled
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCLAPB = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigPspFPRegisters = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCPPP = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentPart = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskTable = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTask = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxCPU = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxKernel = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCENET = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCLAPD = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentSem = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentEDS = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentQlog = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCHDLC = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCMFS = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentTimer = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponent = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentIPC = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentMutex = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskIO = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfigPspKernelLogging = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxConfig = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCSNMP = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCSDLC = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskSched = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxCPUType = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_freescale = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCCAN = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentLog = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskFlag = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxTaskEntry = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCRTCS = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxRevision = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqx = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOCIO = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxIOC = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentMessage = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentWatchdog = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentEvent = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+const RTCSMIB_VALUE MIBVALUE_mqxComponentName = {
+	RTCSMIB_NODETYPE_INT_CONST,
+	NULL
+};
+
+#endif /* RTCSCFG_ENABLE_SNMP */
+
+/****************************************************************************/
+ 
+void MIBMQX_init(void)
+{
+#if RTCSCFG_ENABLE_SNMP
+   RTCSMIB_mib_add(&MIBNODE_freescale);
+#endif
+}
+
+/* EOF */

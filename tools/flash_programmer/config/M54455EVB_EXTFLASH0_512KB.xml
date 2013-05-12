@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<fpconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fp_config.xsd">
+
+  <targetconfwindow>
+    <usecustomsettings>false</usecustomsettings>
+    <targetprocessor>54455</targetprocessor>
+    <connection/>
+    <usetargetinit>true</usetargetinit>
+    <targetinitfile>{CodeWarrior}\ColdFire_Support\Initialization_Files\M54455EVB.cfg</targetinitfile>
+    <targetmembuffaddr>0x80000000</targetmembuffaddr>
+    <targetmembuffsize>0x00008000</targetmembuffsize>
+    <enablelogging>true</enablelogging>
+    <verifywrites>true</verifywrites>
+  </targetconfwindow>
+
+  <flashconfwindow>
+    <membaseaddr>0x04000000</membaseaddr>
+    <device>AT49BV040</device>
+    <organization>512Kx8x1</organization>
+    <flashstart>0x04000000</flashstart>
+    <flashend>0x0407FFFF</flashend>
+  </flashconfwindow>
+
+  <programverifywindow>
+    <useselectedfile>false</useselectedfile>
+    <projbuildtargetfile>nofile</projbuildtargetfile>
+    <fileiotype>Auto Detect</fileiotype>
+    <restrictaddrrange>false</restrictaddrrange>
+    <restrictaddrrangestart>0x04000000</restrictaddrrangestart>
+    <restrictaddrrangeend>0x0407FFFF</restrictaddrrangeend>
+    <applyaddroffset>false</applyaddroffset>
+    <addroffset>0x04000000</addroffset>
+  </programverifywindow>
+
+  <eraseblankcheckwindow>
+    <eraseallsectors>true</eraseallsectors>
+    <sector/>
+    <processsectorsindividually>false</processsectorsindividually>
+  </eraseblankcheckwindow>
+
+  <checksumwindow>
+    <computechecksumover>FileOnTarg</computechecksumover>
+    <addrstart>0x04000000</addrstart>
+    <addrsize>0x0007FFFF</addrsize>
+  </checksumwindow>
+
+</fpconfig>

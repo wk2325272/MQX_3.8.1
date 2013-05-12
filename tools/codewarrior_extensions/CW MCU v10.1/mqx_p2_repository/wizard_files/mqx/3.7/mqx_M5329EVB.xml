@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+  <uiExtension>
+	<pages>
+	  <page id="mcu.mqxprojectwizard1.page.devices">
+		<uiElement id="mcu.mqxprojectwizard1.chip.list">		 
+		  <elementChoice id="mcu.mqxprojectwizard1.board.list.cf">  
+		    <elementChoice name="M5329EVB Board" id="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"
+        systemTypeId="com.freescale.cw.system.coldfire.MCF532X.MCF5329"
+        contentHelp="M5329EVB Board&#10;&#10;..."> 		     
+		    </elementChoice>
+		  </elementChoice>
+		  	</uiElement>
+	  </page>
+	</pages>
+
+    		    
+<conditions>
+	<!--Conditions to include selected targets in the new project.
+        We add them with OR so that all conditions defined in other files
+        or in plugin.xml also apply.
+        Here Condition means: if true, then perform the action, which is defined with 
+        this condition ID,
+        e.g. copy cfg file for EXTRAM to project.
+        
+        TODO: Define by conditions which modules this board supports (USBHost, MFS etc.)
+        TODO: Define  by conditions which targets will be included in the new project if 
+              this board is selected 
+  -->      
+    <condition id="mcu.mqxprojectwizard1.condition.hasmfs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+			</or>
+		</condition>		
+    <condition id="mcu.mqxprojectwizard1.condition.hasrtcs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+			</or>
+		</condition>	
+    <condition id="mcu.mqxprojectwizard1.condition.hasusbdevice">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+			</or>
+		</condition>	
+     <condition id="mcu.mqxprojectwizard1.condition.hasusbhost">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+			</or>
+		</condition>			
+    <condition id="mcu.mqxprojectwizard1.condition.hasshell">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+			</or>
+		</condition>	
+      
+       <!-- Conditions to define the configurations (targets) for this board -->
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_EXT_RAM_DEBUG">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_EXT_RAM_RELEASE">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_EXT_FLASH_DEBUG">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_EXT_FLASH_RELEASE">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+			<!-- Conditions to define ColdFire version -->
+		<condition id="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		<!-- Condition to define standard download or execute task for flash targets
+      if defined here, the board uses tasks; (task file must exist and names must be defined below!) 
+      if not defined, uses standard download.
+      -->
+		<condition id="mcu.mqxprojectwizard1.condition.launch.hastargettask">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		<!-- Conditions to define which connections this board supports (e.g. OSBDM, PEBDM) -->				
+		<condition id="mcu.mqxprojectwizard1.condition.connection.haspebdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+			</or>
+		</condition>
+		
+		
+		
+
+	</conditions>
+	</uiExtension>
+ 
+ <newProjectExtension>
+  	<variables>
+	  <variable name="BoardName" value="M5329EVB" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB" />
+	  	  <variable name="BoardID" value="ID_BOARD_M5329EVB" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="ChipName" value="MCF5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>	
+	  <variable name="ChipHeaders" value="MCF5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="ChipFamily" value="V3" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="ChipCompSelect" value="5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="ChipAssemblySelect" value="5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="ChipDebugSelect" value="MCF5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+	  <variable name="TtfFileNames" value="mcf5329_Ext_Flash.ttf" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>
+    <variable name="TaskNamePrefix" value="mcf5329" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M5329EVB"/>	    
+  	</variables>
+  </newProjectExtension>
+
+</wizardExtension>

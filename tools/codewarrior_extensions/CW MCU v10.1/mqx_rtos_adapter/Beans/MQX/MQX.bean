@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bean>
+  <Header>
+    <Name>MQX</Name>
+    <Description>MQX Realtime Operating System</Description>
+    <Author>Processor Expert/MV</Author>
+    <Version>01.031</Version>
+    <Icon>OS_LDD</Icon>
+    <TypesFiles>PE,MQX\MQX</TypesFiles>
+    <FileVersion>6</FileVersion>
+  </Header>
+  <Options>
+    <BW_HelpType>Default</BW_HelpType>
+    <BW_HelpFiles>,Properties,Methods,Events,"User Types"</BW_HelpFiles>
+    <BW_AutoSaveHelp>yes</BW_AutoSaveHelp>
+    <BW_AutoSaveDriver>no</BW_AutoSaveDriver>
+    <BW_DetailedHelp>yes</BW_DetailedHelp>
+    <BW_NeedTps>yes</BW_NeedTps>
+    <BeanStatus>RELEASE</BeanStatus>
+    <Category>Operating Systems</Category>
+    <Shortcut>MQX</Shortcut>
+    <DemoDriver>yes</DemoDriver>
+    <Licence>Basic beans</Licence>
+    <OperatingSystemId>MQX</OperatingSystemId>
+    <BW_NeedUst>0</BW_NeedUst>
+    <BeanLevel>High</BeanLevel>
+    <GroupCategory>SW algorithms, encoding/decoding</GroupCategory>
+    <BW_NeedCns>0</BW_NeedCns>
+  </Options>
+  <PropertyList>
+    <Property>
+      <TCompNameItem>
+        <Name>Component name</Name>
+        <Symbol>DeviceName</Symbol>
+        <Hint>Name of the component.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue/>
+      </TCompNameItem>
+    </Property>
+    <Property>
+      <TGrupItem>
+        <Name>Settings</Name>
+        <Symbol>_SettingsGrp</Symbol>
+        <Hint>Common component setting.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <IsInSimulink>true</IsInSimulink>
+        <BoldName>true</BoldName>
+        <EditLine>false</EditLine>
+        <Description/>
+        <Expanded>Yes</Expanded>
+        <Children>
+          <GrupItem>
+            <TGrupItem>
+              <Name>RTOS adaptor</Name>
+              <Symbol>RTOSAdaptorGrp</Symbol>
+              <Hint>Contains the RTOS specific settings. RTOS adaptor is a part of RTOS component which handles the integration of HAL into specific RTOS.</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <BoldName>true</BoldName>
+              <EditLine>false</EditLine>
+              <Description/>
+              <Expanded>Yes</Expanded>
+              <Children>
+                <GrupItem>
+                  <TGrupItem>
+                    <Name>Memory allocation</Name>
+                    <Symbol>MemoryAllocationGroup</Symbol>
+                    <Hint>Definition of the RTOS API which provides the memory allocation functionality for HAL driver code.</Hint>
+                    <ItemLevel>BASIC</ItemLevel>
+                    <BoldName>true</BoldName>
+                    <EditLine>false</EditLine>
+                    <Description/>
+                    <Expanded>Yes</Expanded>
+                    <Children>
+                      <GrupItem>
+                        <TBoolGrupItem>
+                          <Name>User function for memory allocation</Name>
+                          <Symbol>hasUserMallocFun</Symbol>
+                          <TypeSpec>typeYesNo</TypeSpec>
+                          <Hint>The memory allocation function should allocate the specified number of bytes of memory and return the address of the allocated space. The allocated memory area type should be suitable for usage by RTOS component. If there is an error, it should return NULL pointer.</Hint>
+                          <ItemLevel>BASIC</ItemLevel>
+                          <BoldName>true</BoldName>
+                          <EditLine>false</EditLine>
+                          <Description>no</Description>
+                          <Expanded>No</Expanded>
+                          <DefaultValue>false</DefaultValue>
+                          <DefineSymbol>YES_NO</DefineSymbol>
+                          <IfDisabled>setNOTHING</IfDisabled>
+                          <Children>
+                            <GrupItem>
+                              <TStrgItem>
+                                <Name>User memory allocation function name</Name>
+                                <Symbol>userMallocFunName</Symbol>
+                                <Hint>The name of the user function (see above for description).</Hint>
+                                <ItemLevel>BASIC</ItemLevel>
+                                <EditLine>true</EditLine>
+                                <DefaultValue/>
+                                <StrDefine>nothing</StrDefine>
+                                <MinLength>0</MinLength>
+                                <MaxLength>-1</MaxLength>
+                              </TStrgItem>
+                            </GrupItem>
+                          </Children>
+                        </TBoolGrupItem>
+                      </GrupItem>
+                      <GrupItem>
+                        <TBoolGrupItem>
+                          <Name>User function for memory deallocation</Name>
+                          <Symbol>hasUserDeallocFun</Symbol>
+                          <TypeSpec>typeYesNo</TypeSpec>
+                          <Hint>The memory deallocation function should free the memory area allocated by the memory allocation function. The function can be called only for areas allocated by a pair memory allocation function (see property "&lt;a href="#hasUserMallocFun"&gt;User function for memory allocation&lt;/a&gt;").</Hint>
+                          <ItemLevel>BASIC</ItemLevel>
+                          <BoldName>true</BoldName>
+                          <EditLine>false</EditLine>
+                          <Description>no</Description>
+                          <Expanded>No</Expanded>
+                          <DefaultValue>false</DefaultValue>
+                          <DefineSymbol>YES_NO</DefineSymbol>
+                          <IfDisabled>setNOTHING</IfDisabled>
+                          <Children>
+                            <GrupItem>
+                              <TStrgItem>
+                                <Name>User function name</Name>
+                                <Symbol>userDeallocFunName</Symbol>
+                                <Hint>The name of the user function (see above for description).</Hint>
+                                <ItemLevel>BASIC</ItemLevel>
+                                <EditLine>true</EditLine>
+                                <DefaultValue/>
+                                <StrDefine>nothing</StrDefine>
+                                <MinLength>0</MinLength>
+                                <MaxLength>-1</MaxLength>
+                              </TStrgItem>
+                            </GrupItem>
+                          </Children>
+                        </TBoolGrupItem>
+                      </GrupItem>
+                    </Children>
+                  </TGrupItem>
+                </GrupItem>
+                <GrupItem>
+                  <TGrupItem>
+                    <Name>Critical section</Name>
+                    <Symbol>Symbol</Symbol>
+                    <Hint>Definition of the RTOS API which provides the critical section handling for HAL driver code.</Hint>
+                    <ItemLevel>BASIC</ItemLevel>
+                    <BoldName>true</BoldName>
+                    <EditLine>false</EditLine>
+                    <Description/>
+                    <Expanded>Yes</Expanded>
+                    <Children>
+                      <GrupItem>
+                        <TBoolGrupItem>
+                          <Name>User function for entering critical section</Name>
+                          <Symbol>hasUserEnterCriticalFun</Symbol>
+                          <TypeSpec>typeYesNo</TypeSpec>
+                          <Hint>The open critical section function should introduce the code what cannot be interrupted by the ISRs. Such function can be also called from ISRs and/or within context where ISRs are already disabled. In this situation the function has no effect (except that the pair call to critical section close function will be also ignored - see property "&lt;a href="#hasUserExitCriticalFun"&gt;User function for exiting critical section&lt;/a&gt;"). The function has no parameters and returns no value.</Hint>
+                          <ItemLevel>BASIC</ItemLevel>
+                          <BoldName>true</BoldName>
+                          <EditLine>false</EditLine>
+                          <Description>no</Description>
+                          <Expanded>No</Expanded>
+                          <DefaultValue>false</DefaultValue>
+                          <DefineSymbol>YES_NO</DefineSymbol>
+                          <IfDisabled>setNOTHING</IfDisabled>
+                          <Children>
+                            <GrupItem>
+                              <TStrgItem>
+                                <Name>User function name</Name>
+                                <Symbol>userEnterCriticalFunName</Symbol>
+                                <Hint>The name of the user function (see above for description).</Hint>
+                                <ItemLevel>BASIC</ItemLevel>
+                                <EditLine>true</EditLine>
+                                <DefaultValue/>
+                                <StrDefine>nothing</StrDefine>
+                                <MinLength>0</MinLength>
+                                <MaxLength>-1</MaxLength>
+                              </TStrgItem>
+                            </GrupItem>
+                          </Children>
+                        </TBoolGrupItem>
+                      </GrupItem>
+                      <GrupItem>
+                        <TBoolGrupItem>
+                          <Name>User function for exiting critical section</Name>
+                          <Symbol>hasUserExitCriticalFun</Symbol>
+                          <TypeSpec>typeYesNo</TypeSpec>
+                          <Hint>The close critical section function should terminate the code what cannot be interrupted by the ISRs. Such function need always to have a pair open critical section call (see property "&lt;a href="#hasUserEnterCriticalFun"&gt;User function for entering critical section&lt;/a&gt;"). If call to the pair open critical section was ignored, the respective close should be also ignored. The function has no parameters and returns no value.</Hint>
+                          <ItemLevel>BASIC</ItemLevel>
+                          <BoldName>true</BoldName>
+                          <EditLine>false</EditLine>
+                          <Description>no</Description>
+                          <Expanded>No</Expanded>
+                          <DefaultValue>false</DefaultValue>
+                          <DefineSymbol>YES_NO</DefineSymbol>
+                          <IfDisabled>setNOTHING</IfDisabled>
+                          <Children>
+                            <GrupItem>
+                              <TStrgItem>
+                                <Name>User function name</Name>
+                                <Symbol>userExitCriticalFunName</Symbol>
+                                <Hint>The name of the user function (see above for description).</Hint>
+                                <ItemLevel>BASIC</ItemLevel>
+                                <EditLine>true</EditLine>
+                                <DefaultValue/>
+                                <StrDefine>nothing</StrDefine>
+                                <MinLength>0</MinLength>
+                                <MaxLength>-1</MaxLength>
+                              </TStrgItem>
+                            </GrupItem>
+                          </Children>
+                        </TBoolGrupItem>
+                      </GrupItem>
+                    </Children>
+                  </TGrupItem>
+                </GrupItem>
+              </Children>
+            </TGrupItem>
+          </GrupItem>
+        </Children>
+      </TGrupItem>
+    </Property>
+  </PropertyList>
+  <Links>
+    <EmptySection_DummyValue/>
+  </Links>
+  <Revisions>
+    <RevisionVersion>2</RevisionVersion>
+    <Revision>
+      <Date>2009-07-20</Date>
+      <Version>01.025</Version>
+      <Level>2</Level>
+      <Author>JC</Author>
+      <Verified>MV</Verified>
+      <Comment>Support of RTOS adaptor design-time configuration properties (user can define its own functions for memory allocation and critical sections)\n</Comment>
+    </Revision>
+    <Revision>
+      <Date>2011-02-25</Date>
+      <Version>01.030</Version>
+      <Level>2</Level>
+      <Author>MV</Author>
+      <Verified>JC</Verified>
+      <Comment>Property "Default serial channel" has been added.\n</Comment>
+    </Revision>
+    <Revision>
+      <Date>2011-02-25</Date>
+      <Version>01.031</Version>
+      <Level>2</Level>
+      <Author>MV</Author>
+      <Verified/>
+      <Comment>Property "Default serial channel" has been removed.\nObsolete property "Version" has been removed.\nObsolete property "Compiler" has been removed.</Comment>
+    </Revision>
+  </Revisions>
+</Bean>

@@ -1,0 +1,7 @@
+
+
+instructions.install=\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:@artifact/../mqx_p2_repository/wizard_files/mqx/3.7,target:${installFolder}/../MCU/lib/wizard_data/mqx/3.7,overwrite:true);
+
+instructions.uninstall=\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../MCU/lib/wizard_data/mqx/3.7);

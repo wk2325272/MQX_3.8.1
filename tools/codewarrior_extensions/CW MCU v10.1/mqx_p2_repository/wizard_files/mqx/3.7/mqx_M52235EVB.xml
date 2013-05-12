@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+  <uiExtension>
+	<pages>
+	  <page id="mcu.mqxprojectwizard1.page.devices">
+		<uiElement id="mcu.mqxprojectwizard1.chip.list">		 
+		  <elementChoice id="mcu.mqxprojectwizard1.board.list.cf">  
+		    <elementChoice name="M52235EVB Board" id="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB" 
+        systemTypeId="com.freescale.cw.system.coldfire.MCF5223X.MCF52235"
+        contentHelp="The M52235EVB evaluation board includes 10/100 BaseT ethernet connectivity, 
+        breakout connectors for serial interfaces (including I2C, QSPI, GPIO, and ADC), 
+        and support for a ZigBee&#x2122;-ready daughter card."> 		     
+		    </elementChoice>
+		  </elementChoice>	
+		  	</uiElement>
+	  </page>
+	</pages>
+
+    		    
+<conditions>
+	<!--Conditions to include selected targets in the new project.
+        We add them with OR so that all conditions defined in other files
+        or in plugin.xml also apply.
+        Here Condition means if true, then perform the action, which is defined with 
+        this condition ID,
+        e.g. copy cfg file for EXTRAM to project.
+        
+        TODO: Define by conditions which modules this board supports (USBHost, MFS etc.)
+        TODO: Define  by conditions which targets will be included in the new project if 
+              this board is selected 
+  -->      
+    <condition id="mcu.mqxprojectwizard1.condition.hasmfs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB" />
+			</or>
+		</condition>				
+    <condition id="mcu.mqxprojectwizard1.condition.hasrtcs">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB" />
+			</or>
+		</condition>	    
+    <condition id="mcu.mqxprojectwizard1.condition.hasshell">
+		  <or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB" />
+			</or>
+		</condition>	
+    	
+	
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_INT_FLASH_DEBUG">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.mqx.ID_TARGET_INT_FLASH_RELEASE">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		
+		<!-- Conditions to define ColdFire version -->
+		<condition id="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<!-- Condition to define standard download or execute task for flash targets
+      if defined here, the board uses tasks; (task file must exist and names must be defined below!) 
+      if not defined, uses standard download.
+      -->
+		<condition id="mcu.mqxprojectwizard1.condition.launch.hastargettask">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>	
+		<!-- Conditions to define which connections this board supports (e.g. OSBDM, PEBDM) -->				
+		<condition id="mcu.mqxprojectwizard1.condition.connection.haspebdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		
+			<condition id="mcu.mqxprojectwizard1.condition.connection.hasosbdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>			
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasusbtapbdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasethernettapbdm">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>		
+    <condition id="mcu.mqxprojectwizard1.condition.connection.hasabatrontcpip">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasabatronserial">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasvycloneusb">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasvyclonetcpip">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		<condition id="mcu.mqxprojectwizard1.condition.connection.hasvycloneserial">
+			<or>
+				<isSelected uiChoiceId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+			</or>
+		</condition>
+		
+		
+
+	</conditions>
+	</uiExtension>
+ 
+ <newProjectExtension>
+  	<variables>
+	  <variable name="BoardName" value="m52235evb" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB" />
+	  	  <variable name="BoardID" value="ID_BOARD_M52235EVB" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="ChipName" value="MCF52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>	
+	  <variable name="ChipHeaders" value="MCF52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="ChipFamily" value="V2" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="ChipCompSelect" value="52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="ChipAssemblySelect" value="52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="ChipDebugSelect" value="MCF52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+	  <variable name="TtfFileNames" value="mcf52235_Int_Flash.ttf" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>
+    <variable name="TaskNamePrefix" value="mcf52235" conditionId="mcu.mqxprojectwizard1.board.ID_BOARD_M52235EVB"/>	    
+  	</variables>
+  </newProjectExtension>
+
+</wizardExtension>

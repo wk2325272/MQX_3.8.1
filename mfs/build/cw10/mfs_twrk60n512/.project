@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>mfs_twrk60n512</name>
+	<comment>MQX project</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>?name?</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.append_environment</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildArguments</key>
+					<value>-j6</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildCommand</key>
+					<value>${system:ECLIPSE_HOME}/../gnu/bin/mingw32-make</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>${ProjDirPath}/Release</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>true</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>MFS Include</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>MFS Source</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>twrk60n512 Config in lib</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Debug/mfs_twrk60n512_d.a</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60n512.cw10/mfs/mfs_twrk60n512_d.a</locationURI>
+		</link>
+		<link>
+			<name>MFS Include/mfs.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/include/mfs.h</locationURI>
+		</link>
+		<link>
+			<name>MFS Include/mfs_cnfg.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/include/mfs_cnfg.h</locationURI>
+		</link>
+		<link>
+			<name>MFS Include/mfs_prv.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/include/mfs_prv.h</locationURI>
+		</link>
+		<link>
+			<name>MFS Include/mfs_rev.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/include/mfs_rev.h</locationURI>
+		</link>
+		<link>
+			<name>MFS Include/part_mgr.h</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/include/part_mgr.h</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/dir_read.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/dir_read.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_attribute.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_attribute.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_cluster.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_cluster.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_create.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_create.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_data_sector.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_data_sector.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_delete.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_delete.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_dir_entry.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_dir_entry.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_directory.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_directory.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_fat.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_fat.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_format.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_format.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_handle.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_handle.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_init.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_init.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_lfn.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_lfn.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_misc.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_misc.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_open.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_open.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_parse.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_parse.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_read.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_read.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_rename.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_rename.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_rw.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_rw.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_search.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_search.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_time.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_time.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_valdev.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_valdev.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/mfs_write.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/mfs_write.c</locationURI>
+		</link>
+		<link>
+			<name>MFS Source/part_mgr.c</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/mfs/source/generic/part_mgr.c</locationURI>
+		</link>
+		<link>
+			<name>Release/mfs_twrk60n512.a</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60n512.cw10/mfs/mfs_twrk60n512.a</locationURI>
+		</link>
+		<link>
+			<name>twrk60n512 Config in lib/twrk60n512_lib.txt</name>
+			<type>1</type>
+			<locationURI>MQX_ROOT_DIR/lib/twrk60n512.cw10/twrk60n512_lib.txt</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>MQX_ROOT_DIR</name>
+			<value>${PROJECT_LOC}/../../../..</value>
+		</variable>
+		<variable>
+			<name>PROJDIRPATH</name>
+			<value>${PROJECT_LOC}/../..</value>
+		</variable>
+	</variableList>
+</projectDescription>

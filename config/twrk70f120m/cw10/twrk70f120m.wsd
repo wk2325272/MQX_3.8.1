@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="workingsets.xsd">
+  <projects>
+    <project>
+      <name>bsp_twrk70f120m</name>
+      <path>..\..\..\mqx\build\cw10\bsp_twrk70f120m</path>
+      <open>true</open>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>mfs_twrk70f120m</name>
+      <path>..\..\..\mfs\build\cw10\mfs_twrk70f120m</path>
+      <open>true</open>
+      <reference>bsp_twrk70f120m</reference>
+      <reference>psp_twrk70f120m</reference>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>psp_twrk70f120m</name>
+      <path>..\..\..\mqx\build\cw10\psp_twrk70f120m</path>
+      <open>true</open>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>rtcs_twrk70f120m</name>
+      <path>..\..\..\rtcs\build\cw10\rtcs_twrk70f120m</path>
+      <open>true</open>
+      <reference>bsp_twrk70f120m</reference>
+      <reference>mfs_twrk70f120m</reference>
+      <reference>psp_twrk70f120m</reference>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>shell_twrk70f120m</name>
+      <path>..\..\..\shell\build\cw10\shell_twrk70f120m</path>
+      <open>true</open>
+      <reference>bsp_twrk70f120m</reference>
+      <reference>mfs_twrk70f120m</reference>
+      <reference>psp_twrk70f120m</reference>
+      <reference>rtcs_twrk70f120m</reference>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>usb_ddk_twrk70f120m</name>
+      <path>..\..\..\usb\device\build\cw10\usb_ddk_twrk70f120m</path>
+      <open>true</open>
+      <reference>bsp_twrk70f120m</reference>
+      <reference>mfs_twrk70f120m</reference>
+      <reference>psp_twrk70f120m</reference>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+    <project>
+      <name>usb_hdk_twrk70f120m</name>
+      <path>..\..\..\usb\host\build\cw10\usb_hdk_twrk70f120m</path>
+      <open>true</open>
+      <reference>bsp_twrk70f120m</reference>
+      <reference>mfs_twrk70f120m</reference>
+      <reference>psp_twrk70f120m</reference>
+      <activeconfig>Debug</activeconfig>
+      <buildreferences config="Debug">false</buildreferences>
+      <buildreferences config="Release">false</buildreferences>
+    </project>
+  </projects>
+  <workingsets>
+    <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" id="1323268527287_1" label="twrk70f120m" name="twrk70f120m"> 
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/bsp_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/psp_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/rtcs_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/mfs_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/shell_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/usb_ddk_twrk70f120m" type="4"/>  
+      <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/usb_hdk_twrk70f120m" type="4"/> 
+    </workingSet>
+  </workingsets>
+  <cdtconfigurations>
+    <workingSet name="twrk70f120m"> 
+      <config name="Release"> 
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="psp_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="mfs_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="rtcs_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="bsp_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="shell_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="usb_ddk_twrk70f120m" configName="Release"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="usb_hdk_twrk70f120m" configName="Release"/> 
+      </config>  
+      <config name="Debug"> 
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="psp_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="mfs_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="rtcs_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="bsp_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="shell_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="usb_ddk_twrk70f120m" configName="Debug"/>  
+        <project config="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="usb_hdk_twrk70f120m" configName="Debug"/> 
+      </config> 
+    </workingSet>
+  </cdtconfigurations>
+</workspace>

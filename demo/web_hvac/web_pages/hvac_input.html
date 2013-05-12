@@ -1,0 +1,393 @@
+<!DOCTYPE HTML SYSTEM>
+
+<html>
+<head>
+<title>Freescale MQX Webserver</title>
+
+<style type="text/css">
+.header {
+	background-color: #ffffff;
+	vertical-align: top;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.headerText {
+	text-align: right;
+}
+
+.padMe5 {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+}
+
+.Hdr {
+	font-weight: bold;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFF;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	font-weight: normal;
+	color: #51626F;
+}
+
+a {
+	color: #017bba;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #017bba;
+	text-decoration: underline;
+}
+
+h1 {
+	line-height: 28px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	text-indent: 0px;
+}
+
+#mncnt {
+	padding: 0px 0px 0px 12px;
+}
+
+.cframe {
+	margin: 0px 0px 0px 160px;
+}
+
+/* Begin Left Nav CSS  */
+#lfnvcl {
+	float: left;
+	width: 161px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#lnv h1,#lnv h2,#lnv h3,#lnv h4,#lnv h5,#lnv h6 {
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+#lnv,#lnv ul { /* all left nav lists */
+	padding: 0px 0px 1px 1px;
+	margin: 0px;
+	list-style: none;
+	float: left;
+	width: 157px;
+	display: block;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	background-color: #FFF;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+	font-size: .9em;
+	/* Commented by rvi01z for CCT57479 on 13 May 2008 start
+	border: 1px solid #C4CFD1;
+	Commented rvi01z for CCT57479 on 13 May 2008 End */
+}
+
+#lnv a {
+	color: #51626F;
+	text-decoration: none;
+}
+
+#lnv a:hover {
+	color: #51626F;
+	text-decoration: underline;
+}
+
+#lnv .pt {
+	background-color: #C4CFD1;
+}
+
+#lnv .ar { /*	background: url(arrow.gif) center right no-repeat;*/
+	background-color: #E0E6E6;
+}
+
+#lnv .sp {
+	background-color: #D3DBDC;
+}
+
+#lnv .usbnav {
+	margin: -1px 0px 0px 0px;
+}
+
+#lnv li { /* all list items */
+	position: relative;
+	float: left;
+	line-height: 16px;
+	margin: 0px;
+	padding: 0px;
+	width: 157px;
+	background-color: #FFF;
+	z-index: 50;
+}
+
+#lnv li ul { /* second-level lists */
+	position: absolute;
+	left: -999em;
+	margin-left: 157px;
+	margin-top: -24px;
+	font-size: 1em;
+}
+
+#lnv li a {
+	width: 139px;
+	w\idth: 139px;
+	display: block;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: #E0E6E6;
+	margin: 0px;
+	padding: 3px 12px 3px 5px;
+	border-top: 1px solid #FFF;
+}
+
+#lnv li a:hover {
+	background-color: #C4CFD1;
+}
+
+#lnv li:hover ul ul,#lnv li:hover ul ul ul,#lnv li.sfhover ul ul,#lnv li.sfhover ul ul ul
+	{
+	left: -999em;
+	background-color: #FFF;
+}
+
+#lnv li:hover ul,#lnv li li:hover ul,#lnv li li li:hover ul,#lnv li.sfhover ul,#lnv li li.sfhover ul,#lnv li li li.sfhover ul
+	{ /* lists nested under hovered list items */
+	left: auto;
+	background-color: #FFF;
+}
+
+div.hrw {
+	background: #aaaaaa repeat-x scroll center;
+	margin: 0;
+	padding: 0;
+	height: 1px;
+}
+
+div.hrw hr {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+</style>
+
+<script type="text/javascript">
+	// page js
+	var hvac_value = new Array(7);
+	var data_received = 0;
+
+	// header.js
+
+	sfHover2 = function() {
+		var navthree = document.getElementById("lnv");
+		if (navthree) {
+			var sfEls2 = document.getElementById("lnv").getElementsByTagName("LI");
+			for ( var i = 0; i < sfEls2.length; i++) {
+				sfEls2[i].onmouseover = function() {
+					this.className += " sfhover";
+					hideselects('hidden');
+				}
+				sfEls2[i].onmouseout = function() {
+					this.className = this.className.replace(new RegExp(" sfhover\\b"), "");
+					hideselects('visible');
+				}
+			}
+		}
+	}
+
+	if (window.attachEvent) {
+		window.attachEvent("onload", sfHover2);
+	}
+
+	function hideselects(state) {
+		for (i = 0; i < document.forms.length; i++) { // if there are forms on the page
+			frm = document.forms[i];
+			var inputs = frm.getElementsByTagName("SELECT");
+			for (j = 0; j < inputs.length; j++) {
+				inputs[j].style.visibility = state;
+			}
+		}
+	}
+
+	// request.js
+
+	function makeRequest(url, fn) {
+		var http_request = false;
+		url = "http://" + document.domain + "/" + url + "?sid=" + Math.random();
+
+		data_received = 1;
+		if (window.XMLHttpRequest) { // Mozilla, Safari,...
+			http_request = new XMLHttpRequest();
+			if (http_request.overrideMimeType) {
+				http_request.overrideMimeType('text/xml');
+			}
+		} else if (window.ActiveXObject) { // IE
+			try {
+				http_request = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					http_request = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+				}
+			}
+		}
+
+		if (!http_request) {
+			alert('Giving up :( Cannot create an XMLHTTP instance');
+			return false;
+		}
+
+		http_request.onreadystatechange = function() {
+			fn(http_request);
+		};
+		http_request.open('GET', url, true);
+		http_request.send(null);
+	}
+
+	function alertContents(http_request) {
+		if ((http_request.readyState == 4) && (http_request.status == 200)) {
+			parse_vars(http_request.responseText);
+		}
+		data_received = 0;
+	}
+	
+	function refreshUSBStatus(http_request) {
+		if ((http_request.readyState == 4) && (http_request.status == 200)) {
+			var visibility = http_request.responseText.split("\n");
+			if (visibility.length > 0) {
+				document.getElementById("usbstick").style.visibility = visibility[0];
+			} else {
+				document.getElementById("usbstick").style.visibility = "hidden";
+			}
+		}
+		data_received = 0;
+	}
+
+	// page js
+	function parse_vars(data) {
+		var parsed = data.split("\n");
+
+		hvac_value[0] = parsed[0];
+		hvac_value[1] = parsed[1];
+		hvac_value[2] = parsed[2];
+		hvac_value[3] = parsed[3];
+		hvac_value[4] = parsed[4];
+		hvac_value[5] = parsed[5];
+		hvac_value[6] = parsed[6];
+
+		//	mode.innerHTML 		= "<h1>Mode: "+hvac_value[0]+"</h1>";
+		//	temp.innerHTML 	= hvac_value[1];
+		//	actual.innerHTML 	= "<h1>Actual Temp:"+hvac_value[2]+"</h1>";
+		//	fan.innerHTML 	= hvac_value[3];
+		//	fan_on.innerHTML 	= "<h1>Fan: "+hvac_value[4]+"</h1>";
+		//	furnance_on.innerHTML 	= "<h1>Furnance: "+hvac_value[5]+"</h1>";
+		//	ac_on.innerHTML 	= "<h1>AC: "+hvac_value[6]+"</h1>";
+	}
+
+	function loop() {
+		if (!data_received) {
+			makeRequest("hvacdata.cgi", alertContents);
+			makeRequest("usbstat.cgi", refreshUSBStatus);
+		}
+
+		setTimeout("loop()", 1000);
+	}
+
+	window.onload = loop;
+</script>
+
+</head>
+<body>
+
+
+	<a href="http://www.freescale.com" title="Freescale"><img
+		src="header.gif" alt="Freescale Semiconductor" width="990" height="50"
+		border="0" /> </a>
+
+
+
+	<div id="lfnvcl">
+		<ul id="lnv">
+			<li><h3>
+					<a href="mqx.html" class="pt">Webserver Home</a>
+				</h3>
+			</li>
+			<li><h3>
+					<a href="hvac.html">HVAC Demo...</a>
+				</h3>
+				<ul>
+					<li><a href="hvac.html">HVAC Status</A>
+					</li>
+					<li><a href="hvac_input.html">Change Settings</A>
+					</li>
+				</ul></li>
+			<li><h3>
+					<a href="ipstat.html">Network Status...</a>
+				</h3>
+				<ul>
+					<li><a href="ipstat.html">IP Stats</a>
+					</li>
+					<li><a href="tcpstat.html">TCP Stats</a>
+					</li>
+				</ul></li>
+			<li><a href="rtc.html">System Run Time (RTC)</a>
+			</li>
+			<li id="usbstick" style="visibility: <% usb_status_fn %>;"><a href="usb/index.htm">Browse
+					USB Mass Storage Device</a>
+			</li>
+		</ul>
+	</div>
+
+
+
+	<div id="mncnt" class="cframe">
+
+		<div class="padMe5"></div>
+		<div class="lcn" style="width: 594px; height: 269px">
+
+			<div class="hrw">
+				<hr>
+			</div>
+			<h1>
+				<strong>Change HVAC Settings </strong>
+			</h1>
+
+			<div class="hrw">
+				<hr>
+			</div>
+
+
+			<form name="HVAC" action="http:hvacoutput.cgi" method="POST">
+				<h1>
+					Desired Temperature:<BR> <input type="text" name="temp"><BR>
+					Temperature unit:<BR> <input type="radio" name=unit value="c"
+						checked>&deg;C<BR> <input type="radio" name=unit
+						value="f">&deg;F<BR> <BR> HVAC Mode:<BR> <input
+						type="radio" name=hvac value=heat checked>Heat<BR> <input
+						type="radio" name=hvac value=cool>Cool<BR> <input
+						type="radio" name=hvac value=off>Off<BR> <BR>
+					Fan Mode:<BR> <input type="radio" name="fan" value="auto"
+						checked>Auto<BR> <input type="radio" name="fan"
+						value="off">On<BR>
+
+				</h1>
+				<INPUT type="submit" value="Set">
+			</form>
+
+		</div>
+
+	</div>
+</body>
+</html>

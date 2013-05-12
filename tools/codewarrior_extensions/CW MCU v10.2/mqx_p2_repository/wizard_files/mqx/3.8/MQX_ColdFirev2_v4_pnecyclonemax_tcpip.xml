@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings><settingsGroup 
+conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4"
+id="MQX_ColdFirev2_v4_pnecyclonemax_tcpip">
+
+<settingsGroupRef id="MQX_ColdFirev2_v4_common"/>
+
+<!--
+<settingsGroupRef id="MQX_ColdFirev2_v4_linux_kd_common"/>
+-->
+
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="CF - GDI" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.pemicro.mcu.debug.connections.pne.cfv234" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type CW Panel" value="" type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.pemicro.mcu.debug.connections.pne.cfv234." type="string"/>
+<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.logData" value="false" type="boolean"/>
+
+
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.Library" value="cf_pne_gdi" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.PCI_DELAY" value="3" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.PORT_IP" value="COM1" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.RESET_DELAY" value="0" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.STARTUP_IP" value="COM1" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.STARTUP_PORT" value="1" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.STARTUP_interface_selection" value="6" type="string"/>
+<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.USE_BDM_INTERFACE_FOR_FREEZE_DETECTION" value="false" type="boolean"/>
+
+</settingsGroup></launchSettings></newProjectExtension></wizardExtension>

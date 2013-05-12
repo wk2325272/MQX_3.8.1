@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_pne_cfvx_osbdm" conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4">
+				
+				<settingsGroupRef id="MQX_ColdFirev2_v4_common"/>
+				
+				<!--
+				<settingsGroupRef id="MQX_ColdFirev2_v4_linux_kd_common"/>
+				-->
+				<settingsGroupRef id="MQX_common_settings"/>
+
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="CF - GDI" type="string"/>
+				
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.pemicro.mcu.debug.connections.pne.cfv234" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.pemicro.mcu.debug.connections.pne.cfv234." type="string"/>
+				
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type CW Panel" value="" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.logData" value="false" type="boolean"/>
+
+				
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.Library" value="cf_pne_gdi" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.PEDEBUG_CURRENTDEVICE" value="${ChipName}" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.CommandLineArgs" value="cf_icd" type="string"/>
+				
+				<!-- Fix @MTWX45219 -->
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.STARTUP_PORT" value="1" type="string"/>
+				<applySetting id="com.pemicro.mcu.debug.connections.pne.cfv234.STARTUP_interface_selection" value="3" type="string"/>
+				
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

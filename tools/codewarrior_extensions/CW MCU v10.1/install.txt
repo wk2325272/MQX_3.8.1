@@ -1,0 +1,27 @@
+To install MQX TAD and MQX Project Wizard into CW10.1:
+------------------------------------------------------
+
+All the required files are in: 
+<MQX_INSTAL_DIR>\tools\codewarrior_extensions\CW MCU v10.1\mqx_p2_repository\
+
+
+1) Execute the install_cw10_plugin.bat <CW_INSTAL_DIR> command to install MQX TAD and Project Wizard into CW10.1. 
+All required data files are  copied into CW10.1 automatically during this installation.
+The MQX-related plugins are provided as a feature called "com.freescale.mqx".
+
+2) Restart Code Warrior 10.1
+
+3) In CW10.1 open Properties of your project (the embedded project to be debugged 
+   using MQX KA plug-in).
+
+4) Select „Run/Debug settings“ and then the launch configuration in which you 
+   want to debug. Click Edit button.
+
+5) In the „Edit launch configuration“ window select Debugger tab and on this 
+   tab select „OS Awareness“ sub-tab. On this sub-tab there should be Target OS 
+   selection box, where you can select "MQX OS for ColdFire" or 
+   "MQX OS for Cortex", depending on which processor your project uses.
+    
+6) You are now ready to debug with MQX TAD.
+
+

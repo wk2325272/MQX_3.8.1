@@ -1,0 +1,446 @@
+[strings:TASK_ERROR_CODE]
+0x1300 = RTCS: Already initialized
+0x1310 = RTCS PCB: Could not allocate PCBs
+0x1311 = RTCS PCB: Already forked 
+0x1312 = RTCS PCB: Too few PCB layers
+0x1313 = RTCS PCB: buffer too small
+0x1314 = RTCS PCB: Too few PCB fragments
+0x1315 = RTCS PCB: Can not add fragment (must fork)
+0x1316 = RTCS PCB: Dependency already exists
+0x1400 = ARP: Could not allocate state
+0x1401 = ARP: Could not allocate cache entry
+0x1402 = ARP: Could not resolve address
+0x1403 = ARP: Error in header
+0x1410 = IPCP: Could not allocate state
+0x1500 = IP: Could not allocate ICB
+0x1501 = IP: Protocol already open
+0x1502 = IP: Could not allocate interface
+0x1503 = IP: Could not allocate route 
+0x1504 = IP: Could not allocate gateway
+0x1505 = IP: Invalid local address
+0x1506 = IP: Invalid network mask 
+0x1507 = IP: Could not allocate SPD node
+0x1508 = IP: Could not allocate virtual node
+0x1510 = IP: No route to host 
+0x1511 = IP: TTL expired 
+0x1512 = IP: Packet exceeds MTU
+0x1513 = IP: Need to fragment but DF set
+0x1514 = IP: Error in header
+0x1515 = IP: Illegal source or dest
+0x1516 = IP: Invalid checksum
+0x1580 = ICMP: Echo reply timed out
+0x1581 = ICMP: Error in header
+0x1582 = ICMP: Invalid checksum
+0x15c0 = IGMP: Could not allocate state
+0x15c1 = IGMP: Could not allocate MCB
+0x15c2 = IGMP: Could not free MCB
+0x15c3 = IGMP: Can not join group (nonlocal IP)
+0x15c4 = IGMP: Can not leave group (not joined)
+0x15c5 = IGMP: Error in header
+0x15c6 = IGMP: Invalid checksum
+0x1660 = UDP: Could not allocate UCB
+0x1661 = UDP: Could not free UCB
+0x1662 = UDP: UCB not open
+0x1663 = UDP: Port already open 
+0x1664 = UDP: No more ports 
+0x1665 = UDP: Can not send to port 0 
+0x1666 = UDP: Error in header
+0x1667 = UDP: Invalid checksum
+0x1668 = UDP: Socket Closed
+0x1704 = RTCS: Socket Invalid
+0x1702 = RTCS: Invalid AF
+0x1706 = RTCS: Short Address
+0x1719 = RTCS: Not Supported
+0x171a = RTCS: Invalid Option
+0x171b = RTCS: Short Option
+0x1709 = RTCS: Not Bound
+0x1705 = RTCS: Is Bound
+0x170c = RTCS: Not Listening
+0x170b = RTCS: Is Listening
+0x170d = RTCS: Not Connected
+0x170a = RTCS: Is Connected
+0x170e = RTCS: Not Owner
+0x170f = RTCS: Socket closed
+0x1800 = TFTP: Socket error
+0x1801 = TFTP: Bind error
+0x1802 = TFTP: RRQ Alloc error
+0x1803 = TFTP: RRQ Send error
+0x1810 = TFTP: Error
+0x1804 = TFTP: Timeout error
+0x1880 = SREC: Invalid character in file
+0x1881 = SREC: Invalid record type 
+0x1882 = SREC: Short S-record 
+0x1883 = SREC: Invalid Checksum 
+0x1884 = SREC: start error
+0x1885 = SREC: Unexpected end of file
+0x1886 = SREC: Unexpected end of file
+0x1887 = SREC: Error
+0x1890 = COFF: Not a COFF File
+0x1891 = COFF: Out of memory
+0x1892 = COFF: Unexpected end of file
+0x1893 = COFF: Error 
+0x1132 = RTCS: Send failed
+0x1135 = RTCS: Create pool failed
+0x1136 = RTCS: Open queue failed
+0x1137 = RTCS: Create failed
+0x1138 = RTCS: Receive failed
+0x1139 = RTCS: Deallocate failed
+0x1102 = RTCS: Out of memory
+0x1104 = RTCS: Invalid address
+0x111f = RTCS: Read aborted
+0x1120 = RTCS: Out of buffers
+0x1121 = RTCS: Create Partition Failed
+0x1103 = RTCS: Timeout error
+0x1105 = RTCS: Invalid parameter
+0x1122 = RTCS: Out of sockets
+0x1123 = RTCS: Fopen failed
+0x1124 = RTCS: Feature not enabled
+0x1140 = RTCS: Server already running
+0x1141 = RTCS: Server not running
+0x1550 = RTCS: IPIP Not initialized
+0x1551 = RTCS: IPIP Loop
+0x1901 = RTCS: Trap insert failed
+0x1902 = RTCS: Trap remove failed
+0x1610 = TCPIP: Invalid argument
+0x1611 = TCPIP: Destination address required
+0x1612 = TCPIP: No buffers
+0x1613 = TCPIP: Delay requested
+0x1614 = TCPIP: Timer corrupt
+0x1630 = TCP: TcpOpen failed
+0x1631 = TCP: Option was invalid
+0x1632 = TCP: Operation already in progress 
+0x1633 = TCP: Address already in use 
+0x1634 = TCP: Cannot assign requested address
+0x1635 = TCP: Software caused connection abort
+0x1636 = TCP: Connection reset by peer 
+0x1637 = TCP: Host is down 
+0x1638 = TCP: Connection closing 
+0x1639 = TCP: Connection/TCB released 
+0x163a = TCP: TCB exists in LISTEN state with no associated Listn request from upper layer 
+0x163b = TCP: TCP_Copy_to_ring got 0 ring buf size
+0x163c = TCP: Attempted to TCP_Send_packet in invalid state
+0x163d = TCP: Could not get a PCB in TCP_Send_packet
+0x163e = TCP: Could not get a PCB in TCP_Send_reply_reset 
+0x163f = TCP: Could not get a PCB in TCP_Send_reset
+0x1640 = TCP: TCP detected a 'shrinker' peer host
+0x1642 = TCP: TCP send buffer corruption detected in TCP_Process_ack 
+0x1643 = TCP: Could not get an SbufNode in TCP_Process_send 
+0x1644 = TCP: Could not get a Rcvchunk buffer in Setup Receive 
+0x1645 = TCP: Could not add a host IpList node in TCP_Process_packet 
+0x1646 = TCP: Could not start a TCP timer
+0x1647 = TCP: Socket is not connected 
+0x1648 = TCP: Cannot send after socket shutdown 
+0x1649 = TCP: Connection timed out 
+0x164a = TCP: Connection refused 
+0x164b = TCP: No more ports available for connections 
+0x164c = TCP: Attempted to call close in invalid state
+0x164d = TCP: Attempted to release a TCB in an invalid state 
+0x164e = TCP: A retransmission timer timed out while in IDLE mode (i.e. invalid) 
+0x164f = TCP: Urgent data pointer was corrupted in the tcb
+0x1650 = TCP: A call to release memory failed
+0x1651 = TCP: No route to host Socket error codes
+0x1652 = TCP: Error in header
+0x1653 = TCP: Invalid checksum
+0x1c00 = NAT: No session found
+0x1c01 = NAT: Unsupported protocol
+0x1c02 = NAT: Initialized
+0x1c03 = NAT: Unexpected
+0x1c04 = NAT: Not initialized
+0x1c05 = NAT: Invalid rule
+0x1c07 = NAT: Invalid private network
+0x1c08 = NAT: Max private networks
+0x1c09 = NAT: Duplicate priority
+0x1c0a = NAT: End of rules
+0x1c0b = NAT: Invalid private address
+
+[strings:KLOG_FN]
+0x2000000 = RTCS Socket
+0x2000001 = RTCS Dgram_bind
+0x2000002 = RTCS Dgram_connect
+0x2000003 = RTCS Dgram_listen
+0x2000004 = RTCS Dgram_accept
+0x2000005 = RTCS Dgram_getsockname
+0x2000006 = RTCS Dgram_getpeername
+0x2000007 = RTCS Dgram_recv
+0x2000008 = RTCS Dgram_recvfrom
+0x2000009 = RTCS Dgram_recvmsg
+0x200000a = RTCS Dgram_send
+0x200000b = RTCS Dgram_sendto
+0x200000c = RTCS Dgram_sendmsg
+0x200000d = RTCS Dgram_sockatmark
+0x200000e = RTCS Dgram_shutdown
+0x200000f = RTCS Stream_bind
+0x2000010 = RTCS Stream_connect
+0x2000011 = RTCS Stream_listen
+0x2000012 = RTCS Stream_accept
+0x2000013 = RTCS Stream_getsockname
+0x2000014 = RTCS Stream_getpeername
+0x2000015 = RTCS Stream_recv
+0x2000016 = RTCS Stream_recvfrom
+0x2000017 = RTCS Stream_recvmsg
+0x2000018 = RTCS Stream_send
+0x2000019 = RTCS Stream_sendto
+0x200001a = RTCS Stream_sendmsg
+0x200001b = RTCS Stream_sockatmark
+0x200001c = RTCS Stream_shutdown
+0x200001d = RTCS Socket_getsockopt
+0x200001e = RTCS Socket_setsockopt
+0x200001f = RTCS UDP_getsockopt
+0x2000020 = RTCS UDP_setsockopt
+0x2000021 = RTCS TCP_getsockopt
+0x2000022 = RTCS TCP_setsockopt
+0x2000023 = RTCS IP_getsockopt
+0x2000024 = RTCS IP_setsockopt
+0x2000025 = RTCS IGMP_getsockopt
+0x2000026 = RTCS IGMP_setsockopt
+0x2000027 = RTCS Link_getsockopt
+0x2000028 = RTCS Link_setsockopt
+0x2000029 = RTCS NAT_getsockopt
+0x200002a = RTCS NAT_setsockopt
+
+0x200002b = RTCS TCP_Must_send_ack
+0x200002c = RTCS TCP_Process_data
+0x200002d = RTCS TCP_Advertise_receive_window
+0x200002e = RTCS TCP_Start_receiving
+0x200002f = RTCS TCP_Process_packet
+0x2000030 = RTCS TCP_Process_effective_close
+0x2000031 = RTCS TCP_Service_packet
+0x2000032 = RTCS IPLOCAL_service
+0x2000033 = RTCS IPLOCAL_send
+0x2000034 = RTCS IP_send_dgram
+0x2000035 = RTCS IP_route
+0x2000036 = RTCS IP_service
+0x2000037 = RTCS TCPIP_task
+0x2000038 = RTCS TCP_Event
+0x2000039 = TCP_Process_signal
+0x200003a = TCP_Tick_server
+0x200003b = TCP_Timer_expire
+0x200003c = TCP_Timer_schedule
+0x200003d = TCP_Timer_remove
+0x200003e = TCP_Timer_stop
+0x200003f = TCP_Timer_start
+0x2000040 = TCP_Timer_advance
+0x2000041 = TCP_Timer_oneshot_max
+0x2000042 = IPE_recv
+0x2000043 = IPE_recv_IP
+0x2000044 = IPE_send
+0x2000045 = IPE_send_IP
+0x2000046 = TCP_Transmit
+0x2000047 = TCP_Send_packet
+
+[strings:RTCS_MODULE]
+0x1 = RTCS 
+0x2 = Socket 
+0x3 = TCP/IP 
+0x4 = TCP 
+0x5 = UDP 
+0x6 = RPC 
+0x7 = Echo 
+0x8 = EDS 
+0x9 = Telnet 
+0xA = DHCP Server 
+0xB = DNS 
+0xC = IGMP 
+
+[strings:INET_PORT]
+7 = echo
+9 = discard
+13 = daytime
+17 = qotd
+19 = chargen
+20 = ftp-data
+21 = ftp
+23 = telnet
+25 = smtp
+37 = time
+39 = rlp
+42 = nameserver
+43 = nicname
+53 = domain
+67 = bootps
+68 = bootpc
+69 = tftp
+70 = gopher
+79 = finger
+80 = http
+88 = kerberos
+101,	hostname
+102,	iso-tsap
+107,	rtelnet
+109,	pop2
+110,	pop3
+111,	sunrpc
+113,	auth
+117,	uucp-path
+119,	nntp
+123,	ntp
+135,	epmap
+137,	netbios-ns
+138,	netbios-dgm
+139,	netbios-ssn
+143,	imap
+158,	pcmail-srv
+161,	snmp
+162,	snmptrap
+170,	print-srv
+179,	bgp
+194,	irc
+213,	ipx
+389,	ldap
+443,	https
+464,	kpasswd
+500,	isakmp
+512,	exec
+513,	who
+514,	syslog
+515,	printer
+517,	talk
+518,	ntalk
+520,	efs
+525,	timed
+526,	tempo
+530,	courier
+531,	conference
+532,	netnews
+533,	netwall
+540,	uucp
+543,	klogin
+544,	kshell
+550,	new-rwho
+556,	remotefs
+560,	rmonitor
+561,	monitor
+636,	ldaps
+749,	kerberos-adm
+
+[strings:INET_PROTO]
+0 = HOPOPTS     
+1 = ICMP        
+2 = IGMP         
+4 = IP           
+6 = TCP          
+17 = UDP          
+41 = IPv6         
+43 = IPv6 routing header          
+44 = IPv6 frag. header          
+50 = ESP          
+51 = AH           
+58 = UDPCMPV6     
+59 = IPv6 None    
+60 = IPv6 DSTOPTS 
+89 = OSPF         
+108 = Compression  
+
+[strings:TCB_STATE]
+0 = Listen        
+1 = Syn Sent      
+2 = Syn Received  
+3 = Established   
+4 = Fin Wait1     
+5 = Fin Wait2     
+6 = Close Wait    
+7 = Closing       
+8 = Last Ack      
+9 = Time Wait     
+10 = Closed        
+11 = Bound    
+
+[strings:MEM_TYPE]
+4097 = RTCS Data;RTCS/Other                      
+4098 = ARP Configuration;RTCS/ARP                       
+4099 = ARP Entries;RTCS/ARP
+4100 = DHCP Client;RTCS/DHCP
+4101 = DHCP Server Options;RTCS/DHCP
+4102 = FTPd Session;RTCS/FTPd
+4103 = FTPd Data Buffer;RTCS/FTPd
+4104 = ICMP Configuration;RTCS/ICMP
+4105 = ICMP Data Buffer;RTCS/ICMP
+4106 = IP Configuration;RTCS/IP
+4107 = IP Data Buffer;RTCS/IP
+4108 = Internet Control block;RTCS/IP
+4109 = IP Interface;RTCS/IP
+4110 = Socket Configuration;RTCS/Socket
+4111 = RTCS Partition;RTCS/Partitions
+4112 = Socket I/O;RTCS/Socket
+4113 = Socket Owner;RTCS/Socket
+4114 = TCP Configuration;RTCS/TCP
+4115 = TCP Control Block;RTCS/TCP
+4116 = TCP Tx Window;RTCS/TCP
+4117 = TCP Rx Window;RTCS/TCP
+4118 = TCP Send Clock;RTCS/TCP
+4119 = UDP Configuration;RTCS/UDP
+4120 = UDP Control Block;RTCS/UDP
+4121 = UDP Buffer;RTCS/UDP
+4122 = Telnet I/O;RTCS/Telnet
+4123 = TCP SBufNode;RTCS/TCP
+4124 = TCP RChunk;RTCS/TCP
+4125 = FTP Client Context;RTCS/FTPc
+4126 = DHCP Server addr struct;RTCS/DHCP
+4127 = DHCP Server cid;RTCS/DHCP
+4128 = DNS controlstruct;RTCS/DNS
+4129 = DNS UDP message;RTCS/DNS
+4130 = FTP Client rx buffer;RTCS/FTPc
+4131 = FTP Client command buffer;RTCS/FTPc
+4132 = Hostent Struct;RTCS/Other
+4133 = TFTP packet;RTCS/TFTP
+4134 = TFTP trans struct;RTCS/TFTP
+4136 = HTTPd struct;RTCS/HTTPd
+4137 = HTTPd params;RTCS/HTTPd
+4138 = HTTPd session struct;RTCS/HTTPd
+4139 = HTTPd uri;RTCS/HTTPd
+4140 = HTTPd auth;RTCS/HTTPd
+4141 = HTTPd line;RTCS/HTTPd
+
+[strings:ENET_MODE]
+0x0 = Full Duplex
+0x1 = Half Duplex
+0x2 = 10M, Full Duplex
+0x3 = 10M, Half Duplex
+0x4 = 100M, Full Duplex
+0x5 = 100M, Half Duplex
+0x6 = 1G, Full Duplex
+0x7 = 1G, Half Duplex
+0x10 = Auto-Negotiate, Full Duplex
+0x11 = Auto-Negotiate, Half Duplex
+0x12 = Auto-Negotiate, 10M, Full Duplex
+0x13 = Auto-Negotiate, 10M, Half Duplex
+0x14 = Auto-Negotiate, 100M, Full Duplex
+0x15 = Auto-Negotiate, 100M, Half Duplex
+0x16 = Auto-Negotiate, 1G, Full Duplex
+0x17 = Auto-Negotiate, 1G, Half Duplex
+
+[strings:ENET_OPTION]
+0x0 = None
+0x1 = VLAN
+0x2 = Phy Discover
+0x4 = MAC Loopback
+0x8 = Phy Loopback
+0x10 = No Preamble
+
+[strings:ENET_TYPE]
+0x800 = IP
+0x806 = ARP
+0x86dd = IPv6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+

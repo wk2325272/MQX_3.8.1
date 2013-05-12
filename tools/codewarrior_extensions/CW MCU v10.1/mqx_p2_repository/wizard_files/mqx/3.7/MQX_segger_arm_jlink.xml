@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<wizardExtension>
+	<newProjectExtension>
+		<launchSettings>
+			<settingsGroup id="MQX_segger_arm_jlink">
+				
+				<settingsGroupRef id="MQX_arm_common_settings"/>				             
+
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="ARM GDI" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.freescale.mcu.debug.connections.jlink.arm" type="string"/>
+				<applySetting id="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.freescale.mcu.debug.connections.jlink.arm." type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.Delay after reset (ms)" value="0" type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.JTAG fixed speed (Khz)" value="1000" type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.JTAG speed" value="Fixed" type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.Library" value="arm_jlink_gdi" type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.Reset" value="Kinetis" type="string"/>
+				<applySetting id="com.freescale.mcu.debug.connections.jlink.arm.USB device" value="0" type="string"/>
+			</settingsGroup>
+		</launchSettings>
+	</newProjectExtension>
+</wizardExtension>

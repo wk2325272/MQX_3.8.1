@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<wizardExtension><newProjectExtension><launchSettings>
+<settingsGroup 
+conditionId="mcu.mqxprojectwizard1.condition.isColdFire.v2_v4"
+id="MQX_cf_v2_v4_existing_rse_flash">
+
+<settingsGroupRef id="MQX_ColdFirev2_v4_common"/>
+<settingsGroupRef id="MQX_common_settings"/>
+
+<!-- Fix @MTWX43175 -->
+<!-- removed for MQX
+<settingsGroupRef id="ColdFirev2_v4_linux_kd_common"/>
+-->
+
+<settingsGroup id="rse_ColdFirev2_v4_common" conditionId="mcu.mqxprojectwizard1.page.connections.cf.selExistingSystemID">
+	<applySetting 
+		id="com.freescale.cdt.debug.cw.core.settings.rseSystemId" 
+		type="string" 
+		value="${rseHostCombo:mcu.mqxprojectwizard1.page.connections.cf.rseHostComboComposite}"/>
+		
+		<!-- Added for MQX -->
+		<!-- Execute tasks option -->
+		  <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.StandardDownload" value="false" type="boolean"/>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="true" type="boolean"/>
+			
+      <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskNames" 
+      type="list" mode="append">
+      <listValue value="${MQX_PROJECT_NAME}_${TaskNamePrefix}_Int_Flash"/>
+      </applySetting>
+			
+      <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskTypes" 
+      type="list" mode="append"><listValue value="Flash Programmer for ColdFire V234"/>
+      </applySetting>
+			
+      <applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskInitialLaunches" type="list" mode="append"><listValue value="true"/></applySetting>
+			<applySetting id="com.freescale.cdt.debug.cw.Embedded Download.TaskSuccessiveRuns" type="list" mode="append"><listValue value="true"/></applySetting>
+
+</settingsGroup>
+
+</settingsGroup></launchSettings></newProjectExtension></wizardExtension>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML SYSTEM><html><head><title>Freescale MQX Webserver</title>
+<style type="text/css"> .header{ background-color: #ffffff; vertical-align: top; text-align: right; padding-right: 5px; } .headerText{ text-align: right; } .padMe5 { display: block; text-align: right; font-weight: bold; margin: 0px; padding: 5px 0px 0px 0px; } .Hdr { font-weight: bold; } body { padding: 0px; margin: 0px; background-color: #FFF; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 75%; font-weight: normal; color: #51626F; } a{ color: #017bba; text-decoration: none; } a:hover{ color: #017bba; text-decoration: underline; } h1 { line-height: 28px; font-size: 1.2em; font-weight: bold; margin: 0px; padding: 0px; text-indent: 0px; } #mncnt { padding: 0px 0px 0px 12px; } .cframe{ margin: 0px 0px 0px 160px; } #lfnvcl { float: left; width: 161px; margin: 0px; padding: 0px; } #lnv, #lnv ul { padding: 0px 0px 1px 1px; margin: 0px; list-style: none; float : left; width : 157px; display: block; font-size: .9em; } #lnv a { color: #51626F; text-decoration: none; } #lnv a:hover { color: #51626F; text-decoration: underline; } #lnv li { position : relative; float : left; line-height : 16px; margin: 0px; padding: 0px; width: 157px; background-color: #FFF; z-index: 50; } #lnv li a { width: 139px; w\idth : 139px; display : block; font-weight : normal; text-decoration : none; background-color: #E0E6E6; margin : 0px; padding: 3px 12px 3px 5px; border-top: 1px solid #FFF; } #lnv li a:hover { background-color : #C4CFD1; } div.hrw { background: #aaaaaa repeat-x scroll center; margin: 0; padding: 0; height: 1px; } div.hrw hr { display: none; margin: 0; padding: 0; }
+</style>
+<script type="text/javascript">
+var 	parsed 	= new Array(15);
+var	data_received   = 0;
+// request.js
+function makeRequest(url) {
+var http_request = false;
+url = url + "?sid=" + Math.random();
+data_received = 1;
+if (window.XMLHttpRequest) { // Mozilla, Safari,...
+http_request = new XMLHttpRequest();
+if (http_request.overrideMimeType) {
+http_request.overrideMimeType('text/xml');
+}
+}
+else if (window.ActiveXObject) { // IE
+try {
+http_request = new ActiveXObject("Msxml2.XMLHTTP");
+}
+catch (e) {
+try {
+http_request = new ActiveXObject("Microsoft.XMLHTTP");
+}
+catch (e) {}
+}
+}
+if (!http_request) {
+alert('Giving up :( Cannot create an XMLHTTP instance');
+return false;
+}
+http_request.onreadystatechange = function() { alertContents(http_request); };
+http_request.open('GET', url, true);
+http_request.send(null);
+}
+function alertContents(http_request) {
+if (http_request.readyState == 4) {
+if (http_request.status == 200) {
+parse_vars(http_request.responseText);
+data_received = 0;
+}
+else {
+data_received = 0;
+}
+}
+}
+// page js
+function parse_vars(data) {
+var parsed = data.split( "\n" );
+door.innerHTML = "<h1>Door: "+parsed[0]+"</h1>";
+win.innerHTML = "<h1>Window: "+parsed[1]+"</h1>";
+motion.innerHTML = "<h1>Motion Detection: "+parsed[2]+"</h1>";
+time.innerHTML = "<h1>System Time: "+parsed[3]+"</h1>";
+pot.innerHTML  = "<h1>Garage Door:  "+parsed[14]+"% Open</h1>";
+log0.innerHTML = "<h3>"+parsed[4]+"</h1>";
+log1.innerHTML = "<h3>"+parsed[5]+"</h1>";
+log2.innerHTML = "<h3>"+parsed[6]+"</h1>";
+log3.innerHTML = "<h3>"+parsed[7]+"</h1>";
+log4.innerHTML = "<h3>"+parsed[8]+"</h1>";
+log5.innerHTML = "<h3>"+parsed[9]+"</h1>";
+log6.innerHTML = "<h3>"+parsed[10]+"</h1>";
+log7.innerHTML = "<h3>"+parsed[11]+"</h1>";
+log8.innerHTML = "<h3>"+parsed[12]+"</h1>";
+log9.innerHTML = "<h3>"+parsed[13]+"</h1>";
+}
+function loop() {
+	if (!data_received)
+		makeRequest("secdata.cgi");
+	setTimeout("loop()", 1000);
+}
+window.onload=loop; 
+</script> 
+</head><body> <br><h1> <font color=#E66A08 size=+2>Freescale Semiconductor</font></h1><div id="lfnvcl"><ul id="lnv"> <li> <a href="mqx.html">Security Status</a></li> <li> <a href="mcf51cn128.html">MCF51CN128 Information</a></li> <li> <a href="towersystem.html">Tower System Information</a></li></ul></div><div id="mncnt" class="cframe"><div class="padMe5"></div><div class="lcn" style="width: 594px; height: 269px"><div class="hrw"><hr></div><h1>MCF51CN128 Security Status</h1><div class="hrw"><hr></div><div id="door"><h1>Door:</h1></div>(SW2)<div id="win"><h1>Window: </h1></div>(SW3)<div id="motion"><h1>Motion Detection:</h1></div>(Accelerometer)<div id="pot""><h1>Garage Door:</h1></div>(Potentiometer R2)<div id="time"><h1>System Time:</h1></div><div class="hrw"><hr></div><h1>Log: </h1><div id="log0"></div><div id="log1"></div><div id="log2"></div><div id="log3"></div><div id="log4"></div><div id="log5"></div><div id="log6"></div><div id="log7"></div><div id="log8"></div><div id="log9"></div></div></div></body>
+</html>

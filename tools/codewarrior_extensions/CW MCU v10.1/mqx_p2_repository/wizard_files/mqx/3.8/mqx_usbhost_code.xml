@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<wizardExtension>
+
+  <newProjectExtension>
+    <variables>
+    
+            <!-- 
+            ****************************** 
+            main.h variables
+            ************************************
+            -->
+    <!-- mcu.mqxprojectwizard1.usbhost_host_controller_number -->
+    <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbhost_host_controller_number">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value=" ">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]usbhost_host_controller_number.h">
+               </enumeratedValue>
+    </enumeratedVariable>   
+    
+    <!-- usbhost_max_frame_size -->
+    <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbhost_max_frame_size">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value=" ">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]usbhost_max_frame_size.h">
+               </enumeratedValue>
+    </enumeratedVariable>     
+    
+    <!-- usbhost_usb_otg -->
+    <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbhost_usb_otg">
+      <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value="">
+      </enumeratedValue>
+      <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]usbhost_usb_otg.h">
+      </enumeratedValue>
+    </enumeratedVariable>
+        
+        <!-- usbhost_hostevent_function_prototype -->
+    <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbhost_hostevent_function_prototype">
+      <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value="">
+      </enumeratedValue>
+      <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]usbhost_hostevent_function_prototype.h">
+      </enumeratedValue>
+    </enumeratedVariable>
+            
+             <!-- mainh_usbhost_includes -->
+     <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.mainh_usbhost_includes">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]mainh_usbhost_includes.h">                     
+               </enumeratedValue>
+      </enumeratedVariable>     
+      
+            <!-- 
+            ****************************** 
+            main.c variables
+            ************************************
+            -->
+            
+            
+      <!-- usbh_init_function_prototype -->
+      <enumeratedVariable
+                  name="mcu.mqxprojectwizard1.usbh_init_function_prototype">
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                     value="">
+               </enumeratedValue>
+               <enumeratedValue
+                     conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                     value="[[[!codeblock]]]usbh_init_function_prototype.h">                     
+               </enumeratedValue>
+      </enumeratedVariable>    
+      
+      <!-- mainc_usbhost_includes -->
+      <enumeratedVariable
+                   name="mcu.mqxprojectwizard1.mainc_usbhost_includes">
+                <enumeratedValue
+                      conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                      value="">
+                </enumeratedValue>
+                <enumeratedValue
+                      conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                      value="[[[!codeblock]]]mainc_usbhost_includes.c">                     
+                </enumeratedValue>
+       </enumeratedVariable>        
+                                  
+       <!--$mainc_usbh_init_call$--> 
+       <enumeratedVariable
+                   name="mcu.mqxprojectwizard1.mainc_usbh_init_call">
+                <enumeratedValue
+                      conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost_not"
+                      value="">
+                </enumeratedValue>
+                <enumeratedValue
+                      conditionId="mcu.mqxprojectwizard1.condition.mqxusbhost"
+                      value="[[[!codeblock]]]mainc_usbh_init_call.c">                      
+                </enumeratedValue>
+       </enumeratedVariable> 
+          
+    </variables>
+  </newProjectExtension>
+
+  
+</wizardExtension>

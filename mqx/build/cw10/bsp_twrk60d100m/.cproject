@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.freescale.arm.cdt.toolchain.config.arm.release.231439194">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.managedbuilder.core.ManagedBuildManager" point="org.eclipse.cdt.core.ScannerInfoProvider"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.SccErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwarmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="a" artifactName="${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp\bsp_twrk60d100m_d" buildProperties="" cleanCommand="${system:ECLIPSE_HOME}/../gnu/bin/rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;com.freescale.mxc.cdt.errorparsers.MwfeErrorParser;com.freescale.mxc.cdt.errorparsers.SccErrorParser;com.freescale.mxc.cdt.errorparsers.LnkErrorParser;com.freescale.mxc.cdt.errorparsers.AsmErrorParser;com.freescale.mxc.cdt.errorparsers.CobjErrorParser;com.freescale.mxc.cdt.errorparsers.IcodeErrorParser;com.freescale.mxc.cdt.errorparsers.LltErrorParser" id="com.freescale.arm.cdt.toolchain.config.arm.release.231439194" name="Debug" parent="com.freescale.arm.cdt.toolchain.config.arm.release" postbuildStep="&quot;${ProjDirPath}\..\..\bat\bsp_twrk60d100m.bat&quot; &quot;${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp&quot;" prebuildStep="&quot;${ProjDirPath}\..\..\bat\bsp_prebuild.bat&quot; &quot;${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp&quot; bsp_twrk60d100m_d.a">
+					<folderInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.231439194." name="/" resourcePath="">
+						<toolChain id="com.freescale.arm.cdt.toolchain.arm.release.1371863626" name="ARM Toolchain" superClass="com.freescale.arm.cdt.toolchain.arm.release">
+							<option id="com.freescale.arm.cdt.toolchain.sharedoption.model.48248380" name="Model" superClass="com.freescale.arm.cdt.toolchain.sharedoption.model" value="com.freescale.arm.cdt.toolchain.sharedoption.model.c9x" valueType="enumerated"/>
+							<option id="com.freescale.arm.cdt.toolchain.sharedoption.librarian.256569397" name="Enable Automatic Library Configurations" superClass="com.freescale.arm.cdt.toolchain.sharedoption.librarian" value="false" valueType="boolean"/>
+							<targetPlatform id="com.freescale.arm.cdt.toolchain.targetplatform.1341829847" isAbstract="false" name="ARM Target Platform" superClass="com.freescale.arm.cdt.toolchain.targetplatform"/>
+							<builder buildPath="${ProjDirPath}/Debug" id="com.freescale.arm.cdt.toolchain.builder.388318421" keepEnvironmentInBuildfile="false" name="GNU Make Builder" parallelBuildWorkspaceOn="true" parallelizationNumber="-1" superClass="com.freescale.arm.cdt.toolchain.builder"/>
+							<tool id="com.freescale.arm.cdt.toolchain.linker.388574871" name="ARM Linker" superClass="com.freescale.arm.cdt.toolchain.linker">
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch.1333535843" name="Library Search Paths" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/lib&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.linker.commandFile.916173793" name="Linker Command File" superClass="com.freescale.arm.cdt.toolchain.linker.commandFile" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.additionalLibs.2037258747" name="Additional Libraries" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.additionalLibs"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.projectType.1863755976" name="Output Type" superClass="com.freescale.arm.cdt.toolchain.linker.projectType" value="com.freescale.arm.cdt.toolchain.linker.projectType.library" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.otherFlags.1714792623" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.linker.otherFlags" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.entryPoint.536226985" name="Entry Point" superClass="com.freescale.arm.cdt.toolchain.linker.entryPoint" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.nostdlib.1069638222" name="No Standard Library" superClass="com.freescale.arm.cdt.toolchain.linker.nostdlib" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateMapFile.1179327399" name="Generate Link Map" superClass="com.freescale.arm.cdt.toolchain.linker.generateMapFile" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateSymTab.1243947156" name="Generate Symbol Table" superClass="com.freescale.arm.cdt.toolchain.linker.generateSymTab" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateSRecord.1964908672" name="Generate S-Record File" superClass="com.freescale.arm.cdt.toolchain.linker.generateSRecord" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.mapKeep.722859499" name="Keep Map on Failure" superClass="com.freescale.arm.cdt.toolchain.linker.mapKeep" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.maxRecordLength.1119085899" name="Max S-Record Length" superClass="com.freescale.arm.cdt.toolchain.linker.maxRecordLength" value="80" valueType="string"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.linker.input.494071204" name="ARM Linker Input" superClass="com.freescale.arm.cdt.toolchain.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LCF_SRCS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.compiler.660713046" name="ARM Compiler" superClass="com.freescale.arm.cdt.toolchain.compiler">
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes.149194987" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ProcessorExpert/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\psp\cortex&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m\cw&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc\kadc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\can\flexcan&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\cm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\debug&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\Phy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\macnet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx\freescale&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio\kgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_dun&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_mem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_null&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lpm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lwgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb\mqxa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pccard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcflash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pipe&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tchres&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\timer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\usb&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.873746493.adjusted.1539987373" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.509736703.adjusted.2066426697" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode.82600410" name="Speed vs. Size" superClass="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode" value="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode.space" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.prefixFile.540108199" name="Prefix File" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.prefixFile" value="${MQX_ROOT_DIR}\mqx\source\psp\cortex\psp_abi.h" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.otherFlags.1917892195" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.armCpp.otherFlags" value="-define __CODEWARRIOR__=1 -define MQX_DISABLE_CONFIG_CHECK=1 -define _DEBUG=1 -define _EWL_FLOATING_POINT=1 -define __CWARM__=1" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.20417716" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.443876882" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.11381424" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.2121784568" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.299026090" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.632544776" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.320221117" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1277627594" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1378019980" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1222904474" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.2088507651" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warnIllPragma.1847718224" name="Illegal #pragmas (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warnIllPragma" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.extraCommas.138016009" name="Extra Commas (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.extraCommas" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.emptyDecl.252818387" name="Empty Declarations (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.emptyDecl" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.unusedVar.1040904572" name="Unused Variables (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.unusedVar" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.2059606759" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.199771334" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.260696628" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.902134026" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1031072238" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.962431404" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.2083275694" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1522286965" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1375246252" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warnExtendedErrChecks.1761798647" name="Extended Error Checks (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warnExtendedErrChecks" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.missingReturn.1184755687" name="Missing 'return' Value in Non-Void-Returning Function (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.missingReturn" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warnPossibleErr.1978676737" name="Possible Unwanted Effects (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warnPossibleErr" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.enumsInt.254134388" name="Enums Always Int" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.enumsInt" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.requireProtos.1806299137" name="Require Function Prototypes" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.requireProtos" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions.1330203508" name="Enable Exceptions" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.rtti.1533524454" name="Enable RTTI Support" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.rtti" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.isoParser.725465617" name="ISO Template Parser" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.isoParser" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.374736473" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.1476290379" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.502350131" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.571889148" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1225049964" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1264053570" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.179667247" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1124783441" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1385090951" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.optimization.level.1286231177" name="Optimization Level" superClass="com.freescale.arm.cdt.toolchain.armCpp.optimization.level" value="com.freescale.arm.cdt.toolchain.armCpp.optimization.level.level1" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.c99.2130729828" name="Enable C99 Extensions" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.c99" value="true" valueType="boolean"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armCpp.cSource.81323413" name="ARM C/C++ Compiler" superClass="com.freescale.arm.cdt.toolchain.armCpp.cSource"/>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.assembler.990686865" name="ARM Assembler" superClass="com.freescale.arm.cdt.toolchain.assembler">
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.include.449380193" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armAsm.include" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ProcessorExpert/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\psp\cortex&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m\cw&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc\kadc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\can\flexcan&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\cm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\debug&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\Phy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\macnet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx\freescale&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio\kgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_dun&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_mem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_null&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lpm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lwgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb\mqxa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pccard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcflash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pipe&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tchres&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\timer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\usb&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.prefixFile.284066416" name="Prefix File" superClass="com.freescale.arm.cdt.toolchain.armAsm.prefixFile" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.otherFlags.1361739854" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.armAsm.otherFlags" value="-define __CODEWARRIOR__=1 -define MQX_DISABLE_CONFIG_CHECK=1 -define _DEBUG=1 -define _EWL_FLOATING_POINT=1 -define __CWARM__=1" valueType="string"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armAsm.input.167538271" name="ARM Assembler Input" superClass="com.freescale.arm.cdt.toolchain.armAsm.input"/>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.preproc.959197077" name="ARM Preprocessor" superClass="com.freescale.arm.cdt.toolchain.preproc"/>
+							<tool id="com.freescale.arm.cdt.toolchain.disassembler.1462423941" name="ARM Disassembler" superClass="com.freescale.arm.cdt.toolchain.disassembler"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="scannerConfiguration">
+				<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+				<profile id="com.freescale.coldfire.cdt.toolchain.linux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.toolchain.linux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.toolchain.uclinux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.toolchain.uclinux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="makefileGenerator">
+						<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.dsc.cdt.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.hc08.cdt.toolchain.hcs08.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.hc08.cdt.toolchain.rs08.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.s12z.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<scannerConfigBuildInfo instanceId="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430;com.freescale.arm.cdt.toolchain.config.arm.release.1738784430.;com.freescale.arm.cdt.toolchain.compiler.1453629298;com.freescale.arm.cdt.toolchain.armCpp.cSource.244528564">
+					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile"/>
+					<profile id="com.freescale.coldfire.cdt.toolchain.linux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.toolchain.linux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.toolchain.uclinux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.toolchain.uclinux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="makefileGenerator">
+							<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.dsc.cdt.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.hc08.cdt.toolchain.hcs08.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.hc08.cdt.toolchain.rs08.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.s12z.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+				</scannerConfigBuildInfo>
+			</storageModule>
+		</cconfiguration>
+		<cconfiguration id="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.managedbuilder.core.ManagedBuildManager" point="org.eclipse.cdt.core.ScannerInfoProvider"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.SccErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.mxc.cdt.errorparsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwarmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="a" artifactName="${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp\bsp_twrk60d100m" buildProperties="" buildReferences="true" buildReferencingConfigurations="false" cleanCommand="${system:ECLIPSE_HOME}/../gnu/bin/rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;com.freescale.mxc.cdt.errorparsers.MwfeErrorParser;com.freescale.mxc.cdt.errorparsers.SccErrorParser;com.freescale.mxc.cdt.errorparsers.LnkErrorParser;com.freescale.mxc.cdt.errorparsers.AsmErrorParser;com.freescale.mxc.cdt.errorparsers.CobjErrorParser;com.freescale.mxc.cdt.errorparsers.IcodeErrorParser;com.freescale.mxc.cdt.errorparsers.LltErrorParser" id="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430" name="Release" parent="com.freescale.arm.cdt.toolchain.config.arm.release" postbuildStep="&quot;${ProjDirPath}\..\..\bat\bsp_twrk60d100m.bat&quot; &quot;${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp&quot;" prebuildStep="&quot;${ProjDirPath}\..\..\bat\bsp_prebuild.bat&quot; &quot;${MQX_ROOT_DIR}\lib\twrk60d100m.cw10\bsp&quot; bsp_twrk60d100m.a" produceBuildErrorsWithMissingReferences="true">
+					<folderInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430." name="/" resourcePath="">
+						<toolChain id="com.freescale.arm.cdt.toolchain.arm.release.583725022" name="ARM Toolchain" superClass="com.freescale.arm.cdt.toolchain.arm.release">
+							<option id="com.freescale.arm.cdt.toolchain.sharedoption.model.616124921" name="Model" superClass="com.freescale.arm.cdt.toolchain.sharedoption.model" value="com.freescale.arm.cdt.toolchain.sharedoption.model.c9x" valueType="enumerated"/>
+							<option id="com.freescale.arm.cdt.toolchain.sharedoption.librarian.614500673" name="Enable Automatic Library Configurations" superClass="com.freescale.arm.cdt.toolchain.sharedoption.librarian" value="false" valueType="boolean"/>
+							<targetPlatform id="com.freescale.arm.cdt.toolchain.targetplatform.442903038" isAbstract="false" name="ARM Target Platform" superClass="com.freescale.arm.cdt.toolchain.targetplatform"/>
+							<builder buildPath="${ProjDirPath}/Release" id="com.freescale.arm.cdt.toolchain.builder.825618763" keepEnvironmentInBuildfile="false" name="GNU Make Builder" parallelBuildWorkspaceOn="true" superClass="com.freescale.arm.cdt.toolchain.builder"/>
+							<tool id="com.freescale.arm.cdt.toolchain.linker.68886344" name="ARM Linker" superClass="com.freescale.arm.cdt.toolchain.linker">
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch.628164446" name="Library Search Paths" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/lib&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.linker.commandFile.556244487" name="Linker Command File" superClass="com.freescale.arm.cdt.toolchain.linker.commandFile" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.additionalLibs.2037258748" name="Additional Libraries" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.additionalLibs"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.projectType.1863755977" name="Output Type" superClass="com.freescale.arm.cdt.toolchain.linker.projectType" value="com.freescale.arm.cdt.toolchain.linker.projectType.library" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.otherFlags.1714792624" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.linker.otherFlags" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.nostdlib.1432995176" name="No Standard Library" superClass="com.freescale.arm.cdt.toolchain.linker.nostdlib" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.entryPoint.1550307976" name="Entry Point" superClass="com.freescale.arm.cdt.toolchain.linker.entryPoint" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateMapFile.101922532" name="Generate Link Map" superClass="com.freescale.arm.cdt.toolchain.linker.generateMapFile" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateSymTab.1960636928" name="Generate Symbol Table" superClass="com.freescale.arm.cdt.toolchain.linker.generateSymTab" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.generateSRecord.1469097773" name="Generate S-Record File" superClass="com.freescale.arm.cdt.toolchain.linker.generateSRecord" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.maxRecordLength.1522497797" name="Max S-Record Length" superClass="com.freescale.arm.cdt.toolchain.linker.maxRecordLength" value="80" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.linker.mapKeep.240309533" name="Keep Map on Failure" superClass="com.freescale.arm.cdt.toolchain.linker.mapKeep" value="false" valueType="boolean"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.linker.input.966807147" name="ARM Linker Input" superClass="com.freescale.arm.cdt.toolchain.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LCF_SRCS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.compiler.1453629298" name="ARM Compiler" superClass="com.freescale.arm.cdt.toolchain.compiler">
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes.426417503" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ProcessorExpert/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\psp\cortex&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m\cw&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc\kadc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\can\flexcan&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\cm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\debug&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\Phy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\macnet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx\freescale&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio\kgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_dun&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_mem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_null&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lpm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lwgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb\mqxa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pccard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcflash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pipe&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tchres&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\timer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\usb&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.873746494.adjusted.1539987374" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.509736704.adjusted.2066426698" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode.82600411" name="Speed vs. Size" superClass="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode" value="com.freescale.arm.cdt.toolchain.armCpp.optimization.mode.space" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.prefixFile.540108198" name="Prefix File" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.prefixFile" value="${MQX_ROOT_DIR}\mqx\source\psp\cortex\psp_abi.h" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.otherFlags.1917892196" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.armCpp.otherFlags" value="-define __CODEWARRIOR__=1 -define MQX_DISABLE_CONFIG_CHECK=1 -define _EWL_FLOATING_POINT=1 -define __CWARM__=1" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.2130111300" name="(hidden) warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.703058179" name="(hidden) toggle warnings flag" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.optimization.level.992670748" name="Optimization Level" superClass="com.freescale.arm.cdt.toolchain.armCpp.optimization.level" value="com.freescale.arm.cdt.toolchain.armCpp.optimization.level.level4" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.1395511532" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.2105945011" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.323844553" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1570983360" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.758237420" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.33815195" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.373929262" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.2137941314" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1134235056" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warnIllPragma.845567264" name="Illegal #pragmas (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warnIllPragma" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warnPossibleErr.1629707520" name="Possible Unwanted Effects (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warnPossibleErr" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.missingReturn.187632910" name="Missing 'return' Value in Non-Void-Returning Function (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.missingReturn" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.extraCommas.1875124538" name="Extra Commas (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.extraCommas" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.emptyDecl.1796775815" name="Empty Declarations (most)" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.emptyDecl" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.enumsInt.1156676533" name="Enums Always Int" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.enumsInt" value="true" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.requireProtos.500570051" name="Require Function Prototypes" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.requireProtos" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions.798696660" name="Enable Exceptions" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.rtti.1228892706" name="Enable RTTI Support" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.rtti" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.isoParser.484990340" name="ISO Template Parser" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.isoParser" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.39843999" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.1275846757" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663.adjusted.1923928766" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.warningsFlag.hidden.adjusted.1739140663" value="false" valueType="boolean"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.988452169" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.1801121090" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.184114857" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.2073471023" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.648879659" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960.adjusted.812430549" superClass="com.freescale.arm.cdt.toolchain.armCpp.warn.enableWarnings.hidden.adjusted.1827357960" value="com.freescale.arm.cdt.toolchain.enableWarnings.custom.hidden" valueType="enumerated"/>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.c99.1713393117" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.c99" value="true" valueType="boolean"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armCpp.cSource.244528564" name="ARM C/C++ Compiler" superClass="com.freescale.arm.cdt.toolchain.armCpp.cSource"/>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.assembler.1536830664" name="ARM Assembler" superClass="com.freescale.arm.cdt.toolchain.assembler">
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.include.449380194" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armAsm.include">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ProcessorExpert/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\config\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\psp\cortex&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\bsp\twrk60d100m\cw&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\adc\kadc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\can\flexcan&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\cm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\debug&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\Phy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\enet\macnet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\flashx\freescale&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\gpio\kgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\i2c\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_dun&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_mem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\io_null&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lpm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\lwgpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcb\mqxa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pccard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pcflash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\pipe&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_esdhc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\sdcard\sdcard_spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\serial\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\int&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi\polled&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\spi&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tchres&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\tfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\timer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MQX_ROOT_DIR}\mqx\source\io\usb&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.prefixFile.284066417" name="Prefix File" superClass="com.freescale.arm.cdt.toolchain.armAsm.prefixFile" value="" valueType="string"/>
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.otherFlags.1361739855" name="Other Flags" superClass="com.freescale.arm.cdt.toolchain.armAsm.otherFlags" value="-define __CODEWARRIOR__=1 -define MQX_DISABLE_CONFIG_CHECK=1 -define _EWL_FLOATING_POINT=1 -define __CWARM__=1" valueType="string"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armAsm.input.936352798" name="ARM Assembler Input" superClass="com.freescale.arm.cdt.toolchain.armAsm.input"/>
+							</tool>
+							<tool id="com.freescale.arm.cdt.toolchain.preproc.223072802" name="ARM Preprocessor" superClass="com.freescale.arm.cdt.toolchain.preproc"/>
+							<tool id="com.freescale.arm.cdt.toolchain.disassembler.539956526" name="ARM Disassembler" superClass="com.freescale.arm.cdt.toolchain.disassembler"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="scannerConfiguration">
+				<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+				<profile id="com.freescale.coldfire.cdt.toolchain.linux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.toolchain.linux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.toolchain.uclinux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.toolchain.uclinux.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="false"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="makefileGenerator">
+						<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+					<buildOutputProvider>
+						<openAction enabled="true" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+						<parser enabled="true"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.cpp.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.coldfire.cdt.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.dsc.cdt.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.hc08.cdt.toolchain.hcs08.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.hc08.cdt.toolchain.rs08.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<profile id="com.freescale.s12z.c.symbols.toolchain.discoveryProfile">
+					<buildOutputProvider>
+						<openAction enabled="false" filePath=""/>
+						<parser enabled="true"/>
+					</buildOutputProvider>
+					<scannerInfoProvider id="specsFile">
+						<runAction arguments="" command="" useDefault="true"/>
+						<parser enabled="false"/>
+					</scannerInfoProvider>
+				</profile>
+				<scannerConfigBuildInfo instanceId="com.freescale.arm.cdt.toolchain.config.arm.release.1738784430;com.freescale.arm.cdt.toolchain.config.arm.release.1738784430.;com.freescale.arm.cdt.toolchain.compiler.1453629298;com.freescale.arm.cdt.toolchain.armCpp.cSource.244528564">
+					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile"/>
+					<profile id="com.freescale.coldfire.cdt.toolchain.linux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.toolchain.linux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCInstallDir}/m68k-linux-gnu-g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.toolchain.uclinux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.toolchain.uclinux.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="false"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="${CFGCCUCInstallDir}/m68k-uclinux-g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="makefileGenerator">
+							<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+							<parser enabled="true"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="true" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.cpp.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.coldfire.cdt.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.dsc.cdt.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.hc08.cdt.toolchain.hcs08.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.hc08.cdt.toolchain.rs08.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+					<profile id="com.freescale.s12z.c.symbols.toolchain.discoveryProfile">
+						<buildOutputProvider>
+							<openAction enabled="false" filePath=""/>
+							<parser enabled="true"/>
+						</buildOutputProvider>
+						<scannerInfoProvider id="specsFile">
+							<runAction arguments="" command="" useDefault="true"/>
+							<parser enabled="false"/>
+						</scannerInfoProvider>
+					</profile>
+				</scannerConfigBuildInfo>
+			</storageModule>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="dfg.com.freescale.arm.cdt.toolchain.project.arm.477847556" name="ARM Project" projectType="com.freescale.arm.cdt.toolchain.project.arm"/>
+	</storageModule>
+</cproject>
