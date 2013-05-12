@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2722801553</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_audio.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_cdc_pstn.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\twrk60n512_lib.txt</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_audio.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_cdc.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_cdc.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_cdc_pstn.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\common\usb_class.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_class.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\common\usb_framework.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_framework.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hid\usb_hid.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_hid.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_msc.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_msc_scsi.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_msc.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_msc_scsi.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_phdc.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\phdc\usb_phdc.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_cncl.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_ep_deinit.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_main.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_recv.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_send.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_shut.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\dev_utl.c</file>
+      <file>$PROJ_DIR$\..\..\source\include\rtos\mqx_dev.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_misc_prv.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_debug.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_desc.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_error.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_misc.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\include\usb_stack_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_prv.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_types.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\dev_cnfg.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\dev_main.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\devapi.h</file>
+      <file>$PROJ_DIR$\..\..\source\device\khci\callback_khci.c</file>
+      <file>$PROJ_DIR$\..\..\source\device\khci\khci_dev_main.c</file>
+      <file>$PROJ_DIR$\..\..\source\include\khci\khci_dev_main.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\khci\khci_usbprv.h</file>
+    </outputs>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>IARCHIVE</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>IARCHIVE</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

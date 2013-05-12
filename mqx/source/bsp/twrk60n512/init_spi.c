@@ -71,7 +71,11 @@ const DSPI_INIT_STRUCT _bsp_dspi1_init = {
 const DSPI_INIT_STRUCT _bsp_dspi2_init = { 
    2,                            /* SPI channel                     */
    SPI_PUSHR_PCS(1 << 0),        /* Chip Select 0                   */
-   SPI_DEVICE_MASTER_MODE,       /* Transfer mode                   */  
+   
+   /*wk @130418 --> 修改SPI2初始化时为从机 */  
+//   SPI_DEVICE_MASTER_MODE,       /* Transfer mode                   */  
+   SPI_DEVICE_SLAVE_MODE,         /* Transfer mode                   */ 
+   
    BSP_DSPI_BAUDRATE,            /* SPI Baud rate register value    */ 
    BSP_BUS_CLOCK,                /* Relevant bus clock              */         
    SPI_CLK_POL_PHA_MODE0,        /* SPI clock phase                 */   

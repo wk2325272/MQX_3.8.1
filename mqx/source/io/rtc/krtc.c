@@ -31,6 +31,9 @@
 #include <mqx.h>
 #include <bsp.h>
 
+/* wk@130512--> DisTimeFlg()声明 */
+#include "app_wk.h"
+
 static RTC_TIME_STRUCT alarm_time,
                        sw_time;
 static uint_32 user_enables = 0;
@@ -116,10 +119,18 @@ uint_32 _rtc_init
             rtc->CR &= ~RTC_CR_SWR_MASK;
         }
 
-        if (NULL == _int_install_isr (INT_RTC, _rtc_isr, (pointer)rtc))
+/* wk@130510 -->  */
+    /* default */
+//        if (NULL == _int_install_isr (INT_RTC, _rtc_isr, (pointer)rtc))
+//        {
+//            result = _task_get_error ();
+//        }
+    /* wk */       
+        if (NULL == _int_install_isr (INT_RTC, _rtc_isr_app, (pointer)rtc))
         {
             result = _task_get_error ();
         }
+ /* end */
 
         if (MQX_OK == result)
         {
@@ -128,6 +139,9 @@ uint_32 _rtc_init
                 rtc->CR |= RTC_CR_OSCE_MASK;
                 /* recommended 125 ms delay for oscillator start */
                 _rtc_wait_ms(125);
+                
+                rtc->TAR=rtc->TSR;  // wk@130405 -->
+                
                 rtc->SR |= RTC_SR_TCE_MASK;
             }
             _bsp_int_init(INT_RTC, BSP_RTC_INT_LEVEL, 0, TRUE);
@@ -220,7 +234,53 @@ void _rtc_isr
     }
 }
 
+/*FUNCTION****************************************************************
+*
+* Author : wk @130510
+* Function Name    : _rtc_isr_app
+* Returned Value   : none
+* Comments         :
+*    This is ISR for RTC module, triggered each second.
+*
+*END*********************************************************************/
+void _rtc_isr_app
+(
+    /* [IN] rtc module pointer passed to interrupt */
+    pointer ptr
+)
+{
+    RTC_MemMapPtr rtc = RTC_BASE_PTR;
+    uint_32 status;
+    status = rtc->SR;
+    if (status & RTC_SR_TAF_MASK)
+    {
+//   	   printf("SRTC alarm interrupt entered...\r\n");
+//         printf("Time Seconds Register value is: %i\n", rtc->TSR);
+   	   rtc->TAR += 1;  
+           DisTimeFlg();  //wk @130510 --> 调用外部应用函数显示时间
+    }	
+    /* Time Invalid Flag, Time Overflow Flag */
+    else if (status & (RTC_SR_TIF_MASK | RTC_SR_TOF_MASK))
+    {
+        rtc->SR &= ~RTC_SR_TCE_MASK;    /* disable rtc timer - enable write access */
+        rtc->TAR = 0xFFFFFFFF; /* e2574: RTC: Writing RTC_TAR[TAR] = 0 does not disable RTC alarm */
+        /* if TIF or TOF flag is set, reading TSR return zero and we must set TSR to one */
+        rtc->TSR = 1;                   /* this clear SR flags TIF, TOF */
+        rtc->SR |= RTC_SR_TCE_MASK;
 
+        user_requests |= ((status & RTC_SR_TIF_MASK) ? RTC_ISR_TIF : 0) | ((status & RTC_SR_TOF_MASK) ? RTC_ISR_TOF : 0);
+    }
+    else
+    {
+       printf("No valid Flag was set!\n");
+    }
+    /* user callback */
+    if ((NULL != user_isr) && (user_requests & user_enables))
+    {
+//        TimeDis();
+    }
+    return;
+}
 
 /*FUNCTION****************************************************************
 *

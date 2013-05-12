@@ -64,6 +64,7 @@ void     _rtc_get_alarm_mqxd (DATE_STRUCT_PTR time);
 
 uint_32  _rtc_init (uint_32 flags);
 void     _rtc_isr (pointer ptr);
+void     _rtc_isr_app(  pointer ptr); //wk@130510-->º¯ÊıÉùÃ÷
 uint_32  _rtc_int_install (pointer isr);
 uint_32  _rtc_int_enable (boolean enable, uint_32 bitmask);
 void     _rtc_clear_requests (uint_32 bitmask);

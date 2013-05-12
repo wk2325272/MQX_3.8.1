@@ -36,6 +36,9 @@
 #include "spi.h"
 #include "spi_int_prv.h"
 #include "spi_dspi_prv.h"
+/* wk @130512 */
+#include "app_wk.h"  // wk@130512 --> 用户定义变量
+#include "event.h" // wk@130103 --> 事件引用文件
 
 extern uint_32 _dspi_polled_init(DSPI_INIT_STRUCT_PTR, pointer _PTR_, char_ptr);
 extern uint_32 _dspi_polled_ioctl(VDSPI_INFO_STRUCT_PTR, uint_32, uint_32_ptr, uint_32);
@@ -48,6 +51,11 @@ static uint_32 _dspi_dma_enable(VDSPI_INFO_STRUCT_PTR io_info_ptr);
 static void    _dspi_dma_isr_err(pointer parameter);
 static void    _dspi_dma_isr_rx(pointer parameter);
 
+/* wk@121120-->deifne for reverse DMA register : 0--> default  1--> wk  */
+#define wk_rx 1    
+#define wk_tx 1    
+#define wk_dma_daddr 1 
+#define wk_dma_saddr_tx 1
 
 /* Temporary definitions, will be removed when eDMA API is introduced */
 
@@ -190,11 +198,26 @@ static void _dspi_dma_setup
     
     /* Setup and run RX DMA */
     channel = io_info_ptr->INIT.DMA_RX_CHANNEL;
+#if !wk_rx  // wk_rx = 0   <1>
     DMA_ATTR(channel) = DMA_ATTR_SSIZE(2) | DMA_ATTR_DSIZE(2);  
     DMA_NBYTES_MLNO(channel) = sizeof (uint_32);
+#endif
+#if wk_rx  // wk_rx = 1   <1>
+     DMA_ATTR(channel) = DMA_ATTR_SSIZE(0) | DMA_ATTR_DSIZE(0);
+     DMA_NBYTES_MLNO(channel) = sizeof(uchar);
+#endif
+     
     DMA_SADDR(channel) = (vuint_32)&(io_info_ptr->DSPI_PTR->POPR);
+#if !wk_rx // wk_rx = 0   <2>
     DMA_SOFF(channel) = 0;
     DMA_SLAST(channel) = 0;
+#endif
+#if wk_rx // wk_r = 1    <2>
+     DMA_SOFF(channel) = 0;   // wk ? 4
+     DMA_SLAST(channel) = 0;  // wk ? 8
+#endif   
+
+#if !wk_dma_daddr // wk_dma_addr = 0 
     if (rx_offset)
     {
         DMA_DADDR(channel) = (vuint_32)&(io_info_ptr->RX_BUFFER[io_info_ptr->RX_IN]);
@@ -203,20 +226,49 @@ static void _dspi_dma_setup
     {
         DMA_DADDR(channel) = (vuint_32)&(io_info_ptr->RX_DATA);
     }
+#endif
+#if wk_dma_daddr  // wk_dma_daddr = 1
+    DMA_DADDR(channel) = (vuint_32)BufRxchar; // SPI2的接收 DMA 通道目的地址绑定到 BufRxchar
+#endif
+    
+#if !wk_rx // wk_rx = 0   <3>
     DMA_DOFF(channel) = rx_offset;
     DMA_DLAST_SGA(channel) = 0;
+#endif
+#if wk_rx  // wk_rx = 1  <3>
+    DMA_DOFF(channel) = 1; // wk ? 4
+    DMA_DLAST_SGA(channel) = 0;  // wk ? 8
+#endif     
+    
+#if !wk_rx // wk_rx = 0   <4>
     DMA_CITER_ELINKNO(channel) = DMA_CITER_ELINKNO_CITER(size);
     DMA_BITER_ELINKNO(channel) = DMA_BITER_ELINKNO_BITER(size);
+#endif
+#if wk_rx   // wk_rx = 1  <4>
+     DMA_CITER_ELINKNO(channel) = DataSize;
+     DMA_BITER_ELINKNO(channel) = DataSize;
+#endif    
+    
     DMA_CSR(channel) = DMA_CSR_INTMAJOR_MASK | DMA_CSR_DREQ_MASK;
     if (size)
     {
         DMA_SERQ = channel;
     }
-    
+  DMA_SERQ = channel; // wk@130512 -> 重要：配置完成直接开启 DMA，而不是通过外部函数调用开启  
+/*********************************************************************************/  
     /* Setup and run TX DMA */
     channel = io_info_ptr->INIT.DMA_TX_CHANNEL;
+    
+#if !wk_tx // wk_tx = 0   <1>
     DMA_ATTR(channel) = DMA_ATTR_SSIZE(2) | DMA_ATTR_DSIZE(2);  
     DMA_NBYTES_MLNO(channel) = sizeof (uint_32);
+#endif
+#if wk_tx // wk_tx = 1   <1>
+    DMA_ATTR(channel) = DMA_ATTR_SSIZE(0) | DMA_ATTR_DSIZE(0);  
+    DMA_NBYTES_MLNO(channel) = sizeof (uchar);
+#endif
+
+#if !wk_dma_saddr_tx // default    
     if (tx_offset)
     {
         DMA_SADDR(channel) = (vuint_32)&(io_info_ptr->TX_BUFFER[io_info_ptr->TX_OUT]);
@@ -226,18 +278,52 @@ static void _dspi_dma_setup
     {
         DMA_SADDR(channel) = (vuint_32)&(io_info_ptr->TX_DATA);
     }
+#endif
+#if wk_dma_saddr_tx // wk_dma_saddr_tx = 1
+    DMA_SADDR(channel) = (vuint_32)SysDataSend;
+#endif
+
+#if !wk_tx   // wk_tx = 0   <2> 
     DMA_SOFF(channel) = tx_offset;
     DMA_SLAST(channel) = 0;
+#endif
+#if wk_tx  // wk_tx = 1  <2>
+    DMA_SOFF(channel) = 1;  
+    DMA_SLAST(channel) = 0;  // wk ? 8
+#endif
+    
     DMA_DADDR(channel) = (vuint_32)&(io_info_ptr->DSPI_PTR->PUSHR);
+
+#if !wk_tx  // wk_tx = 0   <3> 
     DMA_DOFF(channel) = 0;
     DMA_DLAST_SGA(channel) = 0;
+#endif
+#if wk_tx  // wk_tx = 1  <3>
+    DMA_DOFF(channel) = 0; // wk ? 4
+    DMA_DLAST_SGA(channel) = 0;  // wk ? 8
+#endif
+  
+#if !wk_tx  // wk_tx = 0   <4>
     DMA_CITER_ELINKNO(channel) = DMA_CITER_ELINKNO_CITER(size);
     DMA_BITER_ELINKNO(channel) = DMA_BITER_ELINKNO_BITER(size);
+#endif
+#if wk_tx  // wk_tx = 1  <4>
+    DMA_CITER_ELINKNO(channel) = 56;
+    DMA_BITER_ELINKNO(channel) = 56;
+#endif
+    
     DMA_CSR(channel) = DMA_CSR_DREQ_MASK;
-    if (size)
+/* wk @130512 --> SPI 发送 DMA 配置完成后开启方式的修改 */
+//    if (size)
+//    {
+//        DMA_SERQ = channel;
+//    }
+    if (SPI_Send)
     {
         DMA_SERQ = channel;
     }
+/* wk @130512 --> end */
+    
 }
 
 
@@ -756,7 +842,8 @@ static void _dspi_dma_isr_rx
     /* Clear RX interrupt */
     channel = io_info_ptr->INIT.DMA_RX_CHANNEL;
     DMA_CINT = channel;
-   
+
+#if 0 // wk@130512 --> 中断函数中，没有此部分，功能正常
     /* Stats... */
     io_info_ptr->STATS.INTERRUPTS++;
     io_info_ptr->STATS.RX_PACKETS += io_info_ptr->RX_COUNT;
@@ -882,6 +969,41 @@ static void _dspi_dma_isr_rx
     {
         io_info_ptr->DMA_FLAGS = 0;
     }
+#endif // wk@130512 --> 中断函数中，没有此部分，功能正常
+ 
+    _dspi_dma_setup (io_info_ptr, sizeof (uint_32), sizeof (uint_32), 0); // wk -->  这个必须要有,才能启动下一次DMA数据传送
+ 
+#define SPIDMA_EVENT 0
+
+#if SPIDMA_EVENT 
+    
+   pointer pspidma_event;
+    
+#ifdef _SPIDMA_DBUG_
+   if(_event_open("spidma_event",&pspidma_event) != MQX_OK)
+    {
+      printf("\n Open event failed of spi_dma_dspi.c");
+    }
+    else 
+      printf("\n Open event OK of spi_dma_dspi.c");
+      
+    if (_event_set(pspidma_event,0x02) != MQX_OK) {
+       printf("\n Set Event failed of spi_dma_dspi.c");
+    }  
+    else
+       printf("\n Set Event OK of spi_dma_dspi.c");   
+#endif
+    
+#ifndef _SPIDMA_DBUG_
+    _event_open("spidma_event",&pspidma_event);
+    _event_set(pspidma_event,0x02);
+#endif
+      
+#endif // wk --> SPIDMA_EVENT 
+      
+#if !SPIDMA_EVENT  // 没有使用事件时通过此函数调用应用程序接收SPI数据
+    DMA_RecData_OK();  // 调用外部函数处理 DMA 接收的数据 --> 应用程序中的函数
+#endif // wk --> !SPIDMA_EVENT
 }
 
 /* EOF */

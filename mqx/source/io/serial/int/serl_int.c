@@ -46,6 +46,7 @@
 #include "bsp.h"
 #include "serinprv.h"
 
+#include "bsp_prv.h"    /* BSP_SERIAL_POLLED_WRAPPER */  // wk
 
 #if MQX_ENABLE_LOW_POWER
 

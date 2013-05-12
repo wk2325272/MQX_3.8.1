@@ -346,9 +346,13 @@ extern uchar __DEFAULT_INTERRUPT_STACK_SIZE[];
 /*-----------------------------------------------------------------------------
 **                      DSPI
 */
+/* default */
+//#define BSP_DSPI_RX_BUFFER_SIZE          (32)  
+//#define BSP_DSPI_TX_BUFFER_SIZE          (32)
+/* wk */
+#define BSP_DSPI_RX_BUFFER_SIZE          (128)  
+#define BSP_DSPI_TX_BUFFER_SIZE          (128)
 
-#define BSP_DSPI_RX_BUFFER_SIZE          (32)
-#define BSP_DSPI_TX_BUFFER_SIZE          (32)
 #define BSP_DSPI_BAUDRATE                (1000000)
 #define BSP_DSPI_INT_LEVEL               (4)
 #define BSP_SPI_MEMORY_CHANNEL           2
@@ -961,7 +965,11 @@ extern uchar __USER_NO_MEMORY_END[];
  */
 #ifndef BSP_DEFAULT_IO_CHANNEL
     #if BSPCFG_ENABLE_TTYF
-        #define BSP_DEFAULT_IO_CHANNEL                    "ttyf:"    /* OSJTAG-COM   polled mode   */
+/* default */
+//        #define BSP_DEFAULT_IO_CHANNEL                    "ttyf:"    /* OSJTAG-COM   polled mode   */
+/* wk @130512 --> ´®¿Ú4 printf Êä³ö */
+        #define BSP_DEFAULT_IO_CHANNEL                    "ttye:"    /* OSJTAG-COM   polled mode   */
+
         #define BSP_DEFAULT_IO_CHANNEL_DEFINED
     #else
         #define BSP_DEFAULT_IO_CHANNEL                      NULL

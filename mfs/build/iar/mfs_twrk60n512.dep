@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2668485049</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_attribute.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_cluster.c</file>
+      <file>$PROJ_DIR$\..\..\..\lib\twrk60n512.iar\twrk60n512_lib.txt</file>
+      <file>$PROJ_DIR$\..\..\source\generic\dir_read.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_create.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_data_sector.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_delete.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_dir_entry.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_directory.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_format.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_fat.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_handle.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_rename.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_init.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_lfn.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_misc.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_open.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_parse.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_read.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_search.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_rw.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_valdev.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_time.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\mfs_write.c</file>
+      <file>$PROJ_DIR$\..\..\source\generic\part_mgr.c</file>
+      <file>$PROJ_DIR$\..\..\source\include\mfs.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\mfs_cnfg.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\mfs_prv.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\mfs_rev.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\part_mgr.h</file>
+    </outputs>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>IARCHIVE</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>IARCHIVE</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

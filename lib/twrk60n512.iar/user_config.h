@@ -44,35 +44,73 @@
 /* Silicon version number */
 #define MK60_REV_1_0             1
 
-/* MGCT: <generated_code> */
-#define BSPCFG_ENABLE_TTYA       0
-#define BSPCFG_ENABLE_ITTYA      0
-#define BSPCFG_ENABLE_TTYB       0
-#define BSPCFG_ENABLE_ITTYB      0
-#define BSPCFG_ENABLE_TTYC       0
-#define BSPCFG_ENABLE_ITTYC      0
+/* wk@130512--> */
+#define BSPCFG_ENABLE_GPIODEV    1
+#define BSPCFG_ENABLE_RTCDEV     1
+
+#define BSPCFG_ENABLE_TTYA       1
+#define BSPCFG_ENABLE_ITTYA      1
+#define BSPCFG_ENABLE_TTYB       1
+#define BSPCFG_ENABLE_ITTYB      1
+#define BSPCFG_ENABLE_TTYC       1
+#define BSPCFG_ENABLE_ITTYC      1
 #define BSPCFG_ENABLE_TTYD       1
-#define BSPCFG_ENABLE_ITTYD      0
-#define BSPCFG_ENABLE_TTYE       0
-#define BSPCFG_ENABLE_ITTYE      0
+#define BSPCFG_ENABLE_ITTYD      1
+#define BSPCFG_ENABLE_TTYE       1
+#define BSPCFG_ENABLE_ITTYE      1
 #define BSPCFG_ENABLE_TTYF       1
-#define BSPCFG_ENABLE_ITTYF      0
+#define BSPCFG_ENABLE_ITTYF      1
+
+#define BSPCFG_ENABLE_SPI0       1
+#define BSPCFG_ENABLE_SPI1       1
+
+#define MQX_USE_TIMER 1 // wk @130401--> add for timer
+
+#define BSPCFG_ENABLE_TCHSRES 1 // wk @130401--> add
+//#define MQX_HAS_TIME_SLICE 1  // wk --> 2012-1-2
+
+#define BSP_SDCARD_SDHC_CHANNEL   1
+
+#define BSPCFG_ENABLE_SPI2       1 
+#define BSPCFG_ENABLE_ISPI0      1 
+#define BSPCFG_ENABLE_ISPI1      1
+#define BSPCFG_ENABLE_ISPI2      1
+#define BSPCFG_ENABLE_FLASHX     1 
+
+/* wk@130512--> end */
+
+/* MGCT: <generated_code> */
+//#define BSPCFG_ENABLE_TTYA       0
+//#define BSPCFG_ENABLE_ITTYA      0
+//#define BSPCFG_ENABLE_TTYB       0
+//#define BSPCFG_ENABLE_ITTYB      0
+//#define BSPCFG_ENABLE_TTYC       0
+//#define BSPCFG_ENABLE_ITTYC      0
+//#define BSPCFG_ENABLE_TTYD       1
+//#define BSPCFG_ENABLE_ITTYD      0
+//#define BSPCFG_ENABLE_TTYE       0
+//#define BSPCFG_ENABLE_ITTYE      0
+//#define BSPCFG_ENABLE_TTYF       1
+//#define BSPCFG_ENABLE_ITTYF      0
+
 #define BSPCFG_ENABLE_I2C0       1
 #define BSPCFG_ENABLE_II2C0      1
 #define BSPCFG_ENABLE_I2C1       0
 #define BSPCFG_ENABLE_II2C1      0
-#define BSPCFG_ENABLE_SPI0       0
-#define BSPCFG_ENABLE_ISPI0      0
-#define BSPCFG_ENABLE_SPI1       0
-#define BSPCFG_ENABLE_ISPI1      0
-#define BSPCFG_ENABLE_SPI2       0
-#define BSPCFG_ENABLE_ISPI2      0
-#define BSPCFG_ENABLE_GPIODEV    0
-#define BSPCFG_ENABLE_RTCDEV     1
+
+//#define BSPCFG_ENABLE_SPI0       0
+//#define BSPCFG_ENABLE_ISPI0      0
+//#define BSPCFG_ENABLE_SPI1       0
+//#define BSPCFG_ENABLE_ISPI1      0
+//#define BSPCFG_ENABLE_SPI2       0
+//#define BSPCFG_ENABLE_ISPI2      0
+//#define BSPCFG_ENABLE_GPIODEV    0
+//#define BSPCFG_ENABLE_RTCDEV     1
+
 #define BSPCFG_ENABLE_PCFLASH    0
 #define BSPCFG_ENABLE_ADC0       0
 #define BSPCFG_ENABLE_ADC1       1
-#define BSPCFG_ENABLE_FLASHX     0
+//#define BSPCFG_ENABLE_FLASHX     0
 #define BSPCFG_ENABLE_ESDHC      1
 #define BSPCFG_ENABLE_IODEBUG    0
 #define BSPCFG_ENABLE_II2S0      0
