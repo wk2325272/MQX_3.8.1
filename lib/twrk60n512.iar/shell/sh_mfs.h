@@ -70,6 +70,18 @@ extern int_32 Shell_write_test(int_32 argc, char_ptr argv[] );
 extern int_32 Shell_read_test(int_32 argc, char_ptr argv[] );
 extern int_32 Shell_append_test(int_32 argc, char_ptr argv[] );
 
+/* wk @130331 --> */
+extern int_32  Shell_write_buf(int_32 argc, char_ptr argv[] ); 
+extern int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr data);
+extern int_32  Shell_read_wk(int_32 argc, char_ptr argv[], uchar_ptr data ); 
+extern int_32  Shell_update(int_32 argc, char_ptr argv[] ); 
+extern int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_32 TotalSpace,uint_32 FreeSpace);
+extern int_32  Shell_df_file(int_32 argc, char_ptr argv[]);
+extern int_32  Shell_search_file(int_32 argc, char_ptr argv[]);
+extern int_32  Shell_search_file_1(int_32 argc, char_ptr argv[], uint_32 size,uint_16 status);
+extern int_32  Shell_search_file_r(int_32 argc, char_ptr argv[] );
+extern uchar  Shell_search_file_r1(int_32 argc, char_ptr argv[],uint_32_ptr size);
+/* wk @130331 --> end */
 #ifdef __cplusplus
 }
 #endif

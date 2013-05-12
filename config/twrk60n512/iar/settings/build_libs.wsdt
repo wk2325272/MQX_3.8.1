@@ -18,15 +18,26 @@
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>238</Column0>
+          <Column0>221</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
         </ColumnWidths>
       </Workspace>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>1035</ColumnWidth1>
+        <ColumnWidth2>276</ColumnWidth2>
+        <ColumnWidth3>69</ColumnWidth3>
+      </Build>
+      <Find-in-Files>
+        <ColumnWidth0>496</ColumnWidth0>
+        <ColumnWidth1>70</ColumnWidth1>
+        <ColumnWidth2>850</ColumnWidth2>
+      </Find-in-Files>
     </Static>
     <Windows>
-      <Wnd1>
+      <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-17179-833</Identity>
@@ -40,13 +51,39 @@
                 <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/rtc</ExpandedNode>
                 <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/serial</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/timer</ExpandedNode>
+                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/usb</ExpandedNode>
+                <ExpandedNode>bsp_twrk60n512/twrk60n512 User Config</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512</ExpandedNode>
+                <ExpandedNode>shell_twrk60n512/Output</ExpandedNode>
+                <ExpandedNode>usb_ddk_twrk60n512</ExpandedNode>
+                <ExpandedNode>usb_hdk_twrk60n512</ExpandedNode>
+                <ExpandedNode>usb_hdk_twrk60n512/USB Class Drivers</ExpandedNode>
+                <ExpandedNode>usb_hdk_twrk60n512/USB Host</ExpandedNode>
+                <ExpandedNode>usb_hdk_twrk60n512/USB Host/os</ExpandedNode>
+                <ExpandedNode>usb_hdk_twrk60n512/twrk60n512 Config in lib</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd1>
+      </Wnd2>
+      <Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-6434-21299</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-3717-32607</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        <SelectedTab>1</SelectedTab>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
@@ -102,11 +139,10 @@
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\krtc.c</Filename>
           <XPos>0</XPos>
-          <YPos>125</YPos>
-          <SelStart>5189</SelStart>
-          <SelEnd>5189</SelEnd>
+          <YPos>116</YPos>
+          <SelStart>4032</SelStart>
+          <SelEnd>4032</SelEnd>
         </Tab>
-        <ActiveTab>6</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\..\mqx\source\include\io.h</Filename>
@@ -171,6 +207,47 @@
           <SelStart>1542</SelStart>
           <SelEnd>1542</SelEnd>
         </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\shell\source\include\sh_mfs.h</Filename>
+          <XPos>0</XPos>
+          <YPos>2</YPos>
+          <SelStart>455</SelStart>
+          <SelEnd>455</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_install.c</Filename>
+          <XPos>0</XPos>
+          <YPos>27</YPos>
+          <SelStart>1759</SelStart>
+          <SelEnd>1759</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_bsp.h</Filename>
+          <XPos>0</XPos>
+          <YPos>83</YPos>
+          <SelStart>3469</SelStart>
+          <SelEnd>3469</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</Filename>
+          <XPos>0</XPos>
+          <YPos>86</YPos>
+          <SelStart>3394</SelStart>
+          <SelEnd>3394</SelEnd>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\usb\host\source\rtos\mqx\usb_mqx.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>483</SelStart>
+          <SelEnd>483</SelEnd>
+        </Tab>
+        <ActiveTab>19</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -194,11 +271,11 @@
       <Left>
         <Row0>
           <Sizes>
-            <Wnd1>
+            <Wnd2>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>773</Bottom>
+                <Bottom>592</Bottom>
                 <Right>312</Right>
                 <x>-2</x>
                 <y>-2</y>
@@ -207,9 +284,9 @@
                 <sizeHorzCX>138889</sizeHorzCX>
                 <sizeHorzCY>244499</sizeHorzCY>
                 <sizeVertCX>218056</sizeVertCX>
-                <sizeVertCY>947433</sizeVertCY>
+                <sizeVertCY>726161</sizeVertCY>
               </Rect>
-            </Wnd1>
+            </Wnd2>
           </Sizes>
         </Row0>
       </Left>
@@ -220,7 +297,24 @@
       </Right>
       <Bottom>
         <Row0>
-          <Sizes/>
+          <Sizes>
+            <Wnd3>
+              <Rect>
+                <Top>-2</Top>
+                <Left>-2</Left>
+                <Bottom>181</Bottom>
+                <Right>1442</Right>
+                <x>-2</x>
+                <y>-2</y>
+                <xscreen>1444</xscreen>
+                <yscreen>183</yscreen>
+                <sizeHorzCX>1002778</sizeHorzCX>
+                <sizeHorzCY>223716</sizeHorzCY>
+                <sizeVertCX>138889</sizeVertCX>
+                <sizeVertCY>244499</sizeVertCY>
+              </Rect>
+            </Wnd3>
+          </Sizes>
         </Row0>
       </Bottom>
       <Float>
