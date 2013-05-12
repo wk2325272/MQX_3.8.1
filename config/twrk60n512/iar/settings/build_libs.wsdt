@@ -2,72 +2,48 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>bsp_twrk60n512/Debug</Project>
-      <Project>psp_twrk60n512/Debug</Project>
-      <Project>rtcs_twrk60n512/Debug</Project>
-      <Project>mfs_twrk60n512/Debug</Project>
-      <Project>shell_twrk60n512/Debug</Project>
-      <Project>usb_ddk_twrk60n512/Debug</Project>
-      <Project>usb_hdk_twrk60n512/Debug</Project>
-    </CurrentConfigs>
-    <CurrentProj>bsp_twrk60n512</CurrentProj>
-    <OverviewSelected>0</OverviewSelected>
-  </ConfigDictionary>
+    
+    
+    
+  <CurrentConfigs><Project>bsp_twrk60n512/Debug</Project><Project>psp_twrk60n512/Debug</Project><Project>rtcs_twrk60n512/Debug</Project><Project>mfs_twrk60n512/Debug</Project><Project>usb_ddk_twrk60n512/Debug</Project><Project>shell_twrk60n512/Debug</Project><Project>usb_hdk_twrk60n512/Debug</Project></CurrentConfigs><CurrentProj>bsp_twrk60n512</CurrentProj><OverviewSelected>0</OverviewSelected></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>221</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>196</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
-        <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1035</ColumnWidth1>
-        <ColumnWidth2>276</ColumnWidth2>
-        <ColumnWidth3>69</ColumnWidth3>
-      </Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
       <Find-in-Files>
-        <ColumnWidth0>496</ColumnWidth0>
-        <ColumnWidth1>70</ColumnWidth1>
-        <ColumnWidth2>850</ColumnWidth2>
-      </Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files>
     </Static>
     <Windows>
-      <Wnd2>
+      
+      
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-17179-833</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>&lt;ws&gt;</ExpandedNode>
-                <ExpandedNode>&lt;ws&gt;/bsp_twrk60n512</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/rtc</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/serial</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/usb</ExpandedNode>
-                <ExpandedNode>bsp_twrk60n512/twrk60n512 User Config</ExpandedNode>
-                <ExpandedNode>shell_twrk60n512</ExpandedNode>
-                <ExpandedNode>shell_twrk60n512/Output</ExpandedNode>
-                <ExpandedNode>usb_ddk_twrk60n512</ExpandedNode>
-                <ExpandedNode>usb_hdk_twrk60n512</ExpandedNode>
-                <ExpandedNode>usb_hdk_twrk60n512/USB Class Drivers</ExpandedNode>
-                <ExpandedNode>usb_hdk_twrk60n512/USB Host</ExpandedNode>
-                <ExpandedNode>usb_hdk_twrk60n512/USB Host/os</ExpandedNode>
-                <ExpandedNode>usb_hdk_twrk60n512/twrk60n512 Config in lib</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/bsp_twrk60n512</ExpandedNode><ExpandedNode>bsp_twrk60n512</ExpandedNode><ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers</ExpandedNode><ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/serial</ExpandedNode><ExpandedNode>bsp_twrk60n512/Peripheral IO Drivers/serial/int</ExpandedNode><ExpandedNode>bsp_twrk60n512/twrk60n512 User Config</ExpandedNode><ExpandedNode>shell_twrk60n512</ExpandedNode><ExpandedNode>shell_twrk60n512/Output</ExpandedNode><ExpandedNode>shell_twrk60n512/Shell Include</ExpandedNode><ExpandedNode>usb_ddk_twrk60n512</ExpandedNode><ExpandedNode>usb_hdk_twrk60n512</ExpandedNode><ExpandedNode>usb_hdk_twrk60n512/USB Class Drivers</ExpandedNode><ExpandedNode>usb_hdk_twrk60n512/USB Host</ExpandedNode><ExpandedNode>usb_hdk_twrk60n512/USB Host/os</ExpandedNode><ExpandedNode>usb_hdk_twrk60n512/twrk60n512 Config in lib</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-6434-21299</Identity>
@@ -82,245 +58,21 @@
             <Session/>
           </Tab>
         </Tabs>
-        <SelectedTab>1</SelectedTab>
-      </Wnd3>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\user_config.h</Filename>
-          <XPos>0</XPos>
-          <YPos>45</YPos>
-          <SelStart>699</SelStart>
-          <SelEnd>699</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_bsp.c</Filename>
-          <XPos>0</XPos>
-          <YPos>9</YPos>
-          <SelStart>1364</SelStart>
-          <SelEnd>1364</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\bsp.h</Filename>
-          <XPos>0</XPos>
-          <YPos>33</YPos>
-          <SelStart>1697</SelStart>
-          <SelEnd>1699</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_gpio.c</Filename>
-          <XPos>0</XPos>
-          <YPos>485</YPos>
-          <SelStart>17547</SelStart>
-          <SelEnd>17547</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_spi.c</Filename>
-          <XPos>0</XPos>
-          <YPos>48</YPos>
-          <SelStart>3216</SelStart>
-          <SelEnd>3216</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\twrk60n512.h</Filename>
-          <XPos>0</XPos>
-          <YPos>934</YPos>
-          <SelStart>28774</SelStart>
-          <SelEnd>28774</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\krtc.c</Filename>
-          <XPos>0</XPos>
-          <YPos>116</YPos>
-          <SelStart>4032</SelStart>
-          <SelEnd>4032</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\include\io.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>1321</SelStart>
-          <SelEnd>1321</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\krtc.h</Filename>
-          <XPos>0</XPos>
-          <YPos>27</YPos>
-          <SelStart>1132</SelStart>
-          <SelEnd>1132</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\rtc.h</Filename>
-          <XPos>0</XPos>
-          <YPos>51</YPos>
-          <SelStart>2324</SelStart>
-          <SelEnd>2324</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\spi\int\spi_dma_dspi.c</Filename>
-          <XPos>0</XPos>
-          <YPos>957</YPos>
-          <SelStart>31294</SelStart>
-          <SelEnd>31294</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt_kinetis.c</Filename>
-          <XPos>0</XPos>
-          <YPos>63</YPos>
-          <SelStart>2631</SelStart>
-          <SelEnd>2631</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\serial\int\serl_int.c</Filename>
-          <XPos>0</XPos>
-          <YPos>24</YPos>
-          <SelStart>1542</SelStart>
-          <SelEnd>1542</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\shell\source\include\sh_mfs.h</Filename>
-          <XPos>0</XPos>
-          <YPos>2</YPos>
-          <SelStart>455</SelStart>
-          <SelEnd>455</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_install.c</Filename>
-          <XPos>0</XPos>
-          <YPos>27</YPos>
-          <SelStart>1759</SelStart>
-          <SelEnd>1759</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_bsp.h</Filename>
-          <XPos>0</XPos>
-          <YPos>83</YPos>
-          <SelStart>3469</SelStart>
-          <SelEnd>3469</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</Filename>
-          <XPos>0</XPos>
-          <YPos>86</YPos>
-          <SelStart>3394</SelStart>
-          <SelEnd>3394</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\usb\host\source\rtos\mqx\usb_mqx.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>483</SelStart>
-          <SelEnd>483</SelEnd>
-        </Tab>
-        <ActiveTab>19</ActiveTab>
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_bsp.c</Filename><XPos>0</XPos><YPos>9</YPos><SelStart>1364</SelStart><SelEnd>1364</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\bsp.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>1697</SelStart><SelEnd>1699</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\include\io.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1321</SelStart><SelEnd>1321</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\krtc.h</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>1132</SelStart><SelEnd>1132</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\rtc.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>2324</SelStart><SelEnd>2324</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\timer\timer_lpt_kinetis.c</Filename><XPos>0</XPos><YPos>63</YPos><SelStart>2631</SelStart><SelEnd>2631</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\shell\source\include\sh_mfs.h</Filename><XPos>0</XPos><YPos>53</YPos><SelStart>2796</SelStart><SelEnd>2796</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_install.c</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>1759</SelStart><SelEnd>1759</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\usb\usb_bsp.h</Filename><XPos>0</XPos><YPos>83</YPos><SelStart>3469</SelStart><SelEnd>3469</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</Filename><XPos>0</XPos><YPos>86</YPos><SelStart>3394</SelStart><SelEnd>3394</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\usb\host\source\rtos\mqx\usb_mqx.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>483</SelStart><SelEnd>483</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\user_config.h</Filename><XPos>0</XPos><YPos>102</YPos><SelStart>3942</SelStart><SelEnd>3942</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_gpio.c</Filename><XPos>7</XPos><YPos>495</YPos><SelStart>17933</SelStart><SelEnd>17935</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\init_spi.c</Filename><XPos>1</XPos><YPos>54</YPos><SelStart>3409</SelStart><SelEnd>3572</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\bsp\twrk60n512\twrk60n512.h</Filename><XPos>0</XPos><YPos>953</YPos><SelStart>28827</SelStart><SelEnd>28827</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\rtc\krtc.c</Filename><XPos>0</XPos><YPos>261</YPos><SelStart>8760</SelStart><SelEnd>8760</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\include\app_wk.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\serial\int\serl_int.c</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>1658</SelStart><SelEnd>1720</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\serial\int\serl_int_kuart.c</Filename><XPos>0</XPos><YPos>628</YPos><SelStart>21055</SelStart><SelEnd>21055</SelEnd></Tab><ActiveTab>20</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\serial\serl_kuart.h</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>981</SelStart><SelEnd>981</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\serial\serial.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\mqx\source\io\spi\int\spi_dma_dspi.c</Filename><XPos>0</XPos><YPos>992</YPos><SelStart>32068</SelStart><SelEnd>32068</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-            <Toolbar-00efbbe8>
-              <key>iaridepm.enu1</key>
-            </Toolbar-00efbbe8>
-          </Sizes>
-        </Row0>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd2>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>592</Bottom>
-                <Right>312</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>200</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>138889</sizeHorzCX>
-                <sizeHorzCY>244499</sizeHorzCY>
-                <sizeVertCX>218056</sizeVertCX>
-                <sizeVertCY>726161</sizeVertCY>
-              </Rect>
-            </Wnd2>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes>
-            <Wnd3>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>181</Bottom>
-                <Right>1442</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>1444</xscreen>
-                <yscreen>183</yscreen>
-                <sizeHorzCX>1002778</sizeHorzCX>
-                <sizeHorzCY>223716</sizeHorzCY>
-                <sizeVertCX>138889</sizeVertCX>
-                <sizeVertCY>244499</sizeVertCY>
-              </Rect>
-            </Wnd3>
-          </Sizes>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00f0bbe8><key>iaridepm.enu1</key></Toolbar-00f0bbe8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>592</Bottom><Right>287</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>138889</sizeHorzCX><sizeHorzCY>244499</sizeHorzCY><sizeVertCX>200694</sizeVertCX><sizeVertCY>726161</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>181</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>183</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>223716</sizeHorzCY><sizeVertCX>138889</sizeVertCX><sizeVertCY>244499</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

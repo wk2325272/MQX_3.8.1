@@ -43,6 +43,10 @@
 #include "fio_prv.h"
 #include "serinprv.h"
 
+
+#include "event.h"  // wk 
+#include "app_wk.h"  // wk
+
 /* Polled functions used */
 extern uint_32 _kuart_change_baudrate(UART_MemMapPtr, uint_32, uint_32);
 extern uint_32 _kuart_polled_init(KUART_INIT_STRUCT_PTR, pointer _PTR_, char _PTR_);
@@ -348,14 +352,27 @@ uint_32 _kuart_int_init
        return(result);
    }/* Endif */
 
-   sci_info_ptr = int_io_dev_ptr->DEV_INFO_PTR;
+      sci_info_ptr = int_io_dev_ptr->DEV_INFO_PTR;
+   /* wk */
+   UART_MemMapPtr                         sci_ptr = sci_info_ptr->SCI_PTR;
+   sci_ptr->C2 &= 0x77;
+   /* end */
 
    sci_info_ptr->OLD_ISR_DATA = _int_get_isr_data(sci_init_ptr->RX_TX_VECTOR);
    sci_info_ptr->OLD_ISR_EXCEPTION_HANDLER = _int_get_exception_handler(sci_init_ptr->RX_TX_VECTOR);
 
+   /* wk */
+   sci_ptr->C2 &= 0x77;
+   /* end */
+   
    /* Init RX/TX interrupt vector */
    sci_info_ptr->OLD_ISR =
-     _int_install_isr(sci_init_ptr->RX_TX_VECTOR, _kuart_int_rx_tx_isr, int_io_dev_ptr);
+//     _int_install_isr(sci_init_ptr->RX_TX_VECTOR, _kuart_int_rx_tx_isr, int_io_dev_ptr);
+     _int_install_isr(sci_init_ptr->RX_TX_VECTOR, uart_isr, int_io_dev_ptr);  // wk
+
+   /* wk */
+   sci_ptr->C2 &= 0x77;
+   /* end */
 
 #if defined (BSP_TWRMCF51FD) || defined (BSP_TWRMCF51JF) || defined (BSP_TWRMCF51QM)
 #else
@@ -623,4 +640,105 @@ void _kuart_int_putc
 
 } /* Endbody */
 
+/*******************************************************************************
+** Function Name	：uart_isr
+** Input		：
+** Return		：
+** Author		：wk
+** Version	：
+** Date		：
+** Dessription	：
+** Reverse	：
+*******************************************************************************/
+void uart_isr(pointer parameter)
+{
+#if 1   // wk -->  在有些工程中没有定义read_buf[]和LCDTouchSel()  --> 0 else --> 1
+  /* Body */
+   IO_SERIAL_INT_DEVICE_STRUCT_PTR        int_io_dev_ptr = parameter;
+   KUART_INFO_STRUCT_PTR                  sci_info_ptr = int_io_dev_ptr->DEV_INFO_PTR;
+   UART_MemMapPtr                         sci_ptr = sci_info_ptr->SCI_PTR;
+   /*
+   ** author: wk @2012-10-03
+   ** description: 和上面三行的功能相同
+   */
+//    UART_MemMapPtr                         sci_ptr; 
+//    sci_ptr=(UART_MemMapPtr)UART4_BASE_PTR;  //wk
+    
+    volatile int_32                        c;
+
+
+   /* try if RX buffer has some characters */
+#if 0  // wk _system
+   if (sci_ptr->S1 & UART_S1_RDRF_MASK) {
+      c = sci_ptr->D;
+//        printf("c=%x\n",c);
+      if (!_io_serial_int_addc(int_io_dev_ptr, c)) {
+          sci_info_ptr->RX_DROPPED_INPUT++;
+      }
+      sci_info_ptr->RX_CHARS++;
+   }
+#endif 
+   
+#if 1 // wk --> data rec
+ static   uchar  i=0,flag=0;
+//  do  
+   {
+   if (sci_ptr->S1 & UART_S1_RDRF_MASK) {
+      c = sci_ptr->D;
+      
+      if(c == 0xaa || flag==1)  //第一个数据是 0xaa 开始标志才开始接收
+      {
+          read_buffer[i++]= c ;
+          flag=1;
+      }
+      
+      if (!_io_serial_int_addc(int_io_dev_ptr, c)) {
+          sci_info_ptr->RX_DROPPED_INPUT++;
+      }
+      sci_info_ptr->RX_CHARS++;
+   }
+   }
+//   while(c != 0x3c);
+#endif  // wk --< data rec
+   
+#define UART_EVENTTEST 1
+#if !UART_EVENTTEST
+    if(i == 8) 
+    {
+      i=0;flag=0;
+      LCDTouchSel(); // 触摸屏按键判断程序
+    }
+#endif // !UART_EVENTTEST
+
+   
+#if UART_EVENTTEST
+    if(i == 8) 
+    {
+      i=0;flag=0;     
+      pointer puart_event;
+      
+#ifdef _UART_DBUG_      
+      if(_event_open("uart_event",&puart_event) != MQX_OK)
+      {
+        printf("\n Open event failed of serl_int_kuart.c");
+      }
+      else 
+        printf("\n Open event OK of serl_int_kuart.c");
+      
+      if (_event_set(puart_event,0x01) != MQX_OK) {
+         printf("\n Set Event failed of serl_int_kuart.c");
+      }  
+      else
+         printf("\n Set Event OK of serl_int_kuart.c");
+#endif
+      
+#ifndef _UART_DBUG_
+      _event_open("uart_event",&puart_event);
+      _event_set(puart_event,0x01);
+#endif
+    }
+#endif // UART_EVENTTEST
+   
+#endif  
+}
 /* EOF */
