@@ -47,7 +47,7 @@
 *
 *END*---------------------------------------------------------------------*/
 
-int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_32 TotalSpace,uint_32 FreeSpace)
+int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_16_ptr TotalSpace,uint_16_ptr FreeSpace)
 { /* Body */
     boolean              print_usage;
     boolean              shorthelp = FALSE;
@@ -106,8 +106,8 @@ int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_32 TotalSpace,uint_32 
 //    printf("Free disk space on %s\n", fs_name);
 //    printf("%ld clusters, %ld bytes each\n", (long int)clusters, (long int)cluster_size);
 //    printf("%lu KB\n", (unsigned long int)(space>>10));
-    TotalSpace= (unsigned long int) (clusters*cluster_size)>>10 ;// translate 2 kb
-    FreeSpace=  (unsigned long int)(space>>10);
+    *TotalSpace= (unsigned long int) (clusters*cluster_size)>>20 ;// translate 2 kb
+    *FreeSpace=  (unsigned long int)(space>>20);
    /* wk @130331 --> end */
     
     return return_code;

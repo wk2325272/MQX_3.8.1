@@ -75,7 +75,7 @@ extern int_32  Shell_write_buf(int_32 argc, char_ptr argv[] );
 extern int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr data);
 extern int_32  Shell_read_wk(int_32 argc, char_ptr argv[], uchar_ptr data ); 
 extern int_32  Shell_update(int_32 argc, char_ptr argv[] ); 
-extern int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_32 TotalSpace,uint_32 FreeSpace);
+extern int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_16_ptr TotalSpace,uint_16_ptr FreeSpace);
 extern int_32  Shell_df_file(int_32 argc, char_ptr argv[]);
 extern int_32  Shell_search_file(int_32 argc, char_ptr argv[]);
 extern int_32  Shell_search_file_1(int_32 argc, char_ptr argv[], uint_32 size,uint_16 status);
