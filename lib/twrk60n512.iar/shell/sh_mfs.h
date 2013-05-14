@@ -72,7 +72,7 @@ extern int_32 Shell_append_test(int_32 argc, char_ptr argv[] );
 
 /* wk @130331 --> */
 extern int_32  Shell_write_buf(int_32 argc, char_ptr argv[] ); 
-extern int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uchar num,uchar_ptr data);
+extern int_32  Shell_write_binary(int_32 argc, char_ptr argv[] ,uint_32 num,uchar_ptr data);
 extern int_32  Shell_read_wk(int_32 argc, char_ptr argv[], uchar_ptr data ); 
 extern int_32  Shell_update(int_32 argc, char_ptr argv[] ); 
 extern int_32  Shell_df_driver(int_32 argc, char_ptr argv[],uint_16_ptr TotalSpace,uint_16_ptr FreeSpace);
