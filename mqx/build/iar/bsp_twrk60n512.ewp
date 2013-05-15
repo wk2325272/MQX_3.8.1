@@ -1002,7 +1002,7 @@
         </option>
         <option>
           <name>IarchiveOutput</name>
-          <state>$PROJ_DIR$\..\..\..\lib\twrk60n512.iar\bsp\bsp_twrk60n512_130512_a.a</state>
+          <state>$PROJ_DIR$\..\..\..\lib\twrk60n512.iar\bsp\New3.8.1bsp_twrk60n512_130512_a.a</state>
         </option>
       </data>
     </settings>
