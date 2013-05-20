@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1479509966</fileChecksum>
+  <configuration>
+    <name>Int Flash Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\twrk60n512\Int Flash Debug\Obj\gpio.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_twrk60n512_d.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_twrk60n512_d.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_twrk60n512.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\twrk60n512_lib.txt</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_twrk60n512.a</file>
+      <file>$PROJ_DIR$\..\gpio.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Int Flash Debug\Obj\gpio.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Int Flash Debug\Obj\gpio_twrk60n512.pbd</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cnfg.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Int Flash Debug\Exe\twrk60n512.out</file>
+      <file>$PROJ_DIR$\twrk60n512\Int Flash Debug\Exe\gpio_twrk60n512.srec</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\user_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\small_ram_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\verif_enabled_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psptypes.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_ioc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_supp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_macros.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpu.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpudef.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cpudef.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\MK60DZ10.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwevent.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_esdhc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio_kgpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\esdhc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\apccard.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pccardflexbus.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pcflash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\kflexcan.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_kadc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_fcan.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_ki2s.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flashx.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_ftfl.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\krtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\rtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_mpu.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\cortex.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_time.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\init_lpm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwmem.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_math.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_comp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\iar_comp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_rev.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\Generated_Code\PE_LDD.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\twrk60n512.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm_kinetis.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_cm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi_dspi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm_kinetis.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serial.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\fio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io_rev.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serl_kuart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c_ki2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\ioctl.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_null.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_mem.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\enet.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\ethernet.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\pcb.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\macnet_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio_kgpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\iodebug.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_audio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\tchres.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\timer_lpt.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_client.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_lwgpio_provider.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_uids.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\btnled.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_provider.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_tss_provider.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_host_ehci.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_khci.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_host_khci.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_ehci.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13 10 14 15 16 17 18 19 20 21 22 23 24 25 27 28 29 26 31 1 30 55 56 60 59 61 57 62 63 64 66 67 65 68 69 70 72 58 73 75 76 77 78 79 82 74 80 83 71 84 81 86 85 87 89 88 90 91 32 35 36 39 37 38 34 40 41 43 42 44 33 46 47 45 50 51 49 52 53 54 48 93 92 94 95 98 99 96 101 97 102 100 105 103 104 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\twrk60n512\Int Flash Debug\Obj\gpio_twrk60n512.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\twrk60n512\Int Flash Debug\Exe\twrk60n512.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Int Flash Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Int Ram Debug</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Int Ram Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

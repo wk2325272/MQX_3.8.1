@@ -968,9 +968,11 @@ extern uchar __USER_NO_MEMORY_END[];
 /* default */
 //        #define BSP_DEFAULT_IO_CHANNEL                    "ttyf:"    /* OSJTAG-COM   polled mode   */
 /* wk @130512 --> ´®¿Ú4 printf Êä³ö */
-//        #define BSP_DEFAULT_IO_CHANNEL                    "ttye:"    /* wk board  */
-
+#if BSPCFG_SEL_BOARD==1
+        #define BSP_DEFAULT_IO_CHANNEL                    "ttye:"    /* wk board  */
+#elif BSPCFG_SEL_BOARD==0
         #define BSP_DEFAULT_IO_CHANNEL                    "ttyd:"    /*  zhh borad  */
+#endif
         #define BSP_DEFAULT_IO_CHANNEL_DEFINED
     #else
         #define BSP_DEFAULT_IO_CHANNEL                      NULL

@@ -31,6 +31,9 @@
 
 #ifndef __bsp_h__
 #define __bsp_h__   1
+/* wk @130520 --> 选择不同的板子 0-->New(dedigned by zhh) 1--> OLD(dedigned by wk)*/
+#define BSPCFG_SEL_BOARD 1
+/* wk @130520 --> END */
 
 #include <psp.h>
 

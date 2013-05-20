@@ -6,226 +6,274 @@
   <configuration>
     <name>Debug</name>
     <outputs>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_common.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc.o</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_rcv.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_queue.o</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_bo.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c_ki2c.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio_intf.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc_intf.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm_kinetis.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_esdhc.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usbmfs.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_close.o</file>
+      <file>$PROJ_DIR$\..\..\source\host\khci\khci.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serl_kuart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_khci.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc_intf.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_mqx.o</file>
+      <file>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\mqx_dll.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cpudef.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_desc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\init_lpm.h</file>
+      <file>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\usb\host\usb_hdk_twrk60n512_d.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwmsgq.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_provider.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_close.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\krtc.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_common.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_ehci.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\esdhc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_fcan.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpu.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\cortex.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwevent.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_rev.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\MK60DZ10.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\ioctl.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_main.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_supp.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_types.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\rtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\enet.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio.o</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_error.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_queue.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_ufi.pbi</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_cm.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serial.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_null.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_mem.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_printer.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\usb_bsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_debug.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_hdk_twrk60n512.pbd</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_snd.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_phdc.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_ch9.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\iodebug.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_shut.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\mqx_dll.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_ioc.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_kadc.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usbmfs.pbi</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_host_ehci.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwmem.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_host_khci.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_close.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub.o</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_cnfg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_time.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_math.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_khci.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_dev_ehci.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_comp.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\iar_comp.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\if_host_khci.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\verif_enabled_config.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub_sm.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\khci.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cnfg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\timer_lpt.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\khci\khci.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_rcv.o</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_ch9.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\hostapi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serial.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psptypes.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpudef.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_snd.o</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_audio.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\khci\khci_prv.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_snd.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_client.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hid.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_rcv.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi_dspi.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_ch9.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\apccard.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio_kgpio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_null.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\kflexcan.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.c</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.c</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_main.c</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_cnl.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio_kgpio.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_shut.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_common.o</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_main.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_mpu.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flashx.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio_intf.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\btnled.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_cnl.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\pcb.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pccardflexbus.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\fio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\bsp_rev.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\Generated_Code\PE_LDD.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\twrk60n512.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm_kinetis.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\init_lpm.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm_kinetis.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\fio.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io_rev.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\serl_kuart.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\apccard.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\ioctl.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi_dspi.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2c_ki2c.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pcflash.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flashx.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\pcb.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\enet.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\ethernet.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\macnet_mk60.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio_kgpio.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\iodebug.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\tchres.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\btnled.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_gpio_kgpio.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_esdhc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_spi.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\esdhc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_lwgpio_provider.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pccardflexbus.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_mk60.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_tss_provider.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc_kadc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\adc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_fcan.h</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio_intf.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\kflexcan.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\krtc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_mk60.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_ftfl.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\rtc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_ki2s.h</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_audio.h</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_queue.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\timer_lpt.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_client.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_uids.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_provider.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwmsgq.h</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc_intf.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hid.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_bo.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_ufi.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub_sm.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usbmfs.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_mqx.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_phdc.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_printer.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\mqx_dll.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_close.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_ch9.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_cnl.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_common.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_dev_list.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_rcv.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_main.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_shut.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\khci.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_snd.o</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio_intf.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_audio.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc_intf.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hid.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub_sm.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usbmfs.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_bo.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_queue.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_ufi.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_phdc.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_printer.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\mqx_dll.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_mqx.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_ch9.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_close.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_cnl.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_common.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_dev_list.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_main.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_rcv.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_shut.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_snd.pbi</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\khci.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\usb\host\usb_hdk_twrk60n512_d.a</file>
-      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_hdk_twrk60n512.pbd</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\user_config.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_ioc.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpu.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\small_ram_config.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cnfg.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\verif_enabled_config.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psptypes.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\MK60DZ10.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio_intf.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc_intf.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_prv.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfspr.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_queue.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.h</file>
-      <file>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.c</file>
-      <file>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.h</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_ch9.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_close.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_cnl.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_common.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_dev_list.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_main.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_rcv.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_shut.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\host_snd.c</file>
-      <file>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.c</file>
-      <file>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.h</file>
       <file>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_host.h</file>
-      <file>$PROJ_DIR$\..\..\source\rtos\mqx\usb_mqx.c</file>
-      <file>$PROJ_DIR$\..\..\source\rtos\mqx\usb_mqx.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_misc_prv.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_debug.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_desc.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_error.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_ufi.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_math.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
       <file>$PROJ_DIR$\..\..\..\common\include\usb_misc.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_ch9.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_prv.h</file>
-      <file>$PROJ_DIR$\..\..\..\common\include\usb_types.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_close.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_cnfg.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_cnl.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_common.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_dev_list.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_main.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_rcv.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_shut.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\host_snd.h</file>
-      <file>$PROJ_DIR$\..\..\source\include\hostapi.h</file>
-      <file>$PROJ_DIR$\..\..\source\host\khci\khci.c</file>
-      <file>$PROJ_DIR$\..\..\source\host\khci\khci.h</file>
-      <file>$PROJ_DIR$\..\..\source\host\khci\khci_prv.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_cpudef.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_supp.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_cpudef.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_rcv.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\spi.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lwgpio.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_common.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_dev_list.o</file>
+      <file>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio_intf.c</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_main.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_ch9.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\macnet_mk60.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_dev_list.c</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_misc_prv.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_mqx.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_printer.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_prv.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_snd.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\iar_comp.h</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_cnl.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_queue.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\khci.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\lwevent.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\cm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\io_mem.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_phdc.pbi</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_shut.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\psp_comp.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_cnl.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\user_config.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_shut.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\io_rev.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_cdc_intf.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_tss_provider.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\pcflash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\ethernet.h</file>
+      <file>$PROJ_DIR$\..\..\source\rtos\mqx\usb_mqx.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\flash_ftfl.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\lpm_kinetis.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\tchres.h</file>
+      <file>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfspr.h</file>
+      <file>$PROJ_DIR$\..\..\source\rtos\mqx\usb_mqx.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\sdcard_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\small_ram_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\i2s_ki2s.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hid.o</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_hub_sm.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_lwgpio_provider.h</file>
       <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\mqx_macros.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\psp\kinetis_mpu.h</file>
+      <file>$PROJ_DIR$\..\..\source\host\host_close.c</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\host_dev_list.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\lib\twrk60n512.iar\bsp\hmi_uids.h</file>
+      <file>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_host_msd_bo.pbi</file>
+      <file>$PROJ_DIR$\..\..\source\include\host_dev_list.h</file>
+      <file>$PROJ_DIR$\..\..\..\common\include\usb_prv.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_hdk_twrk60n512.pbd</name>
+      <name>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc_intf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 189</file>
+        </tool>
+      </outputs>
       <inputs>
         <tool>
-          <name>BILINK</name>
-          <file> 117 118 119 120 121 122 123 124 125 126 115 103 102 106 104 105 107 108 110 111 112 113 114 116 109</file>
+          <name>BICOMP</name>
+          <file> 11 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 140 83 110 188 44 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 60 85 76 22 38 136 55 29 149 212 164 61 80 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\khci\khci.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 173</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 33 136 60 85 76 22 38 55 29 149 212 164 61 211 37 47 31 144 193 92 102 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 80 95 159 5 103 171</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77</file>
         </tool>
       </inputs>
     </file>
@@ -234,169 +282,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 103</file>
+          <file> 118</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 78</file>
+          <file> 54</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 143 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 106</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 70</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 30 32 31 33 37 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 2 11 9 14 15 181 184 183 185 187 180 182 190 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio_intf.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 102</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 62</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 143 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc_intf.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 104</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 81</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 145 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 30 32 31 33 37 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 2 11 9 14 15 181 184 183 185 187 180 182 190 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 82</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 148 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 107</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 83</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 150 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 198 192 188 176 194 177 179 195 197 191 151 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 186 193</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 108</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 86</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 150 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 198 192 188 176 194 177 179 195 197 191 151 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 186 193 153</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 109</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 87</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 192 188 176 198 194 177 179 195 197 191 158 30 32 31 33 37 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 186 161 155 156</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 110</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 84</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 158 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 30 32 31 33 37 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
+          <file> 17 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
         </tool>
       </inputs>
     </file>
@@ -405,216 +301,35 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 111</file>
+          <file> 172</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 72</file>
+          <file> 6</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 158 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 30 32 31 33 37 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
+          <file> 49 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 140 83 110 188 44 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 85</file>
-        </tool>
-      </outputs>
+      <name>$PROJ_DIR$\twrk60n512\Debug\Obj\usb_hdk_twrk60n512.pbd</name>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 158 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 30 32 31 33 37 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186 161</file>
+          <name>BILINK</name>
+          <file> 160 35 135 1 207 45 150 185 169 89 26 118 9 105 23 107 128 88 210 172 57 179 167 166 75</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.c</name>
+      <name>$PROJ_DIR$\..\..\source\host\host_snd.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 113</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 89</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 135 140 206 207 209 202 210 79 77 163 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186 193</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 114</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 90</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 165 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_ch9.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 117</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 93</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 186 193</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_close.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 92</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 189</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_cnl.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 119</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 94</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_common.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 120</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 95</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 193 186</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_dev_list.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 121</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 96</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 193 186 189</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 122</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 98</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 2 11 9 14 15 181 184 183 185 187 180 182 190 198 192 188 176 194 177 179 195 197 191 193</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_rcv.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 123</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 97</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_shut.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 124</file>
+          <file> 169</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -624,45 +339,330 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191 196</file>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\source\host\host_snd.c</name>
+      <name>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub_sm.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 125</file>
+          <file> 88</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 101</file>
+          <file> 203</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185 187 180 182 190 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 1 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 198 192 188 176 194 177 179 195 197 191</file>
+          <file> 126 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 95 37 47 31 159 144 193 5 103 171 168 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 94 211 187</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\source\rtos\mqx\mqx_dll.c</name>
+      <name>$PROJ_DIR$\..\..\source\classes\hid\usb_host_hid.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 115</file>
+          <file> 107</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 91</file>
+          <file> 202</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 176 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10</file>
+          <file> 3 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_ufi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 146</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 140 83 110 188 44 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94 165</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_rcv.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 150</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_ch9.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 160</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94 211</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\phdc\usb_host_phdc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 179</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64 184 84 81 104 115 151 13 124 178 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94 211</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\msd\usb_host_msd_bo.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 210</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 140 83 110 188 44 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 130</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 60 85 76 22 38 136 55 29 149 212 164 61 80 95 37 47 31 159 144 193 5 103 171 211</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_cnl.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 135</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 182</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_shut.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 185</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 180</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\msd\mfs\usbmfs.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 75</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 37 47 31 95 159 144 193 5 103 171 49 140 83 110 188 44 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 94 165 186 197</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\hub\usb_host_hub.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 126 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 95 37 47 31 159 144 193 5 103 171 168 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 94 211</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\printer\usb_host_printer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 167</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 208 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_common.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 129</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 211 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\audio\usb_host_audio_intf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 133</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\classes\cdc\usb_host_cdc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 105</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 174 140 83 110 188 44 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 60 85 76 22 38 136 55 29 149 212 164 61 80 95 37 47 31 159 144 193 5 103 171 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\source\host\host_dev_list.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 207</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 211 94 78</file>
         </tool>
       </inputs>
     </file>
@@ -671,36 +671,36 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 116</file>
+          <file> 166</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 88</file>
+          <file> 24</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 181 2 11 9 14 15 184 183 185</file>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\source\host\khci\khci.c</name>
+      <name>$PROJ_DIR$\..\..\source\host\host_close.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 126</file>
+          <file> 35</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 100</file>
+          <file> 19</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137 134 129 133 136 138 130 204 211 131 203 205 132 139 208 140 206 207 209 202 210 212 0 10 1 80 181 2 11 9 14 15 184 183 185 187 180 182 193 192 188 176 177 179 200 201 16 17 12 13 18 19 21 22 3 23 24 4 26 27 28 29 30 32 31 33 37 5 35 25 38 39 40 7 6 44 43 45 46 47 8 34 51 54 20 53 52 36 56 41 57 60 59 61 63 42 66 65 64 67 68 69 71 48 49 73 75 50 74 76 55 58 190 198 194 195 197 191</file>
+          <file> 176 90 183 200 87 97 72 46 205 41 98 28 66 43 0 184 84 81 104 115 151 131 42 77 136 60 85 76 22 38 55 29 149 212 164 61 80 4 16 82 147 181 170 148 142 141 143 12 58 175 30 195 53 140 83 110 188 44 96 21 153 111 27 8 177 116 52 137 192 162 125 155 123 114 39 86 199 14 113 138 191 50 18 174 74 40 117 132 194 139 36 51 109 201 101 68 196 91 209 134 106 34 204 190 95 37 47 31 159 144 193 5 103 171 78</file>
         </tool>
       </inputs>
     </file>
@@ -709,7 +709,7 @@
       <outputs>
         <tool>
           <name>IARCHIVE</name>
-          <file> 127</file>
+          <file> 32</file>
         </tool>
       </outputs>
     </file>
